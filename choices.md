@@ -17,6 +17,11 @@
 - perpetual / survives termination
 - during the term / subscription license
 
+## Agreement Term (pick one)
+- one year
+- one year, automatically renewing
+- month-to-month
+
 ## Usage (one or many)
 - internal business use
 - service use
