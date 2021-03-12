@@ -10,6 +10,9 @@
       "name": {
         "type": "string"
       },
+      "description": {
+        "type": "string"
+      },
       "requires": {
         "type": "array",
         "items": {
@@ -41,6 +44,9 @@
             "name": {
               "type": "string"
             },
+            "forced": {
+              "type": "boolean"
+            },
             "notes": {
               "type": "array",
               "items": {
@@ -62,6 +68,7 @@
     "required": [
       "id",
       "name",
+      "description",
       "choice",
       "choices"
     ],

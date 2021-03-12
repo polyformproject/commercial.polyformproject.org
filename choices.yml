@@ -1,5 +1,6 @@
 - id: model
   name: License Model
+  description: Licenses are priced and sold in different ways.  These affect how fees get calculated, as well as other terms.
   choice: single
   choices:
     - id: trial
@@ -19,6 +20,7 @@
 
 - id: expansion
   name: Expansion
+  description: If the customer needs more usage than they've agreed to, how can they get it?
   requires:
     - model: seats
     - model: metered
@@ -33,10 +35,11 @@
     - id: quoted
       name: On Payment, as Agreed in Ordering Document
     - id: usage
-      name: Based on Usage
+      name: Based on Usage, as Agreed in Ordering Document
 
 - id: reporting
   name: Usage Reporting
+  description: How will the seller determine the customer's usage?
   requires:
     - model: seats
     - model: metered
@@ -52,6 +55,7 @@
 
 - id: term
   name: Term
+  description: How long will the license last?
   choice: single
   choices:
     - id: perpetual
@@ -65,10 +69,12 @@
 
 - id: usage
   name: Usage
+  description: How can the customer use the software?
   choice: multiple
   choices:
     - id: internal
       name: Internal Use
+      forced: true
     - id: service
       name: External Services
     - id: redistribution
@@ -76,6 +82,7 @@
 
 - id: delivery
   name: Delivery
+  description: Will the customer get source code, a compiled version, or both?
   choice: single
   choices:
     - id: binary
@@ -87,6 +94,7 @@
 
 - id: modification
   name: Modification Rights
+  description: If the customer gets source code, can they change the software?
   requires:
     - delivery: binary
     - delivery: both
@@ -99,6 +107,7 @@
 
 - id: escrow
   name: Escrow
+  description: If the customer doesn't get source code, will they get it if the seller discontinues the product or goes out of business?
   requires:
     - delivery: binary
   choice: multiple
@@ -108,6 +117,7 @@
 
 - id: maintenance
   name: Maintenance
+  description: Will the seller provides updates to the software?
   choice: single
   choices:
     - id: version
@@ -117,25 +127,28 @@
 
 - id: support
   name: Support
+  description: Will the seller provide technical support?
   choice: single
   choices:
     - id: none
-      name: Nome
+      name: No Support
     - id: basic
-      name: Basic
+      name: Basic Support
       notes:
-        - included in license fee
-        - No SLAs
-        - E-Mail only
+        - no additional fee
+        - no SLAs
+        - e-mail only
         - business hours
     - id: full
-      name: Full
+      name: Full Support
       notes:
-        - availability and response-time SLAs
-        - separately priced
+        - additional fee
+        - availability SLAs
+        - response-time SLAs
 
 - id: warranty
   name: Quality Warranty
+  description: Will the seller give a promise about the quality of the software?
   choice: single
   choices:
     - id: period
@@ -145,6 +158,7 @@
 
 - id: patent
   name: Patent Infringement Indemnity
+  description: Will the seller cover the customer if someone brings a lawsuit claiming that the software infringes a patent?
   choice: single
   choices:
     - id: none
@@ -156,6 +170,7 @@
 
 - id: law
   name: Governing Law
+  description: What law will govern the license agreement?
   choice: single
   choices:
     - id: vendor
@@ -171,6 +186,7 @@
 
 - id: venue
   name: Venue for Disputes
+  description: Where will the seller and customer bring lawsuits about the agreement?
   choice: single
   choices:
     - id: capital
@@ -184,6 +200,7 @@
 
 - id: disputes
   name: Dispute Resolution
+  description: How will the seller and customer resolve disputes about the agreement?
   choice: single
   choices:
     - id: litigation

@@ -1,0 +1,21 @@
+html {
+  font-family: sans-serif;
+  line-height: 1.37;
+}
+
+label {
+  display: block;
+  margin: 1rem 0;
+}
+
+input[type=radio], input[type=checkbox] {
+  margin-right: 1ex;
+}
+
+.description {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.note {
+  margin: 0;
+}
