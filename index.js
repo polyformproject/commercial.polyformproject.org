@@ -1,4 +1,4 @@
-import choices from './choices.js'
+import prompts from './prompts.js'
 
 const inputs = {}
 
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main')
   const form = document.createElement('form')
   main.appendChild(form)
-  choices.forEach(prompt => {
+  prompts.forEach(prompt => {
     const promptID = prompt.id
     inputs[promptID] = {}
     const set = document.createElement('fieldset')
