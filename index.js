@@ -5,7 +5,7 @@ import mustache from 'mustache'
 import outline from 'outline-numbering'
 
 import prompts from './prompts.js'
-import template from './template.js'
+import template from './template.md'
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]

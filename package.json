@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "npm run build:prompts ; npm run build:template ; npm run build:bundle",
-    "build:bundle": "esbuild index.js --bundle --minify --sourcemap --outfile=bundle.js",
+    "build:bundle": "esbuild index.js --loader:.md=text --bundle --minify --sourcemap --outfile=bundle.js",
     "build:prompts": "echo 'module.exports = ' >> prompts.js ; js-yaml < prompts.yml >> prompts.js",
     "build:template": "echo 'module.exports = `' >> template.js ; cat template.md >> template.js ; echo '`' >> template.js",
     "test": "npm run build:prompts && node test.js"
