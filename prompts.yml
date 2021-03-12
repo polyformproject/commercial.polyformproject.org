@@ -107,8 +107,10 @@
   description: If the customer doesn't get source code, will they get it if the seller discontinues the product or goes out of business?
   requires:
     - delivery: binary
-  choice: multiple
+  choice: single
   choices:
+    - id: no
+      name: None
     - id: yes
       name: Third-Party
 
@@ -174,11 +176,11 @@
       name: Vendor's Headquarters
     - id: customer
       name: Customer's Headquarters
-    - id: ca
+    - id: california
       name: California
-    - id: de
+    - id: delaware
       name: Delaware
-    - id: ny
+    - id: newyork
       name: New York
 
 - id: venue
@@ -188,11 +190,11 @@
   choices:
     - id: capital
       name: Capital of the Governing Law Jurisdiction
-    - id: big
+    - id: biggest
       name: Largest City in the Governing Law Jurisdiction
     - id: vendor
       name: Name Nearest Vendor in Governing Law Jurisdiction
-    - id: customers
+    - id: customer
       name: Name Nearest Customer in Governing Law Jurisdiction
 
 - id: disputes
@@ -202,7 +204,7 @@
   choices:
     - id: litigation
       name: Litigation
-    - id: execs
+    - id: executives
       name: Executives Meet Before Litigation
     - id: mediation
       name: Mediation Before Litigation
