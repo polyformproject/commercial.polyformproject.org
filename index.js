@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Compute attributes common to all prompt inputs.
     const inputType = prompt.choice === 'single' ? 'radio' : 'checkbox'
     const required = prompt.choice === 'single' && hasRequired
-    const disabled = hasRequired
 
     prompt.choices.forEach(choice => {
       // Skip choices scheduled for later versions.
@@ -61,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
       input.name = promptID
       input.value = choiceID
       input.requred = required ? 'true' : null
-      input.disabled = disabled ? 'true' : null
       input.onchange = onInputChange
       label.appendChild(input)
       label.appendChild(document.createTextNode(choice.name))
@@ -89,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const markdown = mustache.render(template, view)
     const parsed = commonmark.parse(markdown)
     const options = {
-      title: 'PolyForm License Agreement',
+      title: 'PolyForm Software License Agreement',
       numbering: outline
     }
     docx(parsed.form, [], options)
@@ -103,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
   form.appendChild(reset)
   reset.type = 'reset'
   reset.appendChild(document.createTextNode('Reset'))
+
+  applyPromptRequirements()
 })
 
 function onInputChange (event) {
