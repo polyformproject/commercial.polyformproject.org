@@ -1,6 +1,8 @@
 import prompts from './prompts.js'
 
+const promptIDs = []
 const inputs = {}
+const requirements = {}
 
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main')
@@ -8,9 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
   main.appendChild(form)
   prompts.forEach(prompt => {
     const promptID = prompt.id
+    promptIDs.push(promptID)
     inputs[promptID] = {}
+    const hasRequired = Array.isArray(prompt.requires)
+    if (hasRequired) requirements[promptID] = prompt.requires
     const set = document.createElement('fieldset')
     form.appendChild(set)
+    if (hasRequired) set.className = 'hidden'
     const legend = document.createElement('legend')
     set.appendChild(legend)
     legend.appendChild(document.createTextNode(prompt.name))
@@ -19,11 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     description.appendChild(document.createTextNode(prompt.description))
     set.appendChild(description)
     const inputType = prompt.choice === 'single' ? 'radio' : 'checkbox'
-    const required = (
-      prompt.choice === 'single' &&
-      !Array.isArray(prompt.requires)
-    )
-    const disabled = Array.isArray(prompt.requires)
+    const required = prompt.choice === 'single' && hasRequired
+    const disabled = hasRequired
     prompt.choices.forEach(choice => {
       if (choice.version > 1) return
       const choiceID = choice.id

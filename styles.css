@@ -43,3 +43,7 @@ button[type=submit], button[type=reset] {
 button[type=reset] {
   float: right;
 }
+
+.hidden {
+  display: none;
+}
