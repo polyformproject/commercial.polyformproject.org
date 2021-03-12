@@ -1,3 +1,4 @@
+const JSZip = require('jszip')
 const commonmark = require('commonform-commonmark')
 const docx = require('commonform-docx')
 const fileSaver = require('file-saver')
@@ -5,7 +6,8 @@ const mustache = require('mustache')
 const outline = require('outline-numbering')
 
 const prompts = require('./prompts.json')
-const template = require('./template.js')
+const terms = require('./terms.js')
+const order = require('./order.js')
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
@@ -84,16 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const value = selections[key]
       view[`${key}=${value}`] = true
     })
-    const markdown = mustache.render(template, view)
-    const parsed = commonmark.parse(markdown)
-    const options = {
-      title: 'PolyForm Software License Agreement',
-      numbering: outline
-    }
-    docx(parsed.form, [], options)
-      .generateAsync({ type: 'blob' })
-      .then(blob => {
-        fileSaver.saveAs(blob, 'License Agreement.docx', true)
+    Promise.all([
+      renderTemplate(order, view, 'PolyForm Software License Order'),
+      renderTemplate(terms, view, 'PolyForm Software License Terms')
+    ])
+      .then(files => {
+        const zip = new JSZip()
+        zip.file('order.docx', files[0])
+        zip.file('terms.docx', files[1])
+        zip.generateAsync({ type: 'blob' })
+          .then(blob => {
+            fileSaver.saveAs(blob, 'PolyForm Software License Packet.zip', true)
+          })
       })
   }
 
@@ -104,6 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyPromptRequirements()
 })
+
+function renderTemplate (template, view, title) {
+  const markdown = mustache.render(template, view)
+  const parsed = commonmark.parse(markdown)
+  const options = {
+    title,
+    numbering: outline
+  }
+  return docx(parsed.form, [], options).generateAsync({ type: 'blob' })
+}
 
 function onInputChange (event) {
   updateSelectionsGlobal()

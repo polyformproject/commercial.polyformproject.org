@@ -8,6 +8,7 @@
     "exorcist": "^2.0.0",
     "file-saver": "^2.0.5",
     "js-yaml": "^4.0.0",
+    "jszip": "^3.6.0",
     "mustache": "^4.1.0",
     "mustache-vars": "^0.2.0",
     "outline-numbering": "^2.0.0",
@@ -16,11 +17,12 @@
   "scripts": {
     "lint": "standard index.js",
     "fix": "standard --fix",
-    "build": "npm run build:prompts ; npm run build:template ; npm run build:bundle ; npm run build:compressed",
+    "build": "npm run build:prompts ; npm run build:terms ; npm run build:order ; npm run build:bundle ; npm run build:compressed",
     "build:bundle": "browserify -d index.js | exorcist bundle.map.js > bundle.js ; du -h bundle.js",
-    "build:compressed": "gzip -f bundle.js ; du -h bundle.js.gz",
+    "build:compressed": "gzip -k -f bundle.js ; du -h bundle.js.gz",
     "build:prompts": "js-yaml < prompts.yml > prompts.json",
-    "build:template": "echo 'module.exports = `' > template.js ; cat template.md >> template.js ; echo '`' >> template.js",
+    "build:terms": "echo 'module.exports = `' > terms.js ; cat terms.md >> terms.js ; echo '`' >> terms.js",
+    "build:order": "echo 'module.exports = `' > order.js ; cat order.md >> order.js ; echo '`' >> order.js",
     "test": "npm run build:prompts && node test.js"
   }
 }

@@ -14,8 +14,12 @@ if (!valid) {
 }
 
 const listVars = require('mustache-vars')
-const template = require('fs').readFileSync('./template.md', 'utf8')
-const used = listVars(template)
+
+const terms = require('fs').readFileSync('./terms.md', 'utf8')
+const usedInTerms = listVars(terms)
+
+const order = require('fs').readFileSync('./order.md', 'utf8')
+const usedInOrder = listVars(order)
 
 const possible = []
 data.forEach(prompt => {
@@ -27,15 +31,22 @@ data.forEach(prompt => {
   })
 })
 possible.forEach(expected => {
-  if (!used.includes(expected)) {
-    console.error(`In Prompts, Not in Template: ${expected}`)
+  if (!usedInTerms.includes(expected)) {
+    console.error(`In Prompts, Not in Terms: ${expected}`)
     ok = false
   }
 })
 
-used.forEach(expected => {
+usedInTerms.forEach(expected => {
   if (!possible.includes(expected)) {
-    console.error(`In Template, Not in Prompts: ${expected}`)
+    console.error(`In Terms, Not in Prompts: ${expected}`)
+    ok = false
+  }
+})
+
+usedInOrder.forEach(expected => {
+  if (!possible.includes(expected)) {
+    console.error(`In Order, Not in Prompts: ${expected}`)
     ok = false
   }
 })
