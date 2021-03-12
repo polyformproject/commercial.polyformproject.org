@@ -1,0 +1,4 @@
+#!/bin/sh
+site=todo.polyformproject.org
+[ -d node_modules ] || npm ci
+rsync -avz --files-from=deployed "$site:/var/www/$site/"
