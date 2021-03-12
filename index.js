@@ -67,13 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function onChange (event) {
-  const target = event.target
-  const promptID = target.dataset.prompt
-  const choiceID = target.dataset.choice
-  console.log({ event, promptID, choiceID })
-  // TODO: enable, disable, and reset prompts with requirements
   compileSelections()
-  console.log(selections)
   enablePrompts()
 }
 
@@ -83,7 +77,6 @@ function compileSelections () {
     const elements = Object.values(inputs[promptID])
     elements.forEach(element => {
       if (element.checked) {
-        console.log(element)
         const choiceID = element.dataset.choice
         if (element.type === 'checkbox') {
           if (Array.isArray(selections[promptID])) {
@@ -100,4 +93,5 @@ function compileSelections () {
 }
 
 function enablePrompts () {
+  // TODO
 }
