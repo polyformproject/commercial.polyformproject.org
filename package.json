@@ -9,9 +9,12 @@
     "file-saver": "^2.0.5",
     "js-yaml": "^4.0.0",
     "mustache": "^4.1.0",
-    "outline-numbering": "^2.0.0"
+    "outline-numbering": "^2.0.0",
+    "standard": "^16.0.3"
   },
   "scripts": {
+    "lint": "standard",
+    "fix": "standard --fix",
     "build": "npm run build:prompts ; npm run build:template ; npm run build:bundle",
     "build:bundle": "browserify -d index.js | exorcist bundle.map.js > bundle.js",
     "build:prompts": "js-yaml < prompts.yml > prompts.json",
