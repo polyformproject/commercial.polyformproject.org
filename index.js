@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const label = document.createElement('label')
       set.appendChild(label)
       const input = document.createElement('input')
+      input.dataset.promptID = promptID
+      input.dataset.choiceID = choiceID
       input.type = inputType
       input.name = promptID
       input.value = choiceID
@@ -62,5 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function onChange (event) {
-  console.log(event)
+  const target = event.target
+  const promptID = target.dataset.promptID
+  const choiceID = target.dataset.choiceID
+  console.log({ event, promptID, choiceID })
+  // TODO: enable, disable, and reset prompts with requirements
 }
