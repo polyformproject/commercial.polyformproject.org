@@ -6,9 +6,9 @@
     "js-yaml": "^4.0.0"
   },
   "scripts": {
-    "build": "npm run build:choices ; npm run build:bundle",
+    "build": "npm run build:prompts ; npm run build:bundle",
     "build:bundle": "esbuild index.js --bundle --sourcemap --outfile=bundle.js",
-    "build:choices": "echo 'module.exports = ' >> choices.js ; js-yaml < choices.yml >> choices.js",
-    "test": "npm run build:choices && node test.js"
+    "build:prompts": "echo 'module.exports = ' >> prompts.js ; js-yaml < prompts.yml >> prompts.js",
+    "test": "npm run build:prompts && node test.js"
   }
 }
