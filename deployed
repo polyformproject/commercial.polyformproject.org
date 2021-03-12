@@ -1,3 +1,4 @@
 index.html
 styles.css
-client.js
+bundle.js
+bundle.map.js
