@@ -3,6 +3,22 @@ html {
   line-height: 1.37;
 }
 
+
+header[role=banner],
+main[role=main],
+footer[role=contentinfo] {
+  margin: 1rem auto;
+  max-width: 33rem;
+}
+
+fieldset {
+  margin: 1rem 0;
+}
+
+fieldset legend {
+  font-weight: bold;
+}
+
 label {
   display: block;
   margin: 1rem 0;
