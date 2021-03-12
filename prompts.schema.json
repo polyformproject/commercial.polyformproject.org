@@ -44,9 +44,6 @@
             "name": {
               "type": "string"
             },
-            "forced": {
-              "type": "boolean"
-            },
             "notes": {
               "type": "array",
               "items": {

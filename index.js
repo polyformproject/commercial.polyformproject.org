@@ -1,5 +1,6 @@
 import prompts from './prompts.js'
 
+const selections = {}
 const promptIDs = []
 const inputs = {}
 const requirements = {}
@@ -33,15 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const label = document.createElement('label')
       set.appendChild(label)
       const input = document.createElement('input')
-      input.dataset.promptID = promptID
-      input.dataset.choiceID = choiceID
+      input.dataset.prompt = promptID
+      input.dataset.choice = choiceID
       input.type = inputType
       input.name = promptID
       input.value = choiceID
       input.requred = required ? 'true' : null
-      input.disabled = choice.forced || disabled ? 'true' : null
+      input.disabled = disabled ? 'true' : null
       input.onchange = onChange
-      if (choice.forced) input.checked = 'true'
       label.appendChild(input)
       label.appendChild(document.createTextNode(choice.name))
       inputs[promptID][choiceID] = input
@@ -68,8 +68,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function onChange (event) {
   const target = event.target
-  const promptID = target.dataset.promptID
-  const choiceID = target.dataset.choiceID
+  const promptID = target.dataset.prompt
+  const choiceID = target.dataset.choice
   console.log({ event, promptID, choiceID })
   // TODO: enable, disable, and reset prompts with requirements
+  compileSelections()
+  console.log(selections)
+  enablePrompts()
+}
+
+function compileSelections () {
+  promptIDs.forEach(promptID => {
+    selections[promptID] = null
+    const elements = Object.values(inputs[promptID])
+    elements.forEach(element => {
+      if (element.checked) {
+        console.log(element)
+        const choiceID = element.dataset.choice
+        if (element.type === 'checkbox') {
+          if (Array.isArray(selections[promptID])) {
+            selections[promptID].push(choiceID)
+          } else {
+            selections[promptID] = [choiceID]
+          }
+        } else if (element.type === 'radio') {
+          selections[promptID] = choiceID
+        }
+      }
+    })
+  })
+}
+
+function enablePrompts () {
 }

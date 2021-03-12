@@ -69,12 +69,9 @@
 
 - id: usage
   name: Usage
-  description: How can the customer use the software?
+  description: Can the customer use the software for more than internal business?
   choice: multiple
   choices:
-    - id: internal
-      name: Internal Use
-      forced: true
     - id: service
       name: External Services
     - id: redistribution
