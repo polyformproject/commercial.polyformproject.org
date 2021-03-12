@@ -41,23 +41,21 @@ document.addEventListener('DOMContentLoaded', () => {
       inputs[promptID][choiceID] = input
       // Notes
       if (Array.isArray(choice.notes)) {
-        const ul = document.createElement('ul')
-        set.appendChild(ul)
-        choice.notes.forEach(note => {
-          const li = document.createElement('li')
-          li.className = 'note'
-          ul.appendChild(li)
-          li.appendChild(document.createTextNode(note))
-        })
+        label.appendChild(document.createTextNode(' — '))
+        label.appendChild(document.createTextNode(choice.notes.join(', ')))
       }
     })
   })
   const submit = document.createElement('button')
+  form.appendChild(submit)
   submit.type = 'submit'
   submit.appendChild(document.createTextNode('Generate'))
-  form.appendChild(submit)
   form.onsubmit = event => {
     event.preventDefault()
     window.alert('TODO')
   }
+  const reset = document.createElement('button')
+  form.appendChild(reset)
+  reset.type = 'reset'
+  reset.appendChild(document.createTextNode('Reset'))
 })

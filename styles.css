@@ -19,3 +19,12 @@ input[type=radio], input[type=checkbox] {
 .note {
   margin: 0;
 }
+
+button[type=submit], button[type=reset] {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+button[type=reset] {
+  float: right;
+}
