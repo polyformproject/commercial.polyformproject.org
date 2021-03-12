@@ -15,7 +15,7 @@
     "build": "npm run build:prompts ; npm run build:template ; npm run build:bundle",
     "build:bundle": "browserify -d index.js | exorcist bundle.map.js > bundle.js",
     "build:prompts": "js-yaml < prompts.yml > prompts.json",
-    "build:template": "echo 'module.exports = `' >> template.js ; cat template.md >> template.js ; echo '`' >> template.js",
+    "build:template": "echo 'module.exports = `' > template.js ; cat template.md >> template.js ; echo '`' >> template.js",
     "test": "npm run build:prompts && node test.js"
   }
 }
