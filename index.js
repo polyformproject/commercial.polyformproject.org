@@ -1,10 +1,10 @@
 import prompts from './prompts.js'
 
-const selections = {}
-const promptIDs = []
-const fieldsets = {}
-const inputs = {}
-const requirements = {}
+const selections = {/* promptID -> null | choiceID */}
+const promptIDs = [/* promptID */]
+const fieldsets = {/* promptID => fieldset */}
+const inputs = {/* promptID -> [input] */}
+const requirements = {/* promptID -> [required] */}
 
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main')
