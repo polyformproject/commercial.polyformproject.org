@@ -82,11 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault()
     updateSelectionsGlobal()
     const view = {}
-    for (const [key, value] of selections) {
+    Object.keys(selections).forEach(key => {
+      const value = selections[key]
       view[`${key}=${value}`] = true
-    }
+    })
     const markdown = mustache.render(template, view)
-    const parsed = commonmark.mark(markdown)
+    const parsed = commonmark.parse(markdown)
     const options = {
       title: 'PolyForm License Agreement',
       numbering: outline

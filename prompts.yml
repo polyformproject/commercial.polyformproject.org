@@ -93,7 +93,7 @@
   name: Modification Rights
   description: If the customer gets source code, can they change the software?
   requires:
-    - delivery: binary
+    - delivery: source
     - delivery: both
   choice: single
   choices:
