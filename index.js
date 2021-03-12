@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       input.value = choiceID
       input.requred = required ? 'true' : null
       input.disabled = choice.forced || disabled ? 'true' : null
+      input.onchange = onChange
       if (choice.forced) input.checked = 'true'
       label.appendChild(input)
       label.appendChild(document.createTextNode(choice.name))
@@ -59,3 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   reset.type = 'reset'
   reset.appendChild(document.createTextNode('Reset'))
 })
+
+function onChange (event) {
+  console.log(event)
+}
