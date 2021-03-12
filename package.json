@@ -2,13 +2,19 @@
   "private": true,
   "devDependencies": {
     "ajv": "^7.2.1",
+    "commonform-commonmark": "^6.0.0",
+    "commonform-docx": "^5.4.0",
     "esbuild": "^0.9.0",
-    "js-yaml": "^4.0.0"
+    "file-saver": "^2.0.5",
+    "js-yaml": "^4.0.0",
+    "mustache": "^4.1.0",
+    "outline-numbering": "^2.0.0"
   },
   "scripts": {
-    "build": "npm run build:prompts ; npm run build:bundle",
+    "build": "npm run build:prompts ; npm run build:template ; npm run build:bundle",
     "build:bundle": "esbuild index.js --bundle --sourcemap --outfile=bundle.js",
     "build:prompts": "echo 'module.exports = ' >> prompts.js ; js-yaml < prompts.yml >> prompts.js",
+    "build:template": "echo 'module.exports = `' >> template.js ; cat template.md >> template.js ; echo '`' >> template.js",
     "test": "npm run build:prompts && node test.js"
   }
 }

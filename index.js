@@ -1,4 +1,11 @@
+import commonmark from 'commonform-commonmark'
+import docx from 'commonform-docx'
+import fileSaver from 'file-saver'
+import mustache from 'mustache'
+import outline from 'outline-numbering'
+
 import prompts from './prompts.js'
+import template from './template.js'
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
@@ -73,7 +80,22 @@ document.addEventListener('DOMContentLoaded', () => {
   submit.appendChild(document.createTextNode('Generate'))
   form.onsubmit = event => {
     event.preventDefault()
-    window.alert('TODO')
+    updateSelectionsGlobal()
+    const view = {}
+    for (const [key, value] of selections) {
+      view[`${key}=${value}`] = true
+    }
+    const markdown = mustache.render(template, view)
+    const parsed = commonmark.mark(markdown)
+    const options = {
+      title: 'PolyForm License Agreement',
+      numbering: outline
+    }
+    docx(parsed.form, [], options)
+      .generateAsync({ type: 'blob' })
+      .then(blob => {
+        fileSaver.saveAs(blob, 'License Agreement.docx', true)
+      })
   }
 
   const reset = document.createElement('button')
