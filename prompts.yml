@@ -133,15 +133,15 @@
       name: Basic Support
       notes:
         - no additional fee
-        - no SLAs
+        - no service-level agreements
         - e-mail only
         - business hours
     - id: full
       name: Full Support
       notes:
         - additional fee
-        - availability SLAs
-        - response-time SLAs
+        - availability service-level agreements
+        - response-time service-level agreements
 
 - id: warranty
   name: Quality Warranty
