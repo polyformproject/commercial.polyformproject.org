@@ -4,7 +4,7 @@ import fileSaver from 'file-saver'
 import mustache from 'mustache'
 import outline from 'outline-numbering'
 
-import prompts from './prompts.js'
+import prompts from './prompts.json'
 import template from './template.md'
 
 const selections = {/* promptID -> null | choiceID */}
