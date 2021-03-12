@@ -1,6 +1,6 @@
 This is the form!
 
-{{#model=single}}{{/model=single}}
+{{#model=trial}}{{/model=trial}}
 {{#model=unlimited}}{{/model=unlimited}}
 {{#model=seats}}{{/model=seats}}
 {{#model=metered}}{{/model=metered}}
@@ -9,6 +9,7 @@ This is the form!
 {{#expansion=list}}{{/expansion=list}}
 {{#expansion=quoted}}{{/expansion=quoted}}
 {{#expansion=usage}}{{/expansion=usage}}
+{{#expansion=negotiate}}{{/expansion=negotiate}}
 
 {{#reporting=phone}}{{/reporting=phone}}
 {{#reporting=self}}{{/reporting=self}}
