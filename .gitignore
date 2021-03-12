@@ -3,3 +3,4 @@ client.js
 bundle.js
 bundle.map.js
 template.js
+*.gz

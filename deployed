@@ -1,4 +1,5 @@
 index.html
 styles.css
 bundle.js
+bundle.js.gz
 bundle.map.js
