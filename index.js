@@ -8,33 +8,45 @@ const requirements = {/* promptID -> [required] */}
 
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main')
+
   const form = document.createElement('form')
   main.appendChild(form)
+
   prompts.forEach(prompt => {
     const promptID = prompt.id
     promptIDs.push(promptID)
     inputs[promptID] = []
     const hasRequired = Array.isArray(prompt.requires)
     if (hasRequired) requirements[promptID] = prompt.requires
+
     const set = document.createElement('fieldset')
     form.appendChild(set)
     fieldsets[promptID] = set
     if (hasRequired) set.className = 'hidden'
+
     const legend = document.createElement('legend')
     set.appendChild(legend)
     legend.appendChild(document.createTextNode(prompt.name))
+
     const description = document.createElement('p')
     description.className = 'description'
     description.appendChild(document.createTextNode(prompt.description))
     set.appendChild(description)
+
+    // Compute attributes common to all prompt inputs.
     const inputType = prompt.choice === 'single' ? 'radio' : 'checkbox'
     const required = prompt.choice === 'single' && hasRequired
     const disabled = hasRequired
+
     prompt.choices.forEach(choice => {
+      // Skip choices scheduled for later versions.
       if (choice.version > 1) return
+
       const choiceID = choice.id
+
       const label = document.createElement('label')
       set.appendChild(label)
+
       const input = document.createElement('input')
       input.dataset.prompt = promptID
       input.dataset.choice = choiceID
@@ -43,17 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
       input.value = choiceID
       input.requred = required ? 'true' : null
       input.disabled = disabled ? 'true' : null
-      input.onchange = onChange
+      input.onchange = onInputChange
       label.appendChild(input)
       label.appendChild(document.createTextNode(choice.name))
       inputs[promptID].push(input)
-      // Notes
+
       if (Array.isArray(choice.notes)) {
         label.appendChild(document.createTextNode(' — '))
         label.appendChild(document.createTextNode(choice.notes.join(', ')))
       }
     })
   })
+
   const submit = document.createElement('button')
   form.appendChild(submit)
   submit.type = 'submit'
@@ -62,18 +75,19 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault()
     window.alert('TODO')
   }
+
   const reset = document.createElement('button')
   form.appendChild(reset)
   reset.type = 'reset'
   reset.appendChild(document.createTextNode('Reset'))
 })
 
-function onChange (event) {
-  compileSelections()
-  enablePrompts()
+function onInputChange (event) {
+  updateSelectionsGlobal()
+  applyPromptRequirements()
 }
 
-function compileSelections () {
+function updateSelectionsGlobal () {
   promptIDs.forEach(promptID => {
     selections[promptID] = null
     const elements = inputs[promptID]
@@ -94,7 +108,7 @@ function compileSelections () {
   })
 }
 
-function enablePrompts () {
+function applyPromptRequirements () {
   Object.keys(requirements).forEach(promptID => {
     const required = requirements[promptID]
     const met = required.some(predicate => {
