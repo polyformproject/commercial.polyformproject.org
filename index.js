@@ -1,11 +1,11 @@
-import commonmark from 'commonform-commonmark'
-import docx from 'commonform-docx'
-import fileSaver from 'file-saver'
-import mustache from 'mustache'
-import outline from 'outline-numbering'
+const commonmark = require('commonform-commonmark')
+const docx = require('commonform-docx')
+const fileSaver = require('file-saver')
+const mustache = require('mustache')
+const outline = require('outline-numbering')
 
-import prompts from './prompts.json'
-import template from './template.md'
+const prompts = require('./prompts.json')
+const template = require('./template.js')
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
