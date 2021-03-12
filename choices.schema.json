@@ -1,0 +1,70 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z]+$"
+      },
+      "name": {
+        "type": "string"
+      },
+      "requires": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z]+$": {
+              "type": "string",
+              "pattern": "^[a-z]+$"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "choice": {
+        "enum": [
+          "single",
+          "multiple"
+        ]
+      },
+      "choices": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z]+$"
+            },
+            "name": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "version": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "id",
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "choice",
+      "choices"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "devDependencies": {
+    "ajv": "^7.2.1",
+    "js-yaml": "^4.0.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}
