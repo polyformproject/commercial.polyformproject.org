@@ -70,6 +70,22 @@ const examples = {
     law: 'vendor',
     venue: 'vendor',
     disputes: 'litigation'
+  },
+  heavy: {
+    model: 'seats',
+    expansion: 'list',
+    reporting: 'audit',
+    term: 'renewing',
+    delivery: 'both',
+    modification: 'yes',
+    escrow: 'yes',
+    maintenance: 'term',
+    support: 'full',
+    warranty: 'term',
+    patent: 'all',
+    law: 'california',
+    venue: 'vendor',
+    disputes: 'aaa'
   }
 }
 
@@ -91,13 +107,13 @@ tape('valid examples', test => {
   test.end()
 })
 
-tape('terms builds', testBuilds(terms))
-tape('order builds', testBuilds(order))
+tape('terms renders', testRenders(terms))
+tape('order renders', testRenders(order))
 
-function testBuilds (template) {
+function testRenders (template) {
   return test => {
     for (const name in examples) {
-      test.test(`build example "${name}"`, test => {
+      test.test(`render example "${name}"`, test => {
         const example = examples[name]
         const view = {}
         for (const promptID in example) {
