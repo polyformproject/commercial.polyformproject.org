@@ -12,6 +12,12 @@ const order = require('./order.json')
 const signatures = require('./signatures.json')
 
 const version = 'Development Draft'
+const metaLicense = `
+<h2>Permission</h2>
+<p>Each contributor licenses you to do everything with PolyForm licenses that would otherwise infringe that contributor’s copyright in it.</p>
+<p>If you make changes to a PolyForm license, you must remove all mention of “PolyForm” and polyformproject.org, as well.</p>
+<p class=conspicuous>As far as the law allows, PolyForm licenses come as is, without any warranty at all, and no contributor will be liable to anyone for any damages related to the licenses or their use, for any kind of legal claim.</p>
+`
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
@@ -20,12 +26,14 @@ const inputs = {/* promptID -> [input] */}
 let submit
 
 document.addEventListener('DOMContentLoaded', () => {
-  const main = document.querySelector('main')
+  const header = document.querySelector('header')
 
   const versionLine = document.createElement('p')
-  main.appendChild(versionLine)
-  versionLine.className = 'verison'
+  header.appendChild(versionLine)
+  versionLine.className = 'version'
   versionLine.appendChild(document.createTextNode(version))
+
+  const main = document.querySelector('main')
 
   const form = document.createElement('form')
   main.appendChild(form)
@@ -115,6 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
   reset.appendChild(document.createTextNode('Reset'))
 
   applyPromptRequirements()
+
+  const license = document.createElement('section')
+  license.innerHTML = metaLicense
+  main.appendChild(license)
 })
 
 function renderTemplate (template, view, title, signatures) {

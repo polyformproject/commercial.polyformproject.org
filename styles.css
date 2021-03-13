@@ -18,6 +18,10 @@ header[role=banner] h1 {
   margin-top: 0;
 }
 
+.version {
+  color: #777;
+}
+
 fieldset {
   margin: 1rem 0;
 }
@@ -58,5 +62,11 @@ button[type=reset] {
 
 footer[role=contentinfo] {
   font-size: 85%;
+  margin-bottom: 5rem;
   text-align: right;
+}
+
+.conspicuous {
+  font-style: italic;
+  font-weight: bold;
 }
