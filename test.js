@@ -1,54 +1,54 @@
 const AJV = require('ajv').default
+const listVars = require('mustache-vars')
+const tape = require('tape')
+const terms = require('fs').readFileSync('./terms.md', 'utf8')
+const order = require('fs').readFileSync('./order.md', 'utf8')
 
-let ok = true
-
-const ajv = new AJV({ allErrors: true })
 const schema = require('./prompts.schema.json')
-const validate = ajv.compile(schema)
 const data = require('./prompts.json')
 
-const valid = validate(data)
-if (!valid) {
-  console.error(validate.errors)
-  ok = false
-}
+tape('prompts conform to schema', test => {
+  const ajv = new AJV({ allErrors: true })
+  const validate = ajv.compile(schema)
+  validate(data)
+  test.same(validate.errors, null)
+  test.end()
+})
 
-const listVars = require('mustache-vars')
+tape('templating', test => {
+  function vars (input) {
+    return listVars(input).map(e => e.split('\t').reverse()[0])
+  }
+  const usedInTerms = vars(terms)
+  const usedInOrder = vars(order)
+  const possible = []
 
-const terms = require('fs').readFileSync('./terms.md', 'utf8')
-const usedInTerms = listVars(terms)
-
-const order = require('fs').readFileSync('./order.md', 'utf8')
-const usedInOrder = listVars(order)
-
-const possible = []
-data.forEach(prompt => {
-  const promptID = prompt.id
-  prompt.choices.forEach(choice => {
-    if (choice.version > 1) return
-    const choiceID = choice.id
-    possible.push(`${promptID}=${choiceID}`)
+  data.forEach(prompt => {
+    const promptID = prompt.id
+    prompt.choices.forEach(choice => {
+      if (choice.version > 1) return
+      const choiceID = choice.id
+      possible.push(`${promptID}=${choiceID}`)
+    })
   })
-})
-possible.forEach(expected => {
-  if (!usedInTerms.includes(expected)) {
-    console.error(`In Prompts, Not in Terms: ${expected}`)
-    ok = false
-  }
-})
 
-usedInTerms.forEach(expected => {
-  if (!possible.includes(expected)) {
-    console.error(`In Terms, Not in Prompts: ${expected}`)
-    ok = false
-  }
-})
+  possible.forEach(expected => {
+    if (!usedInTerms.includes(expected)) {
+      test.fail(`In Prompts, Not in Terms: ${expected}`)
+    }
+  })
 
-usedInOrder.forEach(expected => {
-  if (!possible.includes(expected)) {
-    console.error(`In Order, Not in Prompts: ${expected}`)
-    ok = false
-  }
-})
+  usedInTerms.forEach(expected => {
+    if (!possible.includes(expected)) {
+      test.fail(`In Terms, Not in Prompts: ${expected}`)
+    }
+  })
 
-process.exit(ok ? 0 : 1)
+  usedInOrder.forEach(expected => {
+    if (!possible.includes(expected)) {
+      test.fail(`In Order, Not in Prompts: ${expected}`)
+    }
+  })
+
+  test.end()
+})
