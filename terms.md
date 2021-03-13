@@ -12,13 +12,13 @@ The customer can increase the limits on its use of the software by paying for ad
 {{#expansion=quoted}}
 # Higher Limits
 
-The customer can increase the limits on its use of the software by paying for additional usage according to the pricing on the ordering document.
+The customer can increase the limits on its use of the software by paying for additional usage according to the pricing on the order.
 {{/expansion=quoted}}
 
 {{#expansion=usage}}
 # Overage
 
-If the customer exceeds the limits on its use of the software, the customer agrees to pay additional charges for its usage according to the pricing on the ordering document.
+If the customer exceeds the limits on its use of the software, the customer agrees to pay additional charges for its usage according to the pricing on the order.
 {{/expansion=usage}}
 
 {{#expansion=negotiate}}
@@ -139,11 +139,11 @@ The parties do not agree to use any software escrow service for the source code 
 # Maintenance
 
 {{#maintenance=version}}
-This agreement covers only the specific version of the software on the ordering document.
+This agreement covers only the specific version of the software on the order.
 {{/maintenance=version}}
 
 {{#maintenance=term}}
-This agreement covers the specific version of the software on the ordering document, plus any new versions of the software that the vendor makes generally available to customers, or specifically provides to the customer, while this agreement continues.  The vendor agrees to make new version of the software fixing bugs and addressing other technical issues identified by its staff and pointed out by customers.
+This agreement covers the specific version of the software on the order, plus any new versions of the software that the vendor makes generally available to customers, or specifically provides to the customer, while this agreement continues.  The vendor agrees to make new version of the software fixing bugs and addressing other technical issues identified by its staff and pointed out by customers.
 {{/maintenance=term}}
 
 {{#support=none}}
@@ -161,14 +161,14 @@ During its regular business hours, the vendor agrees to respond to e-mail suppor
 {{#support=full}}
 # Full Technical Support
 
-- The vendor agrees to respond to support requests from customer personnel, by phone and through its support portal, about configuration of, use of, and problems with the software and its documentation.  The vendor will respond to support requests every hour of every day of the year, according to the service levels on the ordering document.
+- The vendor agrees to respond to support requests from customer personnel, by phone and through its support portal, about configuration of, use of, and problems with the software and its documentation.  The vendor will respond to support requests every hour of every day of the year, according to the service levels on the order.
 
 - If the vendor fails to meet its support service-level agreements for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
 {{/support=full}}
 
 # Warranty
 
-The vendor guarantees that the software will perform as described in its documentation {{#warranty=period}}during the warranty period on the ordering document{{/warranty=period}}{{#warranty=term}}while this agreement continues{{/warranty=term}}.
+The vendor guarantees that the software will perform as described in its documentation {{#warranty=period}}during the warranty period on the order{{/warranty=period}}{{#warranty=term}}while this agreement continues{{/warranty=term}}.
 
 # Disclaimer
 
@@ -236,7 +236,7 @@ Both sides agree to bring any lawsuits related to this agreement in courts in {{
 
 # Only Terms
 
-Both sides intend the terms of this agreement, together with the ordering document, as the final, complete, and only expression of their agreement about the software.
+Both sides intend the terms of this agreement, together with the order, as the final, complete, and only expression of their agreement about the software.
 
 # Unenforceable Terms
 
