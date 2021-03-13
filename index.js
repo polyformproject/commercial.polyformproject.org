@@ -167,4 +167,6 @@ function applyPromptRequirements () {
       })
     }
   })
+  const complete = promptIDs.every(promptID => selections[promptID])
+  submit.disabled = !complete
 }
