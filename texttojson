@@ -5,4 +5,4 @@ const path = require('path')
 const file = process.argv[2]
 
 const input = fs.readFileSync(file, 'utf8')
-fs.writeFileSync(path.basename(file, '.md') + '.json', input)
+fs.writeFileSync(path.basename(file, '.md') + '.json', JSON.stringify(input))
