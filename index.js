@@ -115,7 +115,16 @@ function renderTemplate (template, view, title, signatures) {
   const parsed = commonmark.parse(markdown)
   const options = {
     title,
-    numbering: outline
+    edition: 'Development Draft',
+    numbering: outline,
+    leftAlignBody: true,
+    indentMargins: true,
+    smartify: true,
+    styles: {
+      heading: { italic: true },
+      reference: { italic: true },
+      referenceHeading: { italic: true }
+    }
   }
   if (signatures) options.after = ooxmlSignaturePages(signatures)
   return docx(parsed.form, [], options).generateAsync({ type: 'blob' })
