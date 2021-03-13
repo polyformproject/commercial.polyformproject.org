@@ -1,7 +1,26 @@
-{{#model=trial}}{{/model=trial}}
-{{#model=unlimited}}{{/model=unlimited}}
-{{#model=seats}}{{/model=seats}}
-{{#model=metered}}{{/model=metered}}
+{{#model=trial}}
+# Trial License
+
+TODO
+{{/model=trial}}
+
+{{#model=unlimited}}
+# Unlimited License
+
+TODO
+{{/model=unlimited}}
+
+{{#model=seats}}
+# Seat License
+
+TODO
+{{/model=seats}}
+
+{{#model=metered}}
+# Metered License
+
+TODO
+{{/model=metered}}
 
 {{#expansion=list}}
 # Higher Limits
