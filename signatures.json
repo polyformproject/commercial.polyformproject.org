@@ -1,0 +1,20 @@
+[
+  {
+    "header": "The parties are signing this agreement on the dates by their signatures.",
+    "term": "Seller",
+    "information": [
+      "date",
+      "email",
+      "address"
+    ]
+  },
+  {
+    "header": "The parties are signing this agreement on the dates by their signatures.",
+    "term": "Customer",
+    "information": [
+      "date",
+      "email",
+      "address"
+    ]
+  }
+]

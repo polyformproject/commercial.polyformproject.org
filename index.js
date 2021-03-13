@@ -3,11 +3,13 @@ const commonmark = require('commonform-commonmark')
 const docx = require('commonform-docx')
 const fileSaver = require('file-saver')
 const mustache = require('mustache')
+const ooxmlSignaturePages = require('ooxml-signature-pages')
 const outline = require('outline-numbering')
 
 const prompts = require('./prompts.json')
 const terms = require('./terms.js')
 const order = require('./order.js')
+const signatures = require('./signatures.json')
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
@@ -86,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       view[`${key}=${value}`] = true
     })
     Promise.all([
-      renderTemplate(order, view, 'PolyForm Software License Order'),
+      renderTemplate(order, view, 'PolyForm Software License Order', signatures),
       renderTemplate(terms, view, 'PolyForm Software License Terms')
     ])
       .then(files => {
@@ -108,13 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
   applyPromptRequirements()
 })
 
-function renderTemplate (template, view, title) {
+function renderTemplate (template, view, title, signatures) {
   const markdown = mustache.render(template, view)
   const parsed = commonmark.parse(markdown)
   const options = {
     title,
     numbering: outline
   }
+  if (signatures) options.after = ooxmlSignaturePages(signatures)
   return docx(parsed.form, [], options).generateAsync({ type: 'blob' })
 }
 
