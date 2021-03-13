@@ -23,8 +23,8 @@
     "build:bundle": "browserify -d index.js | exorcist bundle.map.js > bundle.js ; du -h bundle.js",
     "build:compressed": "gzip -k -f bundle.js ; du -h bundle.js.gz",
     "build:prompts": "js-yaml < prompts.yml > prompts.json",
-    "build:terms": "./texttojson < terms.md > terms.json",
-    "build:order": "./texttojson < order.md > order.json",
+    "build:terms": "./texttojson terms.md",
+    "build:order": "./texttojson order.md",
     "test": "npm run build:prompts && node test.js"
   }
 }
