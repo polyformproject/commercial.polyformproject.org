@@ -20,9 +20,6 @@ This is the form!
 {{#term=renewing}}{{/term=renewing}}
 {{#term=month}}{{/term=month}}
 
-{{#usage=service}}{{/usage=service}}
-{{#usage=redistribution}}{{/usage=redistribution}}
-
 {{#delivery=binary}}{{/delivery=binary}}
 {{#delivery=source}}{{/delivery=source}}
 {{#delivery=both}}{{/delivery=both}}

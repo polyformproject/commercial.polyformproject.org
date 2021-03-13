@@ -14,6 +14,7 @@ const promptIDs = [/* promptID */]
 const fieldsets = {/* promptID => fieldset */}
 const inputs = {/* promptID -> [input] */}
 const requirements = {/* promptID -> [required] */}
+let submit
 
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main')
@@ -74,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  const submit = document.createElement('button')
+  submit = document.createElement('button')
   form.appendChild(submit)
   submit.type = 'submit'
   submit.appendChild(document.createTextNode('Generate'))

@@ -27,10 +27,7 @@
         }
       },
       "choice": {
-        "enum": [
-          "single",
-          "multiple"
-        ]
+        "const": "single"
       },
       "choices": {
         "type": "array",

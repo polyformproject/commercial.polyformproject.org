@@ -83,15 +83,15 @@
     - id: month
       name: Month to Month
 
-- id: usage
-  name: Usage
-  description: Can the customer use the software for more than internal business?
-  choice: multiple
-  choices:
-    - id: service
-      name: External Services
-    - id: redistribution
-      name: Redistribution
+#- id: usage
+#  name: Usage
+#  description: Can the customer use the software for more than internal business?
+#  choice: multiple
+#  choices:
+#    - id: service
+#      name: External Services
+#    - id: redistribution
+#      name: Redistribution
 
 - id: delivery
   name: Delivery
