@@ -164,6 +164,12 @@
 - id: warranty
   name: Quality Warranty
   description: Will the seller give a promise about the quality of the software?
+  requires:
+    - model: unlimited
+    - model: seats
+    - model: metered
+    - model: cpu
+    - model: site
   choice: single
   choices:
     - id: period

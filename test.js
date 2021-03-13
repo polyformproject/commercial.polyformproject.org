@@ -67,7 +67,6 @@ const examples = {
     escrow: 'no',
     maintenance: 'version',
     support: 'none',
-    warranty: 'term',
     patent: 'none',
     law: 'vendor',
     venue: 'vendor',
