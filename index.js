@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
       view[`${key}=${value}`] = true
     })
     Promise.all([
-      renderTemplate(order, view, 'PolyForm Software License Order', signatures),
-      renderTemplate(terms, view, 'PolyForm Software License Terms')
+      renderTemplate(order, view, 'PolyForm Commercial Software License Order', signatures),
+      renderTemplate(terms, view, 'PolyForm Commercial Software License Terms')
     ])
       .then(files => {
         const zip = new JSZip()
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         zip.file('terms.docx', files[1])
         zip.generateAsync({ type: 'blob' })
           .then(blob => {
-            fileSaver.saveAs(blob, 'PolyForm Software License Packet.zip', true)
+            fileSaver.saveAs(blob, 'PolyForm Commercial Packet.zip', true)
           })
       })
   }
