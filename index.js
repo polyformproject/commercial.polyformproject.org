@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   submit = document.createElement('button')
   form.appendChild(submit)
   submit.type = 'submit'
-  submit.appendChild(document.createTextNode('Generate'))
+  submit.appendChild(document.createTextNode('Download ZIP Archive'))
   form.onsubmit = event => {
     event.preventDefault()
     updateSelectionsGlobal()
