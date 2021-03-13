@@ -66,6 +66,12 @@
 - id: term
   name: Term
   description: How long will the license last?
+  requires:
+    - model: unlimited
+    - model: seats
+    - model: metered
+    - model: cpu
+    - model: site
   choice: single
   choices:
     - id: perpetual
