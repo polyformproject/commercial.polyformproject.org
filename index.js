@@ -22,10 +22,10 @@ let submit
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main')
 
-  const version = document.createElement('p')
-  main.appendChild(version)
-  version.className = 'verison'
-  version.appendChild(document.createTextNode(version))
+  const versionLine = document.createElement('p')
+  main.appendChild(versionLine)
+  versionLine.className = 'verison'
+  versionLine.appendChild(document.createTextNode(version))
 
   const form = document.createElement('form')
   main.appendChild(form)
