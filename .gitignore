@@ -2,6 +2,6 @@ prompts.json
 client.js
 bundle.js
 bundle.map.js
-terms.js
-order.js
+terms.json
+order.json
 *.gz

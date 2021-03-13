@@ -7,8 +7,8 @@ const ooxmlSignaturePages = require('ooxml-signature-pages')
 const outline = require('outline-numbering')
 
 const prompts = require('./prompts.json')
-const terms = require('./terms.js')
-const order = require('./order.js')
+const terms = require('./terms.json')
+const order = require('./order.json')
 const signatures = require('./signatures.json')
 
 const selections = {/* promptID -> null | choiceID */}
