@@ -13,7 +13,6 @@ const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
 const fieldsets = {/* promptID => fieldset */}
 const inputs = {/* promptID -> [input] */}
-const requirements = {/* promptID -> [required] */}
 let submit
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     promptIDs.push(promptID)
     inputs[promptID] = []
     const hasRequired = Array.isArray(prompt.requires)
-    if (hasRequired) requirements[promptID] = prompt.requires
 
     const set = document.createElement('fieldset')
     form.appendChild(set)
@@ -147,14 +145,21 @@ function updateSelectionsGlobal () {
 }
 
 function applyPromptRequirements () {
-  Object.keys(requirements).forEach(promptID => {
-    const required = requirements[promptID]
+  const requiredPromptIDs = []
+  prompts.forEach(prompt => {
+    const promptID = prompt.id
+    const required = prompt.requires
+    if (!Array.isArray(required)) {
+      requiredPromptIDs.push(promptID)
+      return
+    }
     const met = required.some(predicate => {
       const requiredPromptID = Object.keys(predicate)[0]
       const requiredChoiceID = Object.values(predicate)[0]
       return selections[requiredPromptID] === requiredChoiceID
     })
     if (met) {
+      requiredPromptIDs.push(promptID)
       fieldsets[promptID].className = ''
       inputs[promptID].forEach(input => {
         input.disabled = ''
@@ -167,4 +172,6 @@ function applyPromptRequirements () {
       })
     }
   })
+  const complete = requiredPromptIDs.every(promptID => selections[promptID])
+  submit.disabled = !complete
 }
