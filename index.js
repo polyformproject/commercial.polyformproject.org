@@ -11,6 +11,8 @@ const terms = require('./terms.json')
 const order = require('./order.json')
 const signatures = require('./signatures.json')
 
+const version = 'Development Draft'
+
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
 const fieldsets = {/* promptID => fieldset */}
@@ -19,6 +21,11 @@ let submit
 
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main')
+
+  const version = document.createElement('p')
+  main.appendChild(version)
+  version.className = 'verison'
+  version.appendChild(document.createTextNode(version))
 
   const form = document.createElement('form')
   main.appendChild(form)
@@ -115,7 +122,7 @@ function renderTemplate (template, view, title, signatures) {
   const parsed = commonmark.parse(markdown)
   const options = {
     title,
-    edition: 'Development Draft',
+    edition: version,
     numbering: outline,
     leftAlignBody: true,
     indentMargins: true,
