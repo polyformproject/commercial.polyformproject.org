@@ -47,3 +47,8 @@ button[type=reset] {
 .hidden {
   display: none;
 }
+
+footer[role=contentinfo] {
+  font-size: 85%;
+  text-align: right;
+}
