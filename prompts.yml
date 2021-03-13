@@ -1,3 +1,4 @@
+# This YAML data file lists all the questions and answers users can choose to generate license packets.
 - id: model
   name: License Model
   description: Licenses are priced and sold in different ways.  These affect how fees get calculated, as well as other terms.

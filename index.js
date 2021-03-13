@@ -1,3 +1,4 @@
+/* This is the root JavaScript file for client-side scripts. */
 const JSZip = require('jszip')
 const commonmark = require('commonform-commonmark')
 const docx = require('commonform-docx')
