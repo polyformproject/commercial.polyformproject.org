@@ -36,11 +36,13 @@ tape('templating', test => {
     })
   })
 
+  /*
   possible.forEach(expected => {
     if (!usedInTerms.includes(expected)) {
       test.fail(`In Prompts, Not in Terms: ${expected}`)
     }
   })
+  */
 
   usedInTerms.forEach(expected => {
     if (!possible.includes(expected)) {
