@@ -1,8 +1,7 @@
-node_modules
-prompts.json
-client.js
+*.gz
 bundle.js
 bundle.map.js
-terms.json
+node_modules
 order.json
-*.gz
+prompts.json
+terms.json
