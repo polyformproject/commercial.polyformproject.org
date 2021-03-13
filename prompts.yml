@@ -98,12 +98,12 @@
   description: Will the customer get source code, a compiled version, or both?
   choice: single
   choices:
-    - id: binary
-      name: Binary Only
+    - id: compiled
+      name: Compiled Only
     - id: source
       name: Source Only
     - id: both
-      name: Source and Binary
+      name: Source and Compiled
 
 - id: modification
   name: Modification Rights
@@ -224,7 +224,9 @@
       name: Executives Meet Before Litigation
     - id: mediation
       name: Mediation Before Litigation
-    - id: jams
-      name: JAMS Arbitration
+    - id: jamsdomestic
+      name: JAMS Arbitration, Under Domestic Rules
+    - id: jamsinternational
+      name: JAMS Arbitration, Under International Rules
     - id: aaa
       name: AAA Arbitration
