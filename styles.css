@@ -10,6 +10,14 @@ footer[role=contentinfo] {
   max-width: 33rem;
 }
 
+#logo img {
+  max-width: 50%;
+}
+
+header[role=banner] h1 {
+  margin-top: 0;
+}
+
 fieldset {
   margin: 1rem 0;
 }

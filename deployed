@@ -1,6 +1,7 @@
-index.html
-styles.css
 bundle.js
 bundle.js.gz
 bundle.map.js
+index.html
+logo.png
 robots.txt
+styles.css
