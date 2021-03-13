@@ -5,12 +5,22 @@
   choices:
     - id: trial
       name: Trial
+      notes:
+        - evaluation use only
+        - time stated on the ordering document
+        - no warranties
     - id: unlimited
       name: Unlimited
     - id: seats
       name: Seats
+      notes:
+        - maximum number of users
+        - stated on the ordering document
     - id: metered
       name: Metered
+      notes:
+        - transaction, storage volume or other technical limit
+        - stated on the ordering document
     - id: cpu
       name: CPU
       version: 2
