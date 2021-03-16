@@ -1,6 +1,6 @@
-# Order Form
+# Order
 
-These terms, together with the **Order Form** referencing them, make up a software license agreement. **Vendor** and **Customer** are identified on the _Order Form_.
+These terms, together with the order referencing them, make up a software license agreement.
 
 <!-- License Model -->
 
@@ -74,6 +74,24 @@ The customer agrees to track and accurately report its usage of the software to 
 The vendor may audit the customer's usage of the software to confirm that the customer has remained within the limits of this agreement.  The customer agrees to cooperate with audits and the vendor's auditors during regular business hours.  The vendor agrees to cooperate with the customer to minimize the disruption to the customer's business from the audit.  The customer agrees to promptly pay the vendor's costs of performing an audit if the audit reveals that the customer has exceeded the limits on their use under this agreement.
 {{/reporting=audit}}
 
+<!-- Payment -->
+
+# Payment
+
+The customer agrees to pay the fees on the order.  The customer's obligation to pay fees already due continues after this agreement ends.
+
+# Billing
+
+The vendor agrees to bill the customer as described on the order.
+
+# Method
+
+The customer agrees to pay using the method on the order.
+
+# Tax
+
+The customer agrees to pay all tax on fees under this agreement, except tax the dveloper owes on income.
+
 <!-- Term -->
 
 # License Term
@@ -139,7 +157,7 @@ either by e-mail or by making it available for download online, without any addi
 
 # License Keys
 
-If the software requires a license key, the vendor agrees to give the customer a set of license keys by e-mail within three calendar days of entering this agreement.  The vendor agrees to send new or replacement license keys to the customer in the same way on request.
+If the software requires a license key, the vendor agrees to give the customer a set of license keys by e-mail within three calendar days of entering this agreement.  The vendor agrees to send new or replacement license keys to the customer in the same way on request.  If the customer receives license keys, the customer agrees to share them only as needed to make use of the software consistent with the terms of this agreement, and to secure them at least as well as the customer's own confidential business information.
 
 # Software Dependencies
 
@@ -251,13 +269,21 @@ Subject to [Indemnification Process](#indemnification-process), the vendor agree
 
 Throughout this agreement, to "indemnify" for claims means to indemnify, defend, and holding harmless for all liability, expenses, damages, and costs from those claims.
 
-# Notice of Infringement Claims
+# Notice of Claims
 
 The developer agrees to give the customer prompt notice of any claim that the software infringes intellectual property.
 
-# Response to Infringement Claims
+# Response to Claims
 
-TODO: procure, modify, replace, terminate
+The developer may take any of these steps in response to a claim that the software infringes intellectual property rights or breaks the law:
+
+- The developer may send the customer a new version of the software that the customer can use, consistent with the terms of this agreement, without infringing or breaking the law.
+
+- If the problem is infringement, the developer may get a license for the customer so that use of the software consistent with this agreement will no longer infringe.
+
+- If the problem is illegality, the developer may get the government approvals, licenses, or other requirements needed to abide by the law.
+
+- The developer may refund any fees the customer has paid for time not yet elapsed and end this agreement by giving the customer notice.
 
 # Indemnification Process
 
@@ -306,6 +332,10 @@ If the vendor licenses any part of the software to the public for free under dif
 The vendor only grants the customer the licenses explicitly stated in this agreement.
 
 <!-- General Contract Terms -->
+
+# Notices
+
+Both sides agree that to give notice under this agreement, the side giving notice has to send by e-mail to the address the recipient gave with its signature, or to a different address given later for notices going forward.  If either side finds that e-mail can't be delivered to the e-mail address given, it may give notice by registered mail to the address on file for the recipient with the state under whose laws it is organized.
 
 # Governing Law
 

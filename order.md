@@ -6,7 +6,7 @@ The software is `Software Name`, `Software Description`.
 
 The version of the software being licensed is `Software Version`.
 
-# Pricing
+# Fees
 
 {{#expansion=quoted}}
 # Expansion Pricing
@@ -19,6 +19,14 @@ The customer can pay for higher limits on use at these prices: `Expansion Prices
 
 `Usage-Based Prices`
 {{/expansion=usage}}
+
+# Billing
+
+`Billing`
+
+# Payment Method
+
+`Payment Method`
 
 {{#warranty=period}}
 # Warranty Period
