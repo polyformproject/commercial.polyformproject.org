@@ -74,57 +74,6 @@ The customer agrees to track and accurately report its usage of the software to 
 The vendor may audit the customer's usage of the software to confirm that the customer has remained within the limits of this agreement.  The customer agrees to cooperate with audits and the vendor's auditors during regular business hours.  The vendor agrees to cooperate with the customer to minimize the disruption to the customer's business from the audit.  The customer agrees to promptly pay the vendor's costs of performing an audit if the audit reveals that the customer has exceeded the limits on their use under this agreement.
 {{/reporting=audit}}
 
-<!-- Payment -->
-
-# Payment
-
-The customer agrees to pay the fees on the order.  The customer's obligation to pay fees already due continues after this agreement ends.
-
-# Billing
-
-The vendor agrees to bill the customer as described on the order.
-
-# Method
-
-The customer agrees to pay using the method on the order.
-
-# Tax
-
-The customer agrees to pay all tax on fees under this agreement, except tax the developer owes on income.
-
-<!-- Term -->
-
-# License Term
-
-The customer's license continues as long as this agreement does.
-
-{{#term=perpetual}}
-# Perpetual
-
-This agreement continues until one side or the other ends it.
-{{/term=perpetual}}
-
-{{#term=year}}
-# Fixed Term
-
-This agreement will continue for one year.
-{{/term=year}}
-
-{{#term=renewing}}{{/term=renewing}}
-# Term and Renewal
-
-This agreement will continue for one year, and then renew automatically for additional year-long terms.  Either side can stop this agreement from renewing automatically by giving the other side notice at least sixty calendar days before it would otherwise renew.
-
-{{#term=month}}
-# Month-to-Month
-
-This agreement continues month-by-month, until one side gives the other notice that it will end after the next month-long period ends.
-{{/term=month}}
-
-# Termination
-
-Either side can terminate this agreement immediately if the other side breaches and fails to cure their breach within fourteen calendar days of notice.
-
 {{#modification=yes}}
 # Modification
 
@@ -136,6 +85,57 @@ The customer may make changes to the software's source code, compile those chang
 
 The customer may not make changes to the software's source code.
 {{/modification=no}}
+
+# Payment
+
+## Fees
+
+The customer agrees to pay the fees on the order.  The customer's obligation to pay fees already due continues after this agreement ends.
+
+## Billing
+
+The vendor agrees to bill the customer as described on the order.
+
+## Payment Method
+
+The customer agrees to pay using the method on the order.
+
+## Tax
+
+The customer agrees to pay all tax on fees under this agreement, except tax the developer owes on income.
+
+# Term
+
+## Term of License
+
+The customer's license continues as long as this agreement does.
+
+{{#term=perpetual}}
+## Perpetual Term
+
+This agreement continues until one side or the other ends it.
+{{/term=perpetual}}
+
+{{#term=year}}
+## Fixed Term
+
+This agreement will continue for one year.
+{{/term=year}}
+
+{{#term=renewing}}{{/term=renewing}}
+## Term and Renewal
+
+This agreement will continue for one year, and then renew automatically for additional year-long terms.  Either side can stop this agreement from renewing automatically by giving the other side notice at least sixty calendar days before it would otherwise renew.
+
+{{#term=month}}
+## Month-to-Month
+
+This agreement continues month-by-month, until one side gives the other notice that it will end after the next month-long period ends.
+{{/term=month}}
+
+## Termination
+
+Either side can terminate this agreement immediately if the other side breaches and fails to cure their breach within fourteen calendar days of notice.
 
 # Delivery
 
