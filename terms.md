@@ -331,13 +331,13 @@ If the vendor licenses any part of the software to the public for free under dif
 
 The vendor only grants the customer the licenses explicitly stated in this agreement.
 
-<!-- General Contract Terms -->
+# General
 
-# Notices
+## Notices
 
 Both sides agree that to give notice under this agreement, the side giving notice has to send by e-mail to the address the recipient gave with its signature, or to a different address given later for notices going forward.  If either side finds that e-mail can't be delivered to the e-mail address given, it may give notice by registered mail to the address on file for the recipient with the state under whose laws it is organized.
 
-# Governing Law
+## Governing Law
 
 This agreement will be governed by {{#law=vendor}}the law of the jurisdiction of the address the vendor gives with its signature{{/law=vendor}}{{#law=customer}}the law of the jurisdiction of the address the vendor gives with its signature{{/law=customer}}{{#law=california}}California law{{/law=california}}{{#law=delaware}}Delaware law{{/law=delaware}}{{#law=newyork}}New York law{{/law=newyork}}.
 
@@ -349,7 +349,7 @@ The United Nations Convention on Contracts for the International Sale of Goods w
 
 As far as the law allows, the Uniform Computer Information Transactions Act will not apply to this agreement.
 
-# Dispute Resolution
+## Dispute Resolution
 
 {{#disputes=court}}The parties do not agree to mediation or arbitration of disputes related to this agreement.{{/disputes=court}}
 
@@ -363,34 +363,34 @@ As far as the law allows, the Uniform Computer Information Transactions Act will
 
 {{#disputes=aaa}}Any controversy or claim arising out of or relating to this contract, or the breach thereof, shall be settled by arbitration administered by the American Arbitration Association in accordance with its Commercial Arbitration Rules and judgment on the award rendered by the arbitrator(s) may be entered in any court having jurisdiction thereof.  Claims shall be heard by a single arbitrator.  The place of arbitration shall be {{#venue=capital}}the capital of the jurisdiction whose laws govern this agreement{{/venue=capital}}{{#venue=biggest}}the largest city of the jurisdiction whose laws govern this agreement{{/venue=biggest}}{{#venue=vendor}}the city nearest the address the vendor gives with its signature{{/venue=vendor}}{{#venue=customer}}the city nearest the address the vendor gives with its signature{{/venue=customer}}.({{/disputes=aaa}}
 
-# Forum for Disputes
+## Forum for Disputes
 
 Both sides agree to bring any lawsuits related to this agreement in courts in {{#venue=capital}}the capital of the jurisdiction whose laws govern this agreement{{/venue=capital}}{{#venue=biggest}}the largest city of the jurisdiction whose laws govern this agreement{{/venue=biggest}}{{#venue=vendor}}the city nearest the address the vendor gives with its signature{{/venue=vendor}}{{#venue=customer}}the city nearest the address the vendor gives with its signature{{/venue=customer}}.  Both sides consent to the exclusive jurisdiction of those courts and waive any objection that they would be an inconvenient forum for a lawsuit.  Both sides agree that the other side can enforce judgments from those courts in other jurisdictions.
 
-# Only Terms
+## Only Terms
 
 Both sides intend the terms of this agreement, together with the order, as the final, complete, and only expression of their agreement about the software.
 
-# Unenforceable Terms
+## Unenforceable Terms
 
 If a court decides that any part of this agreement is invalid or unenforceable for any reason, and that enforcing the rest of this agreement would not defeat the purpose of this agreement, then rest of this agreement will still apply.
 
-# Written Amendments
+## Written Amendments
 
 Both sides may change or add to the terms of this agreement only by signing a written amendment.
 
-# Written Waivers
+## Written Waivers
 
 Both sides will waive terms of this agreement, if at all, only in signed writing.
 
-# No Assignment
+## No Assignment
 
 Neither side may assign any right under this agreement without the other side's signed written permission.  Any attempt to assign against the terms of this agreement will have no legal effect.
 
-# No Delegation
+## No Delegation
 
 Neither side may delegate any performance under this agreement.  Any attempt to delegate will have no legal effect.
 
-# Enforcement
+## Enforcement
 
 Only the parties may enforce rights under this agreement.
