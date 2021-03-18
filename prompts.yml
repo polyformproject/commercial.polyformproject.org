@@ -216,9 +216,9 @@
     - id: biggest
       name: Largest City in the Governing Law Jurisdiction
     - id: vendor
-      name: Name Nearest Vendor in Governing Law Jurisdiction
+      name: City Nearest Vendor in Governing Law Jurisdiction
     - id: customer
-      name: Name Nearest Customer in Governing Law Jurisdiction
+      name: City Nearest Customer in Governing Law Jurisdiction
 
 - id: disputes
   name: Dispute Resolution
