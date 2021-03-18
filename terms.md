@@ -125,9 +125,9 @@ This agreement continues month-by-month, until one side gives the other notice t
 
 Either side can terminate this agreement immediately if the other side breaches and fails to cure their breach within fourteen calendar days of notice.
 
-<!-- Delivery -->
-
 # Delivery
+
+## Copies
 
 The vendor agrees to give the customer:
 
@@ -155,15 +155,13 @@ The vendor agrees to give the customer:
 
 either by e-mail or by making it available for download online, without any additional charge, within three calendar days of entering this agreement.  {{^maintenance=version}}The vendor agrees to make new versions of the software covered by this agreement available in the same way within three calendar days of their release.{{/maintenance=version}}
 
-# License Keys
+## License Keys
 
 If the software requires a license key, the vendor agrees to give the customer a set of license keys by e-mail within three calendar days of entering this agreement.  The vendor agrees to send new or replacement license keys to the customer in the same way on request.  If the customer receives license keys, the customer agrees to share them only as needed to make use of the software consistent with the terms of this agreement, and to secure them at least as well as the customer's own confidential business information.
 
-# Software Dependencies
+## Software Dependencies
 
-The develoepr agrees to make sure any technical dependencies of the software, such as open source software libraries, are licensed for free to the public and generally available for the customer to download, free of charge, from a public software repository.  The developer does not agree to any service-level agreement or other specific guarantee about any public software repository.
-
-<!-- Modification -->
+The developer agrees to make sure any technical dependencies of the software, such as open source software libraries, are licensed for free to the public and generally available for the customer to download, free of charge, from a public software repository.  The developer does not agree to any service-level agreement or other specific guarantee about any public software repository.
 
 {{#modification=yes}}
 # Modification
