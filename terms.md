@@ -219,25 +219,27 @@ During its regular business hours, the vendor agrees to respond to e-mail suppor
 - If the vendor fails to meet its support service-level agreements for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
 {{/support=full}}
 
-<!-- Warranties -->
+# Warranties
 
-# Performance Warranty
+## Performance Warranty
 
 The vendor guarantees that the software will perform as described in its documentation {{#warranty=period}}during the warranty period on the order{{/warranty=period}}{{#warranty=term}}while this agreement continues{{/warranty=term}}.
 
-# Malicious Code
+## Malicious Code
 
 The vendor agrees to keep the software free of malicious code, such as computer worms and viruses.
 
-# Disclaimer
+## Disclaimer
 
 !!! [Performance Warranty](#performance-warranty) and [Malicious Code](#malicious-code) are the only warranties the vendor gives for the software.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
 
-# Liability Cap
+# Liability
+
+## Damages Cap
 
 !!! Except for [Uncapped Liabilities](#uncapped-liabilities), neither side's total liability for breach of this agreement will exceed the amount of fees the vendor received from the customer under this agreement during the twelve months before the first claim is made.  This limit applies even if the side liable is advised that the other may suffer damages, and even if the customer paid no fees at all.
 
-# Uncapped Liabilities
+## Uncapped Liabilities
 
 [Liability Cap](#liability-cap) does not apply to:
 
@@ -247,17 +249,21 @@ The vendor agrees to keep the software free of malicious code, such as computer 
 
 - liabilities the law requires to be unlimited
 
-# Unforeseeable Damages
+## Unforeseeable Damages
 
 Neither side will be liable for breach-of-contract damages they could not have reasonably foreseen when entering into this agreement.
 
-<!-- Indemnities -->
+# Indemnities
 
-# General Indemnity
+## Definition of Indemnify
+
+Throughout this agreement, to "indemnify" for claims means to indemnify, defend, and holding harmless for all liability, expenses, damages, and costs from those claims.
+
+## General Indemnity
 
 Subject to [Indemnification Process](#indemnification-process), the vendor agrees to indemnify the customer for legal claims by others alleging that permitted use of the software infringes any copyright, trademark, or trade secret right, or breaks any law.
 
-# Patent Indemnity
+## Patent Indemnity
 
 {{#patent=none}}The vendor will not indemnify the customer for any claims by others alleging that the software infringes any patent.{{/patent=none}}
 
@@ -265,15 +271,11 @@ Subject to [Indemnification Process](#indemnification-process), the vendor agree
 
 {{#patent=all}}The vendor agrees to indemnify the customer for any claims by others alleging that the software infringes any patent.{{/patent=all}}
 
-# Indemnity
-
-Throughout this agreement, to "indemnify" for claims means to indemnify, defend, and holding harmless for all liability, expenses, damages, and costs from those claims.
-
-# Notice of Claims
+## Notice of Claims
 
 The developer agrees to give the customer prompt notice of any claim that the software infringes intellectual property.
 
-# Response to Claims
+## Response to Claims
 
 The developer may take any of these steps in response to a claim that the software infringes intellectual property rights or breaks the law:
 
@@ -285,29 +287,29 @@ The developer may take any of these steps in response to a claim that the softwa
 
 - The developer may refund any fees the customer has paid for time not yet elapsed and end this agreement by giving the customer notice.
 
-# Indemnification Process
+## Indemnification Process
 
 Both sides agree that to receive indemnification under this agreement, they must give notice of any covered claim quickly, allow the other side to control investigation, defense, and settlement, and cooperate with those efforts.  Both sides agree that if they fail to give notice of any covered claim quickly, indemnification will not cover amounts that could have been defended against or mitigated if notice had been given quickly.  Both sides agree that if they take control of the defense and settlement of any covered claim, they will not agree to any settlements that admit fault or impose obligations on the other side without their permission.
 
-<!-- License Grants -->
+# Intellectual Property
 
-# Common License Terms
+## Common License Terms
 
 A **standard license** means a nonexclusive license for the term of this agreement that is conditional on payment of all fees as required by this agreement.
 
-# Software Copyright License
+## Software Copyright License
 
 The developer grants the customer a _standard license_ for all copyrights in version of the software covered by this agreement that the developer can license, to copy, install, back up, and make use of the software consistent with the terms of this agreement.
 
-# Software Patent License
+## Software Patent License
 
 The developer grants the customer a _standard license_ for any patents the deveoper can license or becomes able to license, to make use of the software consistent with the terms of this agreement.
 
-# Documentation Copyright License
+## Documentation Copyright License
 
 The developer grants the customer a _standard license_ for any copyrights in the documentation that the developer can license, to read, back up, and make copies.
 
-# Dual Licensing
+## Dual Licensing
 
 If the vendor licenses any part of the software to the public for free under different license terms:
 
@@ -315,7 +317,7 @@ If the vendor licenses any part of the software to the public for free under dif
 
 - After this agreement ends, the customer must abide by the terms of the free public license.
 
-# Open Source Compliance
+## Open Source Compliance
 
 - Components of the software may be covered by open source software licenses.
 
@@ -323,11 +325,11 @@ If the vendor licenses any part of the software to the public for free under dif
 
 - If the license for an open source software component requires, the terms of that license will apply to the open source component instead of any of the terms of this agreement.
 
-- If the licens for an open source software component prohibits any restriction in this agreement from applying to that component, the restriction will not apply to that component.
+- If the license for an open source software component prohibits any restriction in this agreement from applying to that component, the restriction will not apply to that component.
 
 - If the license for an open source software component requires the vendor to make an offer to provide source code or related information for that component, the vendor will do so on request.
 
-# No Other Licenses
+## No Other Licenses
 
 The vendor only grants the customer the licenses explicitly stated in this agreement.
 
