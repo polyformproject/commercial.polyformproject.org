@@ -17,6 +17,7 @@
       notes:
         - maximum number of users
         - stated on the ordering document
+      popular: true
     - id: metered
       name: Metered
       notes:
@@ -43,6 +44,7 @@
       name: Commit to Negotiate in Good Faith
     - id: list
       name: On Payment, at List Price
+      popular: true
     - id: quoted
       name: On Payment, as Agreed in Ordering Document
     - id: usage
@@ -61,6 +63,7 @@
       name: Software Phones Home
     - id: self
       name: Self-Reported by Customer
+      popular: true
     - id: audit
       name: Annual Audit Right
 
@@ -81,6 +84,7 @@
       name: One Year
     - id: renewing
       name: One Year, Automatically Renewing
+      popular: true
     - id: month
       name: Month to Month
 
@@ -140,6 +144,7 @@
       name: Specific Version
     - id: term
       name: Updates During Term
+      popular: true
 
 - id: support
   name: Support
@@ -155,6 +160,7 @@
         - no service-level agreements
         - e-mail only
         - business hours
+      popular: true
     - id: full
       name: Full Support
       notes:
@@ -177,6 +183,7 @@
       name: Limited Warranty Period
     - id: term
       name: Term of the Agreement
+      popular: true
 
 - id: patent
   name: Patent Infringement Indemnity
@@ -197,6 +204,7 @@
   choices:
     - id: vendor
       name: Vendor's Headquarters
+      popular: true
     - id: customer
       name: Customer's Headquarters
     - id: california
@@ -217,6 +225,7 @@
       name: Largest City in the Governing Law Jurisdiction
     - id: vendor
       name: City Nearest Vendor in Governing Law Jurisdiction
+      popular: true
     - id: customer
       name: City Nearest Customer in Governing Law Jurisdiction
 
@@ -227,6 +236,7 @@
   choices:
     - id: litigation
       name: Litigation
+      popular: true
     - id: executives
       name: Executives Meet Before Litigation
     - id: mediation

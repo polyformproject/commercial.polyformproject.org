@@ -47,6 +47,9 @@
                 "type": "string"
               }
             },
+            "popular": {
+              "type": "boolean"
+            },
             "version": {
               "type": "number"
             }
