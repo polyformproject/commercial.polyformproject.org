@@ -90,7 +90,7 @@ The customer agrees to pay using the method on the order.
 
 # Tax
 
-The customer agrees to pay all tax on fees under this agreement, except tax the dveloper owes on income.
+The customer agrees to pay all tax on fees under this agreement, except tax the developer owes on income.
 
 <!-- Term -->
 
