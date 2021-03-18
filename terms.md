@@ -231,7 +231,7 @@ The vendor agrees to keep the software free of malicious code, such as computer 
 
 # Disclaimer
 
-!!! [Warranty](#warranty) is the only warranty the vendor gives for the software.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
+!!! [Performance Warranty](#performance-warranty) and [Malicious Code](#malicious-code) are the only warranties the vendor gives for the software.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
 
 # Liability Cap
 
