@@ -234,13 +234,13 @@
   description: How will the seller and customer resolve disputes about the agreement?
   choice: single
   choices:
-    - id: litigation
+    - id: court
       name: Litigation
       popular: true
     - id: executives
-      name: Executives Meet Before Litigation
+      name: Executives Meet Before Court
     - id: mediation
-      name: Mediation Before Litigation
+      name: Mediation Before Court
     - id: jamsdomestic
       name: JAMS Arbitration, Under Domestic Rules
     - id: jamsinternational

@@ -70,7 +70,7 @@ const examples = {
     patent: 'none',
     law: 'vendor',
     venue: 'vendor',
-    disputes: 'litigation'
+    disputes: 'court'
   },
   heavy: {
     model: 'seats',

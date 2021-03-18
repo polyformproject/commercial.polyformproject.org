@@ -351,7 +351,7 @@ As far as the law allows, the Uniform Computer Information Transactions Act will
 
 # Dispute Resolution
 
-{{#disputes=litigation}}The parties do not agree to mediation or arbitration of disputes related to this agreement.{{/disputes=litigation}}
+{{#disputes=court}}The parties do not agree to mediation or arbitration of disputes related to this agreement.{{/disputes=court}}
 
 {{#disputes=executives}}The parties agree to try to resolve any dispute related to this agreement by having an executive from each party meet, in person or by phone, to try and resolve the dispute first.  Only if that fails will they bring a lawsuit.{{/disputes=executives}}
 
