@@ -125,6 +125,18 @@ This agreement continues month-by-month, until one side gives the other notice t
 
 Either side can terminate this agreement immediately if the other side breaches and fails to cure their breach within fourteen calendar days of notice.
 
+{{#modification=yes}}
+# Modification
+
+The customer may make changes to the software's source code, compile those changes, and run changed versions of the software.
+{{/modification=yes}}
+
+{{#modification=no}}
+# No Modification
+
+The customer may not make changes to the software's source code.
+{{/modification=no}}
+
 # Delivery
 
 ## Copies
@@ -162,18 +174,6 @@ If the software requires a license key, the vendor agrees to give the customer a
 ## Software Dependencies
 
 The developer agrees to make sure any technical dependencies of the software, such as open source software libraries, are licensed for free to the public and generally available for the customer to download, free of charge, from a public software repository.  The developer does not agree to any service-level agreement or other specific guarantee about any public software repository.
-
-{{#modification=yes}}
-# Modification
-
-The customer may make changes to the software's source code, compile those changes, and run changed versions of the software.
-{{/modification=yes}}
-
-{{#modification=no}}
-# No Modification
-
-The customer may not make changes to the software's source code.
-{{/modification=no}}
 
 {{#escrow=yes}}
 # Escrow
