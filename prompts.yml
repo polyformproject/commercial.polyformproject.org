@@ -197,7 +197,7 @@
       name: Known Patents
     - id: all
       name: All Patents
-      selected: true
+      default: true
 
 - id: law
   name: Governing Law
@@ -207,7 +207,7 @@
   choices:
     - id: vendor
       name: Vendor's Headquarters
-      selected: true
+      default: true
     - id: customer
       name: Customer's Headquarters
     - id: california
@@ -229,7 +229,7 @@
       name: Largest City in the Governing Law Jurisdiction
     - id: vendor
       name: City Nearest Vendor in Governing Law Jurisdiction
-      selected: true
+      default: true
     - id: customer
       name: City Nearest Customer in Governing Law Jurisdiction
 
@@ -241,7 +241,7 @@
   choices:
     - id: court
       name: Litigation
-      selected: true
+      default: true
     - id: executives
       name: Executives Meet Before Court
     - id: mediation

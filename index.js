@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       input.value = choiceID
       input.requred = required ? 'true' : null
       input.onchange = onInputChange
-      input.checked = choice.selected ? 'true' : null
+      input.checked = choice.default ? 'true' : null
       label.appendChild(input)
       label.appendChild(document.createTextNode(choice.name))
       inputs[promptID].push(input)
