@@ -187,7 +187,7 @@ function updateSelectionsGlobal () {
     selections[promptID] = null
     const elements = inputs[promptID]
     elements.forEach(element => {
-      if (element.checked) {
+      if (element.checked && !element.disabled) {
         const choiceID = element.dataset.choice
         if (element.type === 'checkbox') {
           if (Array.isArray(selections[promptID])) {

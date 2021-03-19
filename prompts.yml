@@ -105,6 +105,7 @@
   choices:
     - id: compiled
       name: Compiled Only
+      default: true
     - id: source
       name: Source Only
     - id: both
@@ -122,6 +123,7 @@
       name: Allowed
     - id: no
       name: Prohibited
+      default: true
 
 - id: escrow
   name: Escrow
@@ -132,6 +134,7 @@
   choices:
     - id: no
       name: None
+      default: true
     - id: yes
       name: Third-Party
 
