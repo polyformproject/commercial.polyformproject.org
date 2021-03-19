@@ -94,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const choiceID = choice.id
 
       const label = document.createElement('label')
-      if (choice.popular) label.className = 'popular'
       set.appendChild(label)
 
       const input = document.createElement('input')

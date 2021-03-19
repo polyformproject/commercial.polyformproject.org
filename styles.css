@@ -74,7 +74,3 @@ footer[role=contentinfo] {
   font-style: italic;
   font-weight: bold;
 }
-
-.popular:after {
-  content: ' (most popular)';
-}
