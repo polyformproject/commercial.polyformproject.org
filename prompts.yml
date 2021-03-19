@@ -188,6 +188,7 @@
 - id: patent
   name: Patent Infringement Indemnity
   description: Will the seller cover the customer if someone brings a lawsuit claiming that the software infringes a patent?
+  advanced: true
   choice: single
   choices:
     - id: none
@@ -196,15 +197,17 @@
       name: Known Patents
     - id: all
       name: All Patents
+      selected: true
 
 - id: law
   name: Governing Law
   description: What law will govern the license agreement?
+  advanced: true
   choice: single
   choices:
     - id: vendor
       name: Vendor's Headquarters
-      popular: true
+      selected: true
     - id: customer
       name: Customer's Headquarters
     - id: california
@@ -217,6 +220,7 @@
 - id: venue
   name: Venue for Disputes
   description: Where will the seller and customer bring lawsuits about the agreement?
+  advanced: true
   choice: single
   choices:
     - id: capital
@@ -225,18 +229,19 @@
       name: Largest City in the Governing Law Jurisdiction
     - id: vendor
       name: City Nearest Vendor in Governing Law Jurisdiction
-      popular: true
+      selected: true
     - id: customer
       name: City Nearest Customer in Governing Law Jurisdiction
 
 - id: disputes
   name: Dispute Resolution
   description: How will the seller and customer resolve disputes about the agreement?
+  advanced: true
   choice: single
   choices:
     - id: court
       name: Litigation
-      popular: true
+      selected: true
     - id: executives
       name: Executives Meet Before Court
     - id: mediation

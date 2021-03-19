@@ -60,6 +60,10 @@ button[type=reset] {
   display: none;
 }
 
+.collapsed fieldset {
+  display: none;
+}
+
 footer[role=contentinfo] {
   font-size: 85%;
   margin-bottom: 5rem;

@@ -39,6 +39,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.createElement('form')
   main.appendChild(form)
 
+  const advanced = document.createElement('fieldset')
+  advanced.className = 'collapsed'
+  const legend = document.createElement('legend')
+  advanced.appendChild(legend)
+  legend.appendChild(document.createTextNode('Advanced Options'))
+
+  const showText = 'Show Advanced Options'
+  const hideText = 'Hide Advanced Options'
+  const toggle = document.createElement('button')
+  toggle.appendChild(document.createTextNode(showText))
+  toggle.addEventListener('click', event => {
+    event.preventDefault()
+    event.stopPropagation()
+    if (advanced.className === 'collapsed') {
+      advanced.className = 'expanded'
+      event.target.innerText = hideText
+    } else {
+      advanced.className = 'collapsed'
+      event.target.innerText = showText
+    }
+  })
+  advanced.appendChild(toggle)
+
   prompts.forEach(prompt => {
     const promptID = prompt.id
     promptIDs.push(promptID)
@@ -46,7 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const hasRequired = Array.isArray(prompt.requires)
 
     const set = document.createElement('fieldset')
-    form.appendChild(set)
+    if (prompt.advanced) advanced.appendChild(set)
+    else form.appendChild(set)
     fieldsets[promptID] = set
     if (hasRequired) set.className = 'hidden'
 
@@ -81,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       input.value = choiceID
       input.requred = required ? 'true' : null
       input.onchange = onInputChange
+      input.checked = choice.selected ? 'true' : null
       label.appendChild(input)
       label.appendChild(document.createTextNode(choice.name))
       inputs[promptID].push(input)
@@ -91,6 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+
+  form.appendChild(advanced)
 
   submit = document.createElement('button')
   form.appendChild(submit)

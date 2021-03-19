@@ -26,6 +26,9 @@
           "additionalProperties": false
         }
       },
+      "advanced": {
+        "type": "boolean"
+      },
       "choice": {
         "const": "single"
       },
@@ -46,6 +49,9 @@
               "items": {
                 "type": "string"
               }
+            },
+            "default": {
+              "type": "boolean"
             },
             "popular": {
               "type": "boolean"
