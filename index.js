@@ -29,6 +29,7 @@ let submitButton
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header')
 
+  // Version
   const versionLine = document.createElement('p')
   header.appendChild(versionLine)
   versionLine.className = 'version'
@@ -37,11 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main')
   const fragment = document.createDocumentFragment()
 
+  // Main Form
   const form = document.createElement('form')
   fragment.appendChild(form)
 
+  // Advanced Options
   const advanced = document.createElement('fieldset')
   advanced.className = 'collapsed'
+  form.appendChild(advanced)
   const legend = document.createElement('legend')
   advanced.appendChild(legend)
   legend.appendChild(document.createTextNode('Advanced Options'))
@@ -63,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   advanced.appendChild(toggle)
 
+  // Prompts
   prompts.forEach(prompt => {
     const promptID = prompt.id
     promptIDs.push(promptID)
@@ -117,8 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  form.appendChild(advanced)
-
+  // Form Submit Button
   submitButton = document.createElement('button')
   form.appendChild(submitButton)
   submitButton.type = 'submit'
@@ -146,16 +150,18 @@ document.addEventListener('DOMContentLoaded', () => {
       })
   }
 
+  // Form Reset Button
   const reset = document.createElement('button')
   form.appendChild(reset)
   reset.type = 'reset'
   reset.appendChild(document.createTextNode('Reset'))
 
-  applyPromptRequirements()
-
+  // License for Legal Texts
   const license = document.createElement('section')
   license.innerHTML = metaLicense
   fragment.appendChild(license)
+
+  applyPromptRequirements()
 
   main.appendChild(fragment)
 })
