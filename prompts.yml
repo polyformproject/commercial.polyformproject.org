@@ -10,8 +10,6 @@
         - evaluation use only
         - time stated on the ordering document
         - no warranties
-    - id: unlimited
-      name: Unlimited
     - id: seats
       name: Seats
       notes:
@@ -23,6 +21,10 @@
       notes:
         - transaction, storage volume or other technical limit
         - stated on the ordering document
+    - id: unlimited
+      name: Unlimited
+      notes:
+        - no seat or other limit on use
     - id: cpu
       name: CPU
       version: 2
