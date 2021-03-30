@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Advanced Options
   const advanced = document.createElement('fieldset')
   advanced.className = 'collapsed'
-  form.appendChild(advanced)
   const legend = document.createElement('legend')
   advanced.appendChild(legend)
   legend.appendChild(document.createTextNode('Advanced Options'))
@@ -121,6 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+
+  form.appendChild(advanced)
 
   // Form Submit Button
   submitButton = document.createElement('button')
