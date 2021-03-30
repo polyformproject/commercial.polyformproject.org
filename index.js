@@ -24,7 +24,7 @@ const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
 const fieldsets = {/* promptID => fieldset */}
 const inputs = {/* promptID -> [input] */}
-let submit
+let submitButton
 
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header')
@@ -119,10 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.appendChild(advanced)
 
-  submit = document.createElement('button')
-  form.appendChild(submit)
-  submit.type = 'submit'
-  submit.appendChild(document.createTextNode('Download ZIP Archive'))
+  submitButton = document.createElement('button')
+  form.appendChild(submitButton)
+  submitButton.type = 'submit'
+  submitButton.appendChild(document.createTextNode('Download ZIP Archive'))
   form.onsubmit = event => {
     event.preventDefault()
     updateSelectionsGlobal()
@@ -235,5 +235,5 @@ function applyPromptRequirements () {
     }
   })
   const complete = requiredPromptIDs.every(promptID => selections[promptID])
-  submit.disabled = !complete
+  submitButton.disabled = !complete
 }
