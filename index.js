@@ -35,9 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
   versionLine.appendChild(document.createTextNode(version))
 
   const main = document.querySelector('main')
+  const fragment = document.createDocumentFragment()
 
   const form = document.createElement('form')
-  main.appendChild(form)
+  fragment.appendChild(form)
 
   const advanced = document.createElement('fieldset')
   advanced.className = 'collapsed'
@@ -154,7 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const license = document.createElement('section')
   license.innerHTML = metaLicense
-  main.appendChild(license)
+  fragment.appendChild(license)
+
+  main.appendChild(fragment)
 })
 
 function renderTemplate (template, view, title, signatures) {
