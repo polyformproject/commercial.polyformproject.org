@@ -85,7 +85,6 @@ const examples = {
   trial: {
     model: 'trial',
     delivery: 'compiled',
-    modification: 'no',
     escrow: 'no',
     maintenance: 'version',
     support: 'none',
@@ -161,58 +160,60 @@ function testRenders (template) {
   }
 }
 
-tape('integration', test => {
-  const server = http.createServer(handler)
-  server.listen(0, async () => {
-    const port = server.address().port
-    test.assert(port, 'port')
-    let browser
-    try {
-      // Launch a browser.
-      browser = await playwright.chromium.launch({
-        headless: !process.env.HEADFUL
-      })
-      const context = await browser.newContext({
-        acceptDownloads: true
-      })
-      const page = await context.newPage()
-      await page.goto(`http://localhost:${port}`)
+for (const key in examples) {
+  tape(`integration: ${key}`, test => {
+    const server = http.createServer(handler)
+    server.listen(0, async () => {
+      const port = server.address().port
+      test.assert(port, 'port')
+      let browser
+      try {
+        // Launch a browser.
+        browser = await playwright.chromium.launch({
+          headless: !process.env.HEADFUL
+        })
+        const context = await browser.newContext({
+          acceptDownloads: true
+        })
+        const page = await context.newPage()
+        await page.goto(`http://localhost:${port}`)
 
-      // Check <h1>.
-      const h1 = await page.$('h1')
-      const heading = await h1.textContent()
-      test.equal(heading, 'Commercial License Generator', 'heading')
+        // Check <h1>.
+        const h1 = await page.$('h1')
+        const heading = await h1.textContent()
+        test.equal(heading, 'Commercial License Generator', 'heading')
 
-      // Fill out the form.
-      await page.click('text=Show Advanced Options')
-      const example = examples.heavy
-      for (const promptID in example) {
-        const choiceID = example[promptID]
-        await page.check(`#${promptID}_${choiceID}`)
+        // Fill out the form.
+        await page.click('text=Show Advanced Options')
+        const example = examples[key]
+        for (const promptID in example) {
+          const choiceID = example[promptID]
+          await page.check(`#${promptID}_${choiceID}`)
+        }
+
+        // Download the packet.
+        const [download] = await Promise.all([
+          page.waitForEvent('download'),
+          page.click('#submit')
+        ])
+        test.pass('selected all options')
+        const path = await download.path()
+        test.assert(path, 'downloaded')
+
+        // Inspect the archive.
+        const data = fs.readFileSync(path)
+        const zip = new JSZip()
+        await zip.loadAsync(data)
+        const entries = Object.keys(zip.files)
+        test.assert(entries.includes('order.docx'), 'zip contains order.docx')
+        test.assert(entries.includes('terms.docx'), 'zip contains terms.docx')
+      } catch (error) {
+        test.ifError(error)
+      } finally {
+        if (browser) browser.close()
+        server.close()
+        test.end()
       }
-
-      // Download the packet.
-      const [download] = await Promise.all([
-        page.waitForEvent('download'),
-        page.click('#submit')
-      ])
-      test.pass('selected all options')
-      const path = await download.path()
-      test.assert(path, 'downloaded')
-
-      // Inspect the archive.
-      const data = fs.readFileSync(path)
-      const zip = new JSZip()
-      await zip.loadAsync(data)
-      const entries = Object.keys(zip.files)
-      test.assert(entries.includes('order.docx'), 'zip contains order.docx')
-      test.assert(entries.includes('terms.docx'), 'zip contains terms.docx')
-    } catch (error) {
-      test.ifError(error)
-    } finally {
-      if (browser) browser.close()
-      server.close()
-      test.end()
-    }
+    })
   })
-})
+}

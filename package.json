@@ -28,6 +28,7 @@
     "build:terms": "./texttojson terms.md",
     "build:order": "./texttojson order.md",
     "prestart": "npm run build",
+    "pretest": "npm run build",
     "test": "npm run build:prompts && node test.js"
   }
 }
