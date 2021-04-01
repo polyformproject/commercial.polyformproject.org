@@ -153,12 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
   }
 
-  // Form Reset Button
-  const reset = document.createElement('button')
-  form.appendChild(reset)
-  reset.type = 'reset'
-  reset.appendChild(document.createTextNode('Reset'))
-
   // License for Legal Texts
   const license = document.createElement('section')
   license.innerHTML = metaLicense
