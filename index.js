@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
   license.innerHTML = metaLicense
   fragment.appendChild(license)
 
+  updateSelectionsGlobal()
   applyPromptRequirements()
 
   main.appendChild(fragment)
