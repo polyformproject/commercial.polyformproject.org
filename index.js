@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       input.dataset.prompt = promptID
       input.dataset.choice = choiceID
       input.type = inputType
+      input.id = `${promptID}_${choiceID}`
       input.name = promptID
       input.value = choiceID
       input.requred = required ? 'true' : null
@@ -126,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Form Submit Button
   submitButton = document.createElement('button')
   form.appendChild(submitButton)
+  submitButton.id = 'submit'
   submitButton.type = 'submit'
   submitButton.appendChild(document.createTextNode('Download ZIP Archive'))
   form.onsubmit = event => {

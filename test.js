@@ -1,10 +1,13 @@
 const AJV = require('ajv').default
 const commonmark = require('commonform-commonmark')
 const docx = require('commonform-docx')
+const handler = require('./server')
+const http = require('http')
 const listVars = require('mustache-vars')
 const mustache = require('mustache')
 const order = require('fs').readFileSync('./order.md', 'utf8')
 const outline = require('outline-numbering')
+const playwright = require('playwright')
 const tape = require('tape')
 const terms = require('fs').readFileSync('./terms.md', 'utf8')
 
@@ -96,7 +99,6 @@ const examples = {
     term: 'renewing',
     delivery: 'both',
     modification: 'yes',
-    escrow: 'yes',
     maintenance: 'term',
     support: 'full',
     warranty: 'term',
@@ -156,3 +158,48 @@ function testRenders (template) {
     test.end()
   }
 }
+
+tape('integration', test => {
+  const server = http.createServer(handler)
+  server.listen(0, async () => {
+    const port = server.address().port
+    test.assert(port, 'port')
+    let browser
+    try {
+      browser = await playwright.chromium.launch({
+        headless: !process.env.HEADFUL
+      })
+      const context = await browser.newContext({
+        acceptDownloads: true
+      })
+      const page = await context.newPage()
+      await page.goto(`http://localhost:${port}`)
+
+      // Check <h1>
+      const h1 = await page.$('h1')
+      const heading = await h1.textContent()
+      test.equal(heading, 'Commercial License Generator', 'heading')
+
+      // Fill out form.
+      await page.click('text=Show Advanced Options')
+      const example = examples.heavy
+      for (const promptID in example) {
+        const choiceID = example[promptID]
+        await page.check(`#${promptID}_${choiceID}`)
+      }
+      const [download] = await Promise.all([
+        page.waitForEvent('download'),
+        page.click('#submit')
+      ])
+      test.pass('selected all options')
+      const path = await download.path()
+      test.assert(path, 'downloaded')
+    } catch (error) {
+      test.ifError(error)
+    } finally {
+      if (browser) browser.close()
+      server.close()
+      test.end()
+    }
+  })
+})
