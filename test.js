@@ -1,6 +1,8 @@
 const AJV = require('ajv').default
+const JSZip = require('jszip')
 const commonmark = require('commonform-commonmark')
 const docx = require('commonform-docx')
+const fs = require('fs')
 const handler = require('./server')
 const http = require('http')
 const listVars = require('mustache-vars')
@@ -166,6 +168,7 @@ tape('integration', test => {
     test.assert(port, 'port')
     let browser
     try {
+      // Launch a browser.
       browser = await playwright.chromium.launch({
         headless: !process.env.HEADFUL
       })
@@ -175,18 +178,20 @@ tape('integration', test => {
       const page = await context.newPage()
       await page.goto(`http://localhost:${port}`)
 
-      // Check <h1>
+      // Check <h1>.
       const h1 = await page.$('h1')
       const heading = await h1.textContent()
       test.equal(heading, 'Commercial License Generator', 'heading')
 
-      // Fill out form.
+      // Fill out the form.
       await page.click('text=Show Advanced Options')
       const example = examples.heavy
       for (const promptID in example) {
         const choiceID = example[promptID]
         await page.check(`#${promptID}_${choiceID}`)
       }
+
+      // Download the packet.
       const [download] = await Promise.all([
         page.waitForEvent('download'),
         page.click('#submit')
@@ -194,6 +199,14 @@ tape('integration', test => {
       test.pass('selected all options')
       const path = await download.path()
       test.assert(path, 'downloaded')
+
+      // Inspect the archive.
+      const data = fs.readFileSync(path)
+      const zip = new JSZip()
+      await zip.loadAsync(data)
+      const entries = Object.keys(zip.files)
+      test.assert(entries.includes('order.docx'), 'zip contains order.docx')
+      test.assert(entries.includes('terms.docx'), 'zip contains terms.docx')
     } catch (error) {
       test.ifError(error)
     } finally {
