@@ -162,8 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
   license.innerHTML = metaLicense
   fragment.appendChild(license)
 
-  updateSelectionsGlobal()
-  applyPromptRequirements()
+  onInputChange()
 
   main.appendChild(fragment)
 })
@@ -188,7 +187,7 @@ function renderTemplate (template, view, title, signatures) {
   return docx(parsed.form, [], options).generateAsync({ type: 'blob' })
 }
 
-function onInputChange (event) {
+function onInputChange () {
   updateSelectionsGlobal()
   applyPromptRequirements()
 }
