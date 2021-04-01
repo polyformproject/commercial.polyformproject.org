@@ -9,7 +9,7 @@
     "file-saver": "^2.0.5",
     "js-yaml": "^4.0.0",
     "jszip": "^3.6.0",
-    "mustache": "^4.1.0",
+    "mustache": "^4.2.0",
     "mustache-vars": "^0.2.0",
     "ooxml-signature-pages": "^3.0.2",
     "outline-numbering": "^2.0.0",
