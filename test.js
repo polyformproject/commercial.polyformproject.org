@@ -64,7 +64,7 @@ tape('templating', test => {
   test.end()
 })
 
-tape('requirements', test => {
+tape('prompt requirements', test => {
   for (const prompt of prompts) {
     if (!prompt.requires) continue
     const promptID = prompt.id
@@ -110,23 +110,20 @@ const examples = {
   }
 }
 
-tape('valid examples', test => {
-  for (const name in examples) {
-    test.test(`validate example "${name}"`, test => {
-      const example = examples[name]
-      for (const promptID in example) {
-        const choiceID = example[promptID]
-        const prompt = prompts.find(prompt => prompt.id === promptID)
-        test.assert(prompt, `promptID "${promptID}"`)
-        if (!prompt) break
-        const choice = prompt.choices.find(choice => choice.id === choiceID)
-        test.assert(choice, `choiceID "${choiceID}"`)
-      }
-      test.end()
-    })
-  }
-  test.end()
-})
+for (const name in examples) {
+  tape(`validate example "${name}"`, test => {
+    const example = examples[name]
+    for (const promptID in example) {
+      const choiceID = example[promptID]
+      const prompt = prompts.find(prompt => prompt.id === promptID)
+      test.assert(prompt, `promptID "${promptID}"`)
+      if (!prompt) break
+      const choice = prompt.choices.find(choice => choice.id === choiceID)
+      test.assert(choice, `choiceID "${choiceID}"`)
+    }
+    test.end()
+  })
+}
 
 tape('terms renders', testRenders(terms))
 tape('order renders', testRenders(order))
@@ -163,7 +160,7 @@ function testRenders (template) {
 for (const key in examples) {
   tape(`integration: ${key}`, test => {
     const server = http.createServer(handler)
-    server.listen(0, async () => {
+    server.listen(0 /* random high port */, async () => {
       const port = server.address().port
       test.assert(port, 'port')
       let browser
