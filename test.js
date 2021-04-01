@@ -59,6 +59,23 @@ tape('templating', test => {
   test.end()
 })
 
+tape('requirements', test => {
+  for (const prompt of prompts) {
+    if (!prompt.requires) continue
+    const promptID = prompt.id
+    for (const requirement of prompt.requires) {
+      for (const otherPromptID in requirement) {
+        const otherPrompt = prompts.find(prompt => prompt.id === otherPromptID)
+        test.assert(otherPrompt, `${promptID}: required prompt "${otherPromptID}" exists`)
+        const choiceID = requirement[otherPromptID]
+        const choice = otherPrompt.choices.find(choice => choice.id === choiceID)
+        test.assert(choice, `${promptID}: required prompt "${otherPromptID}" has choice "${choiceID}"`)
+      }
+    }
+  }
+  test.end()
+})
+
 const examples = {
   trial: {
     model: 'trial',
