@@ -7,14 +7,18 @@ const handler = require('./server')
 const http = require('http')
 const listVars = require('mustache-vars')
 const mustache = require('mustache')
+const ooxmlSignaturePages = require('ooxml-signature-pages')
 const order = require('fs').readFileSync('./order.md', 'utf8')
 const outline = require('outline-numbering')
 const playwright = require('playwright')
 const tape = require('tape')
 const terms = require('fs').readFileSync('./terms.md', 'utf8')
 
-const schema = require('./prompts.schema.json')
+const documentTitles = require('./document-titles')
+const docxStyles = require('./docx-styles')
 const prompts = require('./prompts.json')
+const schema = require('./prompts.schema.json')
+const signatures = require('./signatures.json')
 
 tape('prompts conform to schema', test => {
   const ajv = new AJV({ allErrors: true })
@@ -125,10 +129,10 @@ for (const name in examples) {
   })
 }
 
-tape('terms renders', testRenders(terms))
-tape('order renders', testRenders(order))
+tape('terms renders', testRenders('terms', terms))
+tape('order renders', testRenders('order', order))
 
-function testRenders (template) {
+function testRenders (templateType, template) {
   return test => {
     for (const name in examples) {
       test.test(`render example "${name}"`, test => {
@@ -147,10 +151,29 @@ function testRenders (template) {
           parsed = commonmark.parse(rendered)
         }, 'Common Form render')
         test.doesNotThrow(() => {
-          docx(parsed.form, [], { numbering: outline })
+          docx(parsed.form, [], {
+            title: documentTitles[templateType],
+            edition: 'Test Rendering',
+            numbering: outline,
+            leftAlignBody: true,
+            indentMargins: true,
+            smartify: true,
+            styles: docxStyles,
+            after: templateType === 'order'
+              ? ooxmlSignaturePages(signatures)
+              : undefined
+          })
             .generateAsync({ type: 'nodebuffer' })
+            .then(blob => {
+              fs.mkdir('examples', () => {
+                fs.writeFile(
+                  `examples/${name}-${templateType}.docx`,
+                  blob,
+                  () => test.end()
+                )
+              })
+            })
         }, '.docx render')
-        test.end()
       })
     }
     test.end()

@@ -7,10 +7,12 @@ const mustache = require('mustache')
 const ooxmlSignaturePages = require('ooxml-signature-pages')
 const outline = require('outline-numbering')
 
-const prompts = require('./prompts.json')
-const terms = require('./terms.json')
+const documentTitles = require('./document-titles')
+const docxStyles = require('./docx-styles')
 const order = require('./order.json')
+const prompts = require('./prompts.json')
 const signatures = require('./signatures.json')
+const terms = require('./terms.json')
 
 const version = 'Development Draft'
 const metaLicense = `
@@ -139,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
       view[`${key}=${value}`] = true
     })
     Promise.all([
-      renderTemplate(order, view, 'PolyForm Commercial Software License Order', signatures),
-      renderTemplate(terms, view, 'PolyForm Commercial Software License Terms')
+      renderTemplate(order, view, documentTitles.order, signatures),
+      renderTemplate(terms, view, documentTitles.terms)
     ])
       .then(files => {
         const zip = new JSZip()
@@ -148,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         zip.file('terms.docx', files[1])
         zip.generateAsync({ type: 'blob' })
           .then(blob => {
-            fileSaver.saveAs(blob, 'PolyForm Commercial Packet.zip', true)
+            fileSaver.saveAs(blob, `${documentTitles.archive}.zip`, true)
           })
       })
   }
@@ -173,11 +175,7 @@ function renderTemplate (template, view, title, signatures) {
     leftAlignBody: true,
     indentMargins: true,
     smartify: true,
-    styles: {
-      heading: { italic: true },
-      reference: { italic: true },
-      referenceHeading: { italic: true }
-    }
+    styles: docxStyles
   }
   if (signatures) options.after = ooxmlSignaturePages(signatures)
   return docx(parsed.form, [], options).generateAsync({ type: 'blob' })
