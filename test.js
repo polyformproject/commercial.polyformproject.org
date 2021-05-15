@@ -2,6 +2,7 @@ const AJV = require('ajv').default
 const JSZip = require('jszip')
 const commonmark = require('commonform-commonmark')
 const docx = require('commonform-docx')
+const docxOptions = require('./docx-options')
 const fs = require('fs')
 const handler = require('./server')
 const http = require('http')
@@ -10,6 +11,7 @@ const mustache = require('mustache')
 const ooxmlSignaturePages = require('ooxml-signature-pages')
 const order = require('fs').readFileSync('./order.md', 'utf8')
 const outline = require('outline-numbering')
+const path = require('path')
 const playwright = require('playwright')
 const tape = require('tape')
 const terms = require('fs').readFileSync('./terms.md', 'utf8')
@@ -132,7 +134,7 @@ for (const name in examples) {
 tape('terms renders', testRenders('terms', terms))
 tape('order renders', testRenders('order', order))
 
-function testRenders (templateType, template) {
+function testRenders (kind, template) {
   return test => {
     for (const name in examples) {
       test.test(`render example "${name}"`, test => {
@@ -151,32 +153,25 @@ function testRenders (templateType, template) {
           parsed = commonmark.parse(rendered)
         }, 'Common Form render')
         test.doesNotThrow(() => {
-          docx(parsed.form, [], {
-            title: documentTitles[templateType],
-            edition: 'Test Rendering',
-            numbering: outline,
-            leftAlignBody: true,
-            indentMargins: true,
-            smartify: true,
-            styles: docxStyles,
-            after: templateType === 'order'
-              ? ooxmlSignaturePages(signatures)
-              : undefined
-          })
+          const options = {
+            title: `Test Redering: ${name} ${kind}`,
+            edition: new Date().toISOString()
+          }
+          Object.assign(options, docxOptions)
+          docx(parsed.form, [], options)
             .generateAsync({ type: 'nodebuffer' })
-            .then(blob => {
-              fs.mkdir('examples', () => {
-                fs.writeFile(
-                  `examples/${name}-${templateType}.docx`,
-                  blob,
-                  () => test.end()
-                )
+            .then(result => {
+              fs.mkdir('examples', { recursive: true }, error => {
+                test.ifError(error, 'created examples directory')
+                fs.writeFile(path.join('examples', `${name}-${kind}.docx`), result, error => {
+                  test.ifError(error)
+                  test.end()
+                })
               })
             })
-        }, '.docx render')
+        })
       })
     }
-    test.end()
   }
 }
 

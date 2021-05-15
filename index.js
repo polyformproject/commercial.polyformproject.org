@@ -2,10 +2,10 @@
 const JSZip = require('jszip')
 const commonmark = require('commonform-commonmark')
 const docx = require('commonform-docx')
+const docxOptions = require('./docx-options')
 const fileSaver = require('file-saver')
 const mustache = require('mustache')
 const ooxmlSignaturePages = require('ooxml-signature-pages')
-const outline = require('outline-numbering')
 
 const documentTitles = require('./document-titles')
 const docxStyles = require('./docx-styles')
@@ -168,15 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderTemplate (template, view, title, signatures) {
   const markdown = mustache.render(template, view)
   const parsed = commonmark.parse(markdown)
-  const options = {
-    title,
-    edition: version,
-    numbering: outline,
-    leftAlignBody: true,
-    indentMargins: true,
-    smartify: true,
-    styles: docxStyles
-  }
+  const options = { title, edition: version }
+  Object.assign(options, docxOptions)
   if (signatures) options.after = ooxmlSignaturePages(signatures)
   return docx(parsed.form, [], options).generateAsync({ type: 'blob' })
 }
