@@ -215,6 +215,10 @@ The vendor agrees to give the customer:
 either by e-mail or by making it available for download online, without any additional charge, within three calendar days of entering this agreement.  {{^maintenance=version}}The vendor agrees to make new versions of the software covered by this agreement available in the same way within three calendar days of their release.{{/maintenance=version}}
 {{/delivery=both}}
 
+## License Keys
+
+If the software requires a license key or keys to function, the vendor agrees to give the customer those keys by e-mail on entering into this agreement.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two weeks before the expiration date of the last set of keys.  The customer agrees to share license keys only as required for use of the software under this agreement, and to secure its license keys at least as well as customer's own confidential business information.
+
 {{#escrow=yes}}
 # Escrow
 
