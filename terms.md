@@ -273,9 +273,17 @@ Subject to [Indemnification Process](#indemnification-process), the vendor agree
 
 Both sides agree that to receive indemnification under this agreement, they must give notice of any covered claim quickly, allow the other side to control investigation, defense, and settlement, and cooperate with those efforts.  Both sides agree that if they fail to give notice of any covered claim quickly, indemnification will not cover amounts that could have been defended against or mitigated if notice had been given quickly.  Both sides agree that if they take control of the defense and settlement of any covered claim, they will not agree to any settlements that admit fault or impose obligations on the other side without their permission.
 
-## Response to a Claim
+## Repair, Replace, Refund
 
-TODO: procure, modify, replace, terminate
+If the vendor or the customer receives written notice of a claim that the software infringes any intellectual property right or breaks any law, or vendor reasonably anticipates a claim of that kind, the developer may take any of these steps:
+
+- The developer may provide the customer a new version of the software that no longer infringes or breaks the law.  That new version will be covered by this agreement.  The customer will not pay any additional fee for the new version.
+
+- If the problem is infringement, the developer may get licenses for the customer so that the customer's use of the software no longer infringes.
+
+- If the problem is illegality, the developer may get the approvals, licenses, or other requirements needed to abide by the law.
+
+- The developer may refund any fees the customer has prepaid under this agreement for time remaining in the term of this agreement, on a proportional basis, and end this agreement immediately by giving the customer notice.
 
 # General Contract Terms
 
