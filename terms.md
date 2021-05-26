@@ -88,6 +88,10 @@ The customer may make changes to the software's source code, compile those chang
 The customer may not make changes to the software's source code.
 {{/modification=no}}
 
+## Fees
+
+The vendor agrees to bill the customer per the order.  The customer agrees to pay the fees on the order, usign the payment method on the order.
+
 # Term and Termination
 
 {{#term=perpetual}}
