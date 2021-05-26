@@ -7,7 +7,7 @@ These terms, together with the order referencing them, make up a software licens
 {{#model=trial}}
 ## Trial License
 
-This agreement will continue for the term on the order.  The customer's use of the software is limited to evaluation only.
+This agreement will continue for the term on the order.  The customer may use the software only to evaluate its functionality and suitability for the customer's needs, not to serve customer's customers or to integrate into production systems.
 {{/model=trial}}
 
 {{#model=unlimited}}
