@@ -325,11 +325,11 @@ Both sides intend the terms of this agreement, together with the order, as the f
 
 If a court decides that any part of this agreement is invalid or unenforceable for any reason, and that enforcing the rest of this agreement would not defeat the purpose of this agreement, then rest of this agreement will still apply.
 
-## Written Amendments
+## Amendments
 
 Both sides may change or add to the terms of this agreement only by signing a written amendment.
 
-## Written Waivers
+## Waivers
 
 Both sides will waive terms of this agreement, if at all, only in signed writing.
 
