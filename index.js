@@ -147,7 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const zip = new JSZip()
         zip.file('order.docx', files[0])
         zip.file('terms.docx', files[1])
-        const manifest = { version, selections }
+        const manifest = {
+          generator: 'commercial.polyformproject.org',
+          version,
+          date: new Date().toISOString(),
+          selections
+        }
         zip.file('manifest.json', JSON.stringify(manifest))
         zip.generateAsync({ type: 'blob' })
           .then(blob => {
