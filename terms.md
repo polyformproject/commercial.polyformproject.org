@@ -343,6 +343,10 @@ If the customer is located outside the United States and local law requires the 
 
 - The customer agrees to give the vendor relevant official tax documentation and tax receipts showing that withholding was required and that proper withholding payment was made, as soon as possible after making any withholding payment.
 
+## Billing Disputes
+
+The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven calendar days Deadline` of resolution.
+
 ## Government Procurement
 
 The software is commercial computer software, and the document is commercial computer software documentation.  Both were developed exclusively at private expense.  If customer's procurement is subject to Federal Acquisition Regulation 12.212 or Defense Federal Acquisition Regulation Supplement 227.7202, the customer's rights will be only those stated in this agreement.
