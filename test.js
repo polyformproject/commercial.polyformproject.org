@@ -14,6 +14,7 @@ const path = require('path')
 const playwright = require('playwright')
 const tape = require('tape')
 
+const examples = require('./examples.json')
 const prompts = require('./prompts.json')
 const schema = require('./prompts.schema.json')
 const signatures = require('./signatures.json')
@@ -84,35 +85,6 @@ tape('prompt requirements', test => {
   test.end()
 })
 
-const examples = {
-  trial: {
-    model: 'trial',
-    delivery: 'compiled',
-    escrow: 'no',
-    maintenance: 'version',
-    support: 'none',
-    patent: 'none',
-    law: 'vendor',
-    venue: 'vendor',
-    disputes: 'litigation'
-  },
-  heavy: {
-    model: 'users',
-    expansion: 'list',
-    reporting: 'audit',
-    term: 'renewing',
-    delivery: 'both',
-    modification: 'yes',
-    maintenance: 'term',
-    support: 'full',
-    warranty: 'term',
-    patent: 'all',
-    law: 'california',
-    venue: 'vendor',
-    disputes: 'aaa'
-  }
-}
-
 for (const name in examples) {
   tape(`validate example "${name}"`, test => {
     const example = examples[name]
@@ -152,9 +124,9 @@ function testRenders (kind, template) {
         test.doesNotThrow(() => {
           const options = {
             title: `Test Rendering: ${name} ${kind}`,
-            edition: new Date().toISOString()
+            edition: new Date().toISOString(),
+            after: ooxmlSignaturePages(kind === 'order' ? signatures : [])
           }
-          if (kind === 'order') options.after = ooxmlSignaturePages(signatures)
           Object.assign(options, docxOptions)
           docx(parsed.form, [], options)
             .generateAsync({ type: 'nodebuffer' })

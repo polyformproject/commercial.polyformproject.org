@@ -1,0 +1,28 @@
+{
+  "trial": {
+    "model": "trial",
+    "delivery": "compiled",
+    "escrow": "no",
+    "maintenance": "version",
+    "support": "none",
+    "patent": "none",
+    "law": "vendor",
+    "venue": "vendor",
+    "disputes": "litigation"
+  },
+  "heavy": {
+    "model": "users",
+    "expansion": "list",
+    "reporting": "audit",
+    "term": "renewing",
+    "delivery": "both",
+    "modification": "yes",
+    "maintenance": "term",
+    "support": "full",
+    "warranty": "term",
+    "patent": "all",
+    "law": "california",
+    "venue": "vendor",
+    "disputes": "aaa"
+  }
+}
