@@ -24,6 +24,10 @@ The customer can pay for higher limits on use at these prices: `Expansion Prices
 
 `Billing`
 
+# Payment Terms
+
+Amounts billed must be paid within `Days to Pay` calendar days of receiving the bill.
+
 # Payment Method
 
 `Payment Method`
