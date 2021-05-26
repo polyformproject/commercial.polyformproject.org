@@ -7,25 +7,25 @@ These terms, together with the order referencing them, make up a software licens
 {{#model=trial}}
 ## Trial License
 
-TODO
+This agreement will continue for the term on the order.  The customer's use of the software is limited to evaluation only.
 {{/model=trial}}
 
 {{#model=unlimited}}
 ## Unlimited License
 
-TODO
+The customer's use of the software is not limited under this agreement.
 {{/model=unlimited}}
 
 {{#model=seats}}
 ## Seat License
 
-TODO
+The customer's use of the software is limited to the number of seats on the order.  The customer may assign each seat to one individual at a time, and reassign each seat at most once per calendar quarter.
 {{/model=seats}}
 
 {{#model=metered}}
 ## Metered License
 
-TODO
+The customer's use of the software is limited as described on the order.
 {{/model=metered}}
 
 {{#expansion=list}}
