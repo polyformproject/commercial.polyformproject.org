@@ -10,12 +10,6 @@ These terms, together with the order referencing them, make up a software licens
 This agreement will continue for the term on the order.  The customer may use the software only to evaluate its functionality and suitability for the customer's needs, not to serve customer's customers or to integrate into production systems.
 {{/model=trial}}
 
-{{#model=unlimited}}
-## Unlimited License
-
-The customer's use of the software is not limited under this agreement.
-{{/model=unlimited}}
-
 {{#model=users}}
 ## Users License
 
