@@ -129,6 +129,10 @@ A standard license means a nonexclusive license for the term of this agreement t
 
 Apart from the licenses in [Intellectual Property](#intellectual-property), this agreement does not license or assign any intellectual property rights.
 
+## Open Source Compliance
+
+Some components of the software may be open source software.  If the license terms for any open source component conflict with the terms of this agreement, the developer makes that component available under the open source terms only.  If the license terms for any open source component require the vendor to offer the source code or other information related to the component, the vendor agrees to provide it on written request from the customer.
+
 ## Dual Licensing
 
 If any part of the software is or becomes available under a public license during the term of this agreement:
