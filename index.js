@@ -8,7 +8,6 @@ const mustache = require('mustache')
 const ooxmlSignaturePages = require('ooxml-signature-pages')
 
 const documentTitles = require('./document-titles')
-const docxStyles = require('./docx-styles')
 const order = require('./order.json')
 const prompts = require('./prompts.json')
 const signatures = require('./signatures.json')

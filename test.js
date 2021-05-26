@@ -10,17 +10,14 @@ const listVars = require('mustache-vars')
 const mustache = require('mustache')
 const ooxmlSignaturePages = require('ooxml-signature-pages')
 const order = require('fs').readFileSync('./order.md', 'utf8')
-const outline = require('outline-numbering')
 const path = require('path')
 const playwright = require('playwright')
 const tape = require('tape')
-const terms = require('fs').readFileSync('./terms.md', 'utf8')
 
-const documentTitles = require('./document-titles')
-const docxStyles = require('./docx-styles')
 const prompts = require('./prompts.json')
 const schema = require('./prompts.schema.json')
 const signatures = require('./signatures.json')
+const terms = require('fs').readFileSync('./terms.md', 'utf8')
 
 tape('prompts conform to schema', test => {
   const ajv = new AJV({ allErrors: true })
@@ -157,6 +154,7 @@ function testRenders (kind, template) {
             title: `Test Redering: ${name} ${kind}`,
             edition: new Date().toISOString()
           }
+          if (kind === 'order') options.after = ooxmlSignaturePages(signatures)
           Object.assign(options, docxOptions)
           docx(parsed.form, [], options)
             .generateAsync({ type: 'nodebuffer' })
