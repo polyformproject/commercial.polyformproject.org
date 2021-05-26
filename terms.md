@@ -231,6 +231,13 @@ During its regular business hours, the vendor agrees to respond to e-mail suppor
 
 # Liability
 
+{{#model=trial}}
+## Disclaimer
+
+!!! The vendor provides the software as is,without any warranty.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
+{{/model=trial}}
+
+{{^model=trial}}
 ## Warranty
 
 The vendor guarantees that the software will perform as described in its documentation {{#warranty=period}}during the warranty period on the order{{/warranty=period}}{{#warranty=term}}while this agreement continues{{/warranty=term}}.
@@ -238,6 +245,7 @@ The vendor guarantees that the software will perform as described in its documen
 ## Disclaimer
 
 !!! [Warranty](#warranty) is the only warranty the vendor provides for the software.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
+{{/model=trial}}
 
 ## Liability Cap
 
