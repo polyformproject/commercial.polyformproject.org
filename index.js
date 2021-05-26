@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const zip = new JSZip()
         zip.file('order.docx', files[0])
         zip.file('terms.docx', files[1])
+        const manifest = { version, selections }
+        zip.file('manifest.json', JSON.stringify(manifest))
         zip.generateAsync({ type: 'blob' })
           .then(blob => {
             fileSaver.saveAs(blob, `${documentTitles.archive}.zip`, true)
