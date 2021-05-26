@@ -430,6 +430,22 @@ Both sides intend the terms of this agreement, together with the order, as the f
 
 If a court decides that any part of this agreement is invalid or unenforceable for any reason, and that enforcing the rest of this agreement would not defeat the purpose of this agreement, then rest of this agreement will still apply.
 
+## Excuses
+
+Neither side will be liable for any failure or delay meeting any obligation under this agreement caused by:
+
+- failure of the other side or its personnel to meet their obligations under this agreement
+
+- actions done or delayed at the written request of the other side
+
+- fire, flood, earthquake, and other natural disasters
+
+- declared and undeclared wars, acts of terrorism, sabotage, riots, civil disorder, rebellions, and revolutions
+
+- extraordinary malfunction of Internet infrastructure, data centers, or communication utilities
+
+- government actions taken in response to any of these causes
+
 ## Amendments
 
 Both sides may change or add to the terms of this agreement only by signing a written amendment.
