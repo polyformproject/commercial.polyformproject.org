@@ -151,7 +151,7 @@ function testRenders (kind, template) {
         }, 'Common Form render')
         test.doesNotThrow(() => {
           const options = {
-            title: `Test Redering: ${name} ${kind}`,
+            title: `Test Rendering: ${name} ${kind}`,
             edition: new Date().toISOString()
           }
           if (kind === 'order') options.after = ooxmlSignaturePages(signatures)
