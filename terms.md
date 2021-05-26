@@ -283,6 +283,14 @@ TODO: procure, modify, replace, terminate
 
 This agreement will be governed by {{#law=vendor}}the law of the jurisdiction of the address the vendor gives with its signature{{/law=vendor}}{{#law=customer}}the law of the jurisdiction of the address the vendor gives with its signature{{/law=customer}}{{#law=california}}California law{{/law=california}}{{#law=delaware}}Delaware law{{/law=delaware}}{{#law=newyork}}New York law{{/law=newyork}}.
 
+## No CISG
+
+The United Nations Convention on Contracts for the International Sale of Goods will not apply to this agreement.
+
+## No UCITA
+
+As far as the law allows, the Uniform Computer Information Transactions Act will not apply to this agreement.
+
 ## Dispute Resolution
 
 {{#disputes=litigation}}The parties do not agree to mediation or arbitration of disputes related to this agreement.{{/disputes=litigation}}
