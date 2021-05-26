@@ -100,7 +100,7 @@ const examples = {
     disputes: 'court'
   },
   heavy: {
-    model: 'seats',
+    model: 'users',
     expansion: 'list',
     reporting: 'audit',
     term: 'renewing',

@@ -10,21 +10,18 @@
         - evaluation use only
         - time stated on the ordering document
         - no warranties
-    - id: seats
-      name: Seats
+    - id: unlimited
+      name: Unlimited
+    - id: users
+      name: Users
       notes:
         - maximum number of users
         - stated on the ordering document
-      default: true
     - id: metered
       name: Metered
       notes:
         - transaction, storage volume or other technical limit
         - stated on the ordering document
-    - id: unlimited
-      name: Unlimited
-      notes:
-        - no seat or other limit on use
     - id: cpu
       name: CPU
       version: 2
@@ -36,7 +33,7 @@
   name: Expansion
   description: If the customer needs more usage than they've agreed to, how can they get it?
   requires:
-    - model: seats
+    - model: users
     - model: metered
   choice: single
   choices:
@@ -46,7 +43,6 @@
       name: Commit to Negotiate in Good Faith
     - id: list
       name: On Payment, at List Price
-      default: true
     - id: quoted
       name: On Payment, as Agreed in Ordering Document
     - id: usage
@@ -56,7 +52,7 @@
   name: Usage Reporting
   description: How will the seller determine the customer's usage?
   requires:
-    - model: seats
+    - model: users
     - model: metered
     - expansion: usage
   choice: single
@@ -65,7 +61,6 @@
       name: Software Phones Home
     - id: self
       name: Self-Reported by Customer
-      default: true
     - id: audit
       name: Annual Audit Right
 
@@ -74,7 +69,7 @@
   description: How long will the license last?
   requires:
     - model: unlimited
-    - model: seats
+    - model: users
     - model: metered
     - model: cpu
     - model: site
@@ -86,7 +81,6 @@
       name: One Year
     - id: renewing
       name: One Year, Automatically Renewing
-      default: true
     - id: month
       name: Month to Month
 
@@ -107,7 +101,6 @@
   choices:
     - id: compiled
       name: Compiled Only
-      default: true
     - id: source
       name: Source Only
     - id: both
@@ -125,18 +118,16 @@
       name: Allowed
     - id: no
       name: Prohibited
-      default: true
 
 - id: escrow
   name: Escrow
   description: If the customer doesn't get source code, will they get it if the seller discontinues the product or goes out of business?
   requires:
-    - delivery: compiled
+    - delivery: binary
   choice: single
   choices:
     - id: no
       name: None
-      default: true
     - id: yes
       name: Third-Party
 
@@ -149,7 +140,6 @@
       name: Specific Version
     - id: term
       name: Updates During Term
-      default: true
 
 - id: support
   name: Support
@@ -165,7 +155,6 @@
         - no service-level agreements
         - e-mail only
         - business hours
-      default: true
     - id: full
       name: Full Support
       notes:
@@ -178,7 +167,7 @@
   description: Will the seller give a promise about the quality of the software?
   requires:
     - model: unlimited
-    - model: seats
+    - model: users
     - model: metered
     - model: cpu
     - model: site
@@ -188,12 +177,10 @@
       name: Limited Warranty Period
     - id: term
       name: Term of the Agreement
-      default: true
 
 - id: patent
   name: Patent Infringement Indemnity
   description: Will the seller cover the customer if someone brings a lawsuit claiming that the software infringes a patent?
-  advanced: true
   choice: single
   choices:
     - id: none
@@ -202,17 +189,14 @@
       name: Known Patents
     - id: all
       name: All Patents
-      default: true
 
 - id: law
   name: Governing Law
   description: What law will govern the license agreement?
-  advanced: true
   choice: single
   choices:
     - id: vendor
       name: Vendor's Headquarters
-      default: true
     - id: customer
       name: Customer's Headquarters
     - id: california
@@ -225,7 +209,6 @@
 - id: venue
   name: Venue for Disputes
   description: Where will the seller and customer bring lawsuits about the agreement?
-  advanced: true
   choice: single
   choices:
     - id: capital
@@ -233,24 +216,21 @@
     - id: biggest
       name: Largest City in the Governing Law Jurisdiction
     - id: vendor
-      name: City Nearest Vendor in Governing Law Jurisdiction
-      default: true
+      name: Name Nearest Vendor in Governing Law Jurisdiction
     - id: customer
-      name: City Nearest Customer in Governing Law Jurisdiction
+      name: Name Nearest Customer in Governing Law Jurisdiction
 
 - id: disputes
   name: Dispute Resolution
   description: How will the seller and customer resolve disputes about the agreement?
-  advanced: true
   choice: single
   choices:
-    - id: court
+    - id: litigation
       name: Litigation
-      default: true
     - id: executives
-      name: Executives Meet Before Court
+      name: Executives Meet Before Litigation
     - id: mediation
-      name: Mediation Before Court
+      name: Mediation Before Litigation
     - id: jamsdomestic
       name: JAMS Arbitration, Under Domestic Rules
     - id: jamsinternational

@@ -16,11 +16,15 @@ This agreement will continue for the term on the order.  The customer's use of t
 The customer's use of the software is not limited under this agreement.
 {{/model=unlimited}}
 
-{{#model=seats}}
-## Seat License
+{{#model=users}}
+## Users License
 
-The customer's use of the software is limited to the number of seats on the order.  The customer may assign each seat to one individual at a time, and reassign each seat at most once per calendar quarter.
-{{/model=seats}}
+The customer's use of the software is limited to the number of users on the order.  The customer may assign each seat to one individual at a time, and reassign each seat at most once per calendar quarter.
+
+## Eligible Users
+
+The customer's employees, as well as the customer's subsidiaries' employees, as well as independent contractors providing services to the customer may be assigned as users under this agreement.
+{{/model=users}}
 
 {{#model=metered}}
 ## Metered License
