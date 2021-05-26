@@ -123,7 +123,7 @@
   name: Escrow
   description: If the customer doesn't get source code, will they get it if the seller discontinues the product or goes out of business?
   requires:
-    - delivery: binary
+    - delivery: compiled
   choice: single
   choices:
     - id: no
