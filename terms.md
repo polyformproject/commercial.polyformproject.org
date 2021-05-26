@@ -5,13 +5,13 @@ These terms, together with the order referencing them, make up a software licens
 # Scope
 
 {{#model=trial}}
-## Trial License
+## Trial
 
 This agreement will continue for the term on the order.  The customer may use the software only to evaluate its functionality and suitability for the customer's needs, not to serve customer's customers or to integrate into production systems.
 {{/model=trial}}
 
 {{#model=users}}
-## Users License
+## Users
 
 The customer's use of the software is limited to the number of users on the order.  The customer may assign each seat to one individual at a time, and reassign each seat at most once per calendar quarter.
 
@@ -27,13 +27,13 @@ The customer's use of the software is limited as described on the order.
 {{/model=metered}}
 
 {{#expansion=list}}
-## Higher Limits
+## Increase Limits
 
 The customer can increase the limits on its use of the software by paying for additional usage at the vendor's published list price.
 {{/expansion=list}}
 
 {{#expansion=quoted}}
-## Higher Limits
+## Increase Limits
 
 The customer can increase the limits on its use of the software by paying for additional usage according to the pricing on the order.
 {{/expansion=quoted}}
@@ -45,7 +45,7 @@ If the customer exceeds the limits on its use of the software, the customer agre
 {{/expansion=usage}}
 
 {{#expansion=negotiate}}
-## Higher Limits
+## Increase Limits
 
 The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase the limits on the customer's use of the software on request.
 {{/expansion=negotiate}}
