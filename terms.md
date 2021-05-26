@@ -50,6 +50,22 @@ If the customer exceeds the limits on its use of the software, the customer agre
 The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase the limits on the customer's use of the software on request.
 {{/expansion=negotiate}}
 
+## Use
+
+The customer may use the software only for its own computing needs and those of its subsidiaries and affiliates.  The customer may not:
+
+- sell, lease, license, or sublicense the software or documentation
+
+{{#delivery=compiled}}
+- decompile, disassemble, or reverse engineer any part of the software
+{{/delivery=compiled}}
+
+- allow access to the software by others not licensed by this agreement
+
+- share copies of the software or documentation with with others not licensed by this agreement
+
+- make the software available to others as software-as-a-service
+
 ## Versions
 
 {{#maintenance=version}}
