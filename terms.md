@@ -1,6 +1,6 @@
 # Order
 
-These terms, together with the **order** referencing them, make up a software license agreement.  The software, the developer, and the customer are identified on order form.
+These terms, together with the order referencing them, make up a software license agreement.  The software, the developer, and the customer are identified on order form.
 
 # Scope
 
@@ -119,7 +119,7 @@ The vendor grants the customer and all customer personnel a standard license for
 
 ## Standard License Terms
 
-A **standard license** means a nonexclusive license for the term of this agreement that is conditional on payment of all fees as required by this agreement and subject to any use limits in this agreement.
+A standard license means a nonexclusive license for the term of this agreement that is conditional on payment of all fees as required by this agreement and subject to any use limits in this agreement.
 
 ## No Other Licenses
 
