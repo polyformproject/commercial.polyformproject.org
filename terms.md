@@ -216,19 +216,19 @@ either by e-mail or by making it available for download online, without any addi
 {{/delivery=both}}
 
 {{#escrow=yes}}
-## Escrow
+# Escrow
 
 The parties agree to engage a third-party software escrow agent to received, hold, and release source code for the software if the vendor stops maintaining the software, becomes insolvent or files for bankruptcy, or discontinues the software as a commercial product.
 {{/escrow=yes}}
 
 {{#escrow=no}}
-## No Escrow
+# No Escrow
 
 The parties do not agree to use any software escrow service for the source code of the software under this agreement.
 {{/escrow=no}}
 
 {{#support=none}}
-## No Technical Support
+# No Technical Support
 
 The vendor does not agree to provide technical support for the software under this agreement.
 {{/support=none}}
