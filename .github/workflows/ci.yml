@@ -12,3 +12,4 @@ jobs:
         env:
           CI: true
       - run: npm run build
+      - run: npm run licenses

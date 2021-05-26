@@ -9,6 +9,7 @@
     "file-saver": "^2.0.5",
     "js-yaml": "^4.1.0",
     "jszip": "^3.6.0",
+    "licensee": "^8.2.0",
     "mustache": "^4.2.0",
     "mustache-vars": "^0.2.0",
     "ooxml-signature-pages": "^3.0.2",
@@ -20,6 +21,7 @@
   },
   "scripts": {
     "lint": "standard",
+    "licenses": "licensee --errors-only",
     "fix": "standard --fix",
     "build": "npm run build:prompts ; npm run build:terms ; npm run build:order ; npm run build:bundle ; npm run build:compressed",
     "build:bundle": "browserify -d index.js | exorcist bundle.map.js > bundle.js ; du -h bundle.js",
