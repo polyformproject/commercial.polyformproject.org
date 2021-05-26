@@ -41,7 +41,7 @@ The customer can increase the limits on its use of the software by paying for ad
 {{/expansion=quoted}}
 
 {{#expansion=usage}}
-## Overage
+## Overcharges
 
 If the customer exceeds the limits on its use of the software, the customer agrees to pay additional charges for its usage according to the pricing on the order.
 {{/expansion=usage}}
@@ -52,7 +52,7 @@ If the customer exceeds the limits on its use of the software, the customer agre
 The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase the limits on the customer's use of the software on request.
 {{/expansion=negotiate}}
 
-## Maintenance
+## Versions
 
 {{#maintenance=version}}
 This agreement covers only the specific version of the software on the order.
@@ -63,13 +63,13 @@ This agreement covers the specific version of the software on the order, plus an
 {{/maintenance=term}}
 
 {{#modification=yes}}
-## Modification
+## Software Changes
 
 The customer may make changes to the software's source code, compile those changes, and run changed versions of the software.
 {{/modification=yes}}
 
 {{#modification=no}}
-## No Modification
+## No Software Changes
 
 The customer may not make changes to the software's source code.
 {{/modification=no}}
@@ -208,7 +208,7 @@ The parties do not agree to use any software escrow service for the source code 
 <!-- begin support -->
 
 {{#support=none}}
-# No Support
+# No Technical Support
 
 The vendor does not agree to provide technical support for the software under this agreement.
 {{/support=none}}
