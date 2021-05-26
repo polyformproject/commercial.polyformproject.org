@@ -280,6 +280,14 @@ The vendor guarantees that the software will perform as described in its documen
 
 The vendor guarantees that the software will be kept free of malicious code, such as cmputer worms and viruses.
 
+## Limiting Code
+
+The developer guarantees that the software will be kept free of code that automatically limits or disables software functionality, other than:
+
+- code that limits or disables functionality on faliure to validate license keys
+
+- code that limits or disables functionality based on automatic monitoring of any limits on its use under this agreement
+
 ## Software Dependencies
 
 If the software depends on, installs, configures, or links to other software in order to function, the vendor guarantees that those software dependencies will be either provided in the copies of the software delivered to the customer or generally available for the customer to download, free or charge, from a well known website or Internet service, such as an open source software package repository.
