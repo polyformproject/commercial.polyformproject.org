@@ -366,6 +366,10 @@ If the vendor or the customer receives written notice of a claim that the softwa
 
 # General Contract Terms
 
+## Notices
+
+Both sides agree to give notice under this agreement, the side giving notice must send by e-mail to the address the recipient gave with its signature, or to a different address given later for notices going forward.  If either side finds that e-mail can't be delivered to the e-mail address given, the sender may give notice by registered mail to the address on file for the recipient with the state under whose laws it is organized.
+
 ## Governing Law
 
 This agreement will be governed by {{#law=vendor}}the law of the jurisdiction of the address the vendor gives with its signature{{/law=vendor}}{{#law=customer}}the law of the jurisdiction of the address the vendor gives with its signature{{/law=customer}}{{#law=california}}California law{{/law=california}}{{#law=delaware}}Delaware law{{/law=delaware}}{{#law=newyork}}New York law{{/law=newyork}}.
