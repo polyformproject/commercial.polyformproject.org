@@ -265,7 +265,7 @@ On the customer's request, the vendor will agree to the terms of a standard, pub
 {{#model=trial}}
 ## Disclaimer
 
-!!! The vendor provides the software as is,without any warranty.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
+!!! The vendor provides the software as is, without any warranty.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
 {{/model=trial}}
 
 {{^model=trial}}
