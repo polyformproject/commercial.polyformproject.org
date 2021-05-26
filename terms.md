@@ -227,29 +227,38 @@ The parties agree to engage a third-party software escrow agent to received, hol
 The parties do not agree to use any software escrow service for the source code of the software under this agreement.
 {{/escrow=no}}
 
-<!-- begin support -->
-
 {{#support=none}}
-# No Technical Support
+## No Technical Support
 
 The vendor does not agree to provide technical support for the software under this agreement.
 {{/support=none}}
 
+{{^support=none}}
+# Technical Support
+
 {{#support=basic}}
-# Basic Technical Support
+## Basic Support
 
 During its regular business hours, the vendor agrees to respond to e-mail support requests from customer personnel about configuration of, use of, and problems with the software and its documentation.  The vendor does not agree to any specific service levels for response to support requests.
 {{/support=basic}}
 
 {{#support=full}}
-# Full Technical Support
+## Full Support
 
 - The vendor agrees to respond to support requests from customer personnel, by phone and through its support portal, about configuration of, use of, and problems with the software and its documentation.  The vendor will respond to support requests every hour of every day of the year, according to the service levels on the order.
 
 - If the vendor fails to meet its support service-level agreements for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
 {{/support=full}}
 
-<!-- end support -->
+## Access
+
+The customer agrees to provide the vendor prompt access to personnel, systems, and requested information in order to respond to support requests.
+
+## Confidentiality
+
+On the customer's request, the vendor will agree to the terms of a standard, published, mutual nodisclosure agreement with the customer, for the purpose of fulfilling its support obligations under this agreement through its term.
+
+{{/support=none}}
 
 # Liability
 
