@@ -260,6 +260,28 @@ On the customer's request, the vendor will agree to the terms of a standard, pub
 
 {{/support=none}}
 
+{{^model=trial}}
+# Warranties
+
+## Perform As Documented
+The vendor guarantees that the software will perform as described in its documentation {{#warranty=period}}during the warranty period on the order{{/warranty=period}}{{#warranty=term}}while this agreement continues{{/warranty=term}}, except when:
+
+- the customer uses an older version of the software than the latest provided under this agreement
+
+{{#modification=yes}}
+- the customer modifies the software
+{{/modification=yes}}
+
+- the customer runs the software using hardware or software different from that required, according to the documentation
+
+- the customer combines the software with other software or hardware in ways not described in the documentation, and a problem results from the combination
+
+## Free of Malware
+
+The vendor guarantees that the software will be kept free of malicious code, such as cmputer worms and viruses.
+
+{{/model=trial}}
+
 # Liability
 
 {{#model=trial}}
@@ -269,13 +291,9 @@ On the customer's request, the vendor will agree to the terms of a standard, pub
 {{/model=trial}}
 
 {{^model=trial}}
-## Warranty
-
-The vendor guarantees that the software will perform as described in its documentation {{#warranty=period}}during the warranty period on the order{{/warranty=period}}{{#warranty=term}}while this agreement continues{{/warranty=term}}.
-
 ## Disclaimer
 
-!!! [Warranty](#warranty) is the only warranty the vendor provides for the software.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
+!!! [Warranties](#warranties) sets out the only warranties the vendor provides for the software.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
 {{/model=trial}}
 
 ## Liability Cap
