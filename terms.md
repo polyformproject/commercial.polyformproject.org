@@ -23,7 +23,7 @@ The customer's use of the software is limited to the number of users on the orde
 
 ## Eligible Users
 
-The customer's employees, as well as the customer's subsidiaries' employees, as well as independent contractors providing services to the customer may be assigned as users under this agreement.
+The customer's employees, the customer's subsidiaries' and affiliates' employees, and independent contractors providing services to the customer may be assigned as users under this agreement.
 {{/model=users}}
 
 {{#model=metered}}
