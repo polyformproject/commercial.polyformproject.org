@@ -11,9 +11,9 @@ This agreement will continue for the term on the order.  The customer may use th
 {{/model=trial}}
 
 {{#model=users}}
-## Users
+## Users Limit
 
-The customer's use of the software is limited to the number of users on the order.  The customer may assign each seat to one individual at a time, and reassign each seat at most once per calendar quarter.
+The customer's use of the software is limited to the number of users on the order at any one time.  The customer may reassigning each user at most once per calendar quarter.
 
 ## Eligible Users
 
