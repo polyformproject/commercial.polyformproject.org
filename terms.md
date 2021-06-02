@@ -2,55 +2,53 @@
 
 These terms, together with the order referencing them, make up a software license agreement.  The software, the developer, and the customer are identified on order form.
 
-# Scope
-
 {{#model=trial}}
-## Trial
+# Trial
 
 This agreement will continue for the term on the order.  The customer may use the software only to evaluate its functionality and suitability for the customer's needs, not to serve customer's customers or to integrate into production systems.
 {{/model=trial}}
 
 {{#model=users}}
-## Users Limit
+# Users Limit
 
 The customer's use of the software is limited to the number of users on the order at any one time.  The customer may reassigning each user at most once per calendar quarter.
 
-## Eligible Users
+# Eligible Users
 
 The customer's employees, the customer's subsidiaries' and affiliates' employees, and independent contractors providing services to the customer may be assigned as users under this agreement.
 {{/model=users}}
 
 {{#model=metered}}
-## Metered License
+# Metered License
 
 The customer's use of the software is limited as described on the order.
 {{/model=metered}}
 
 {{#expansion=list}}
-## Increase Limits
+# Increase Limits
 
 The customer can increase the limits on its use of the software by paying for additional usage at the vendor's published list price.
 {{/expansion=list}}
 
 {{#expansion=quoted}}
-## Increase Limits
+# Increase Limits
 
 The customer can increase the limits on its use of the software by paying for additional usage according to the pricing on the order.
 {{/expansion=quoted}}
 
 {{#expansion=usage}}
-## Overcharges
+# Overcharges
 
 If the customer exceeds the limits on its use of the software, the customer agrees to pay additional charges for its usage according to the pricing on the order.
 {{/expansion=usage}}
 
 {{#expansion=negotiate}}
-## Increase Limits
+# Increase Limits
 
 The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase the limits on the customer's use of the software on request.
 {{/expansion=negotiate}}
 
-## Versions
+# Versions
 
 {{#maintenance=version}}
 This agreement covers only the specific version of the software on the order.
@@ -61,18 +59,18 @@ This agreement covers the specific version of the software on the order, plus an
 {{/maintenance=term}}
 
 {{#modification=yes}}
-## Software Changes
+# Software Changes
 
 The customer may make changes to the software's source code, compile those changes, and run changed versions of the software.
 {{/modification=yes}}
 
 {{#modification=no}}
-## No Software Changes
+# No Software Changes
 
 The customer may not make changes to the software's source code.
 {{/modification=no}}
 
-## Fees
+# Fees
 
 The vendor agrees to bill the customer per the order.  The customer agrees to pay the fees on the order, usign the payment method on the order.
 
