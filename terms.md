@@ -50,24 +50,6 @@ If the customer exceeds the limits on its use of the software, the customer agre
 The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase the limits on the customer's use of the software on request.
 {{/expansion=negotiate}}
 
-## Permitted Use
-
-The customer may use the software only for its own computing needs and those of its subsidiaries and affiliates.  The customer may not:
-
-- sell, lease, license, or sublicense the software or documentation
-
-{{#delivery=compiled}}
-- decompile, disassemble, or reverse engineer any part of the software
-{{/delivery=compiled}}
-
-- allow access to the software by others not licensed by this agreement
-
-- share copies of the software or documentation with with others not licensed by this agreement
-
-- make the software available to others as software-as-a-service
-
-- assist or allow others to use the software against the terms of this agreement
-
 ## Versions
 
 {{#maintenance=version}}
@@ -122,6 +104,24 @@ This agreement continues month-by-month, until one side gives the other notice t
 ## Termination
 
 Either side can terminate this agreement immediately if the other side breaches and fails to cure their breach within fourteen calendar days of notice.
+
+# Permitted Use
+
+The customer may use the software only for its own computing needs and those of its subsidiaries and affiliates.  The customer may not:
+
+- sell, lease, license, or sublicense the software or documentation
+
+{{#delivery=compiled}}
+- decompile, disassemble, or reverse engineer any part of the software
+{{/delivery=compiled}}
+
+- allow access to the software by others not licensed by this agreement
+
+- share copies of the software or documentation with with others not licensed by this agreement
+
+- make the software available to others as software-as-a-service
+
+- assist or allow others to use the software against the terms of this agreement
 
 # Intellectual Property
 
