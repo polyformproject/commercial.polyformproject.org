@@ -8,34 +8,38 @@
     "patent": "none",
     "law": "vendor",
     "venue": "vendor",
-    "disputes": "litigation"
+    "disputes": "litigation",
+    "export": "no"
   },
   "unlimited": {
     "model": "unlimited",
     "term": "perpetual",
-    "delivery": "binary",
+    "delivery": "compiled",
     "maintenance": "term",
+    "escrow": "no",
     "support": "basic",
     "warranty": "term",
     "patent": "known",
     "law": "newyork",
     "venue": "vendor",
-    "disputes": "aaa"
+    "disputes": "aaa",
+    "export": "no"
   },
   "metered": {
     "model": "metered",
     "expansion": "quoted",
     "reporting": "audit",
     "term": "month",
-    "escrow": "yes",
-    "delivery": "binary",
+    "delivery": "compiled",
     "maintenance": "version",
+    "escrow": "yes",
     "support": "basic",
     "warranty": "period",
     "patent": "none",
     "law": "delaware",
     "venue": "capital",
-    "disputes": "jamesdomestic"
+    "disputes": "jamsdomestic",
+    "export": "no"
   },
   "heavy": {
     "model": "users",

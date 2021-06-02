@@ -240,14 +240,14 @@
     - id: aaa
       name: AAA Arbitration
 
-- id: exportcontrol
+- id: export
   name: Export Control
   description: Include a section about United States export controls?
   advanced: true
   choice: single
-  choice: no
   choices:
     - id: yes
       name: Yes
     - id: no
       name: No
+      default: true

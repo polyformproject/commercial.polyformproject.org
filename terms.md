@@ -470,11 +470,11 @@ The customer agrees to give the vendor notice of any suspected error on a bill b
 
 The software is commercial computer software, and the document is commercial computer software documentation.  Both were developed exclusively at private expense.  If customer's procurement is subject to Federal Acquisition Regulation 12.212 or Defense Federal Acquisition Regulation Supplement 227.7202, the customer's rights will be only those stated in this agreement.
 
-{{#exportcontrol=yes}}
+{{#export=yes}}
 ## Export Control
 
 The customer may not export or reexport the software or its documentation without the vendor's signed, written permission.
-{{/exportcontrol=yes}}
+{{/export=yes}}
 
 ## Dispute Resolution
 
