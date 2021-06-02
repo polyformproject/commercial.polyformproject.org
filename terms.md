@@ -59,13 +59,13 @@ This agreement covers the specific version of the software on the order, plus an
 {{/maintenance=term}}
 
 {{#modification=yes}}
-# Software Changes
+# Modifications
 
 The customer may make changes to the software's source code, compile those changes, and run changed versions of the software.
 {{/modification=yes}}
 
 {{#modification=no}}
-# No Software Changes
+# No Modifications
 
 The customer may not make changes to the software's source code.
 {{/modification=no}}
