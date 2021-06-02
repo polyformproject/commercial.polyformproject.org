@@ -473,7 +473,7 @@ The software is commercial computer software, and the document is commercial com
 {{#export=yes}}
 ## Export Control
 
-The customer may not export or reexport the software or its documentation without the vendor's signed, written permission.
+The customer may not export or reexport the software or its documentation from the vendor's home country without the vendor's signed, written permission.
 {{/export=yes}}
 
 ## Dispute Resolution
