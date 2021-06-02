@@ -14,7 +14,7 @@
     "mustache-vars": "^0.2.0",
     "ooxml-signature-pages": "^3.0.2",
     "outline-numbering": "^2.0.0",
-    "playwright": "^1.10.0",
+    "playwright": "^1.11.1",
     "send": "^0.17.1",
     "standard": "^16.0.3",
     "tape": "^5.2.2"
