@@ -4,7 +4,7 @@
     "ajv": "^8.4.0",
     "browserify": "^17.0.0",
     "commonform-commonmark": "^6.0.0",
-    "commonform-docx": "^5.5.0",
+    "commonform-docx": "^5.5.2",
     "exorcist": "^2.0.0",
     "file-saver": "^2.0.5",
     "js-yaml": "^4.1.0",
