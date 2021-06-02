@@ -44,28 +44,32 @@ document.addEventListener('DOMContentLoaded', () => {
   fragment.appendChild(form)
 
   // Advanced Options
-  const advanced = document.createElement('fieldset')
-  advanced.className = 'collapsed'
-  const legend = document.createElement('legend')
-  advanced.appendChild(legend)
-  legend.appendChild(document.createTextNode('Advanced Options'))
+  const haveAdvancedOptions = prompts.some(p => p.advanced)
+  let advanced
+  if (haveAdvancedOptions) {
+    advanced = document.createElement('fieldset')
+    advanced.className = 'collapsed'
+    const legend = document.createElement('legend')
+    advanced.appendChild(legend)
+    legend.appendChild(document.createTextNode('Advanced Options'))
 
-  const showText = 'Show Advanced Options'
-  const hideText = 'Hide Advanced Options'
-  const toggle = document.createElement('button')
-  toggle.appendChild(document.createTextNode(showText))
-  toggle.addEventListener('click', event => {
-    event.preventDefault()
-    event.stopPropagation()
-    if (advanced.className === 'collapsed') {
-      advanced.className = 'expanded'
-      event.target.innerText = hideText
-    } else {
-      advanced.className = 'collapsed'
-      event.target.innerText = showText
-    }
-  })
-  advanced.appendChild(toggle)
+    const showText = 'Show Advanced Options'
+    const hideText = 'Hide Advanced Options'
+    const toggle = document.createElement('button')
+    toggle.appendChild(document.createTextNode(showText))
+    toggle.addEventListener('click', event => {
+      event.preventDefault()
+      event.stopPropagation()
+      if (advanced.className === 'collapsed') {
+        advanced.className = 'expanded'
+        event.target.innerText = hideText
+      } else {
+        advanced.className = 'collapsed'
+        event.target.innerText = showText
+      }
+    })
+    advanced.appendChild(toggle)
+  }
 
   // Prompts
   prompts.forEach(prompt => {
@@ -75,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hasRequired = Array.isArray(prompt.requires)
 
     const set = document.createElement('fieldset')
-    if (prompt.advanced) advanced.appendChild(set)
+    if (haveAdvancedOptions && prompt.advanced) advanced.appendChild(set)
     else form.appendChild(set)
     fieldsets[promptID] = set
     if (hasRequired) set.className = 'hidden'
@@ -123,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  form.appendChild(advanced)
+  if (haveAdvancedOptions) form.appendChild(advanced)
 
   // Form Submit Button
   submitButton = document.createElement('button')
