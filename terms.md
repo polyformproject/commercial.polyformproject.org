@@ -230,7 +230,7 @@ The vendor agrees to deliver the following to the customer within three calendar
 
 ## Method
 
-The vendor agrees to deliver all materials by e-mail or by making them available available to download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three calendar days of their release.{{/maintenance=version}}
+The vendor agrees to deliver all materials by e-mail or by making them available to download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three calendar days of their release.{{/maintenance=version}}
 
 ## License Keys
 
