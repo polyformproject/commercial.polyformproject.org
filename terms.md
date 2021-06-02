@@ -105,7 +105,7 @@ Either side can terminate this agreement immediately if the other side breaches 
 
 # Use
 
-# Permitted Use
+## Permitted Use
 
 The customer may use the software only for its own computing needs and those of its subsidiaries and affiliates.
 
@@ -248,7 +248,7 @@ During its regular business hours, the vendor agrees to respond to e-mail suppor
 
 - If the vendor fails to meet its support service-level agreements for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
 
-# Severity Levels
+## Severity Levels
 
 - **Critical Support Requests** are support requests that report:
 
