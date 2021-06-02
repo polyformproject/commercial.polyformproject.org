@@ -254,6 +254,18 @@ During its regular business hours, the vendor agrees to respond to e-mail suppor
 - The vendor agrees to respond to support requests from customer personnel, by phone and through its support portal, about configuration of, use of, and problems with the software and its documentation.  The vendor will respond to support requests every hour of every day of the year, according to the service levels on the order.
 
 - If the vendor fails to meet its support service-level agreements for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
+
+# Severity Levels
+
+- **Critical Support Requests** are support requests that report:
+
+  - TODO
+
+  - TODO
+
+- **Urgent Support Requests** are support requests that report substantial loss of functionality or responsiveness of the software.
+
+- Other support requests are **Regular Support Requests**.
 {{/support=full}}
 
 ## Access

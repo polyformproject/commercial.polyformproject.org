@@ -51,18 +51,6 @@ The e-mail address for support requests is `Support E-Mail Address`.
 
 The address of vendor's support portal is `Support Portal Address`.  The telephone number for support requests is `Support Phone Number`.
 
-# Severity Levels
-
-- **Critical Support Requests** are support requests that report:
-
-  - TODO
-
-  - TODO
-
-- **Urgent Support Requests** are support requests that report substantial loss of functionality or responsiveness of the software.
-
-- Other support requests are **Regular Support Requests**.
-
 # Support Service Levels
 
 The vendor agrees to respond to support requests as follows:
