@@ -8,6 +8,8 @@ The version of the software being licensed is `Software Version`.
 
 # Fees
 
+`Fees`
+
 {{#expansion=quoted}}
 # Expansion Pricing
 
