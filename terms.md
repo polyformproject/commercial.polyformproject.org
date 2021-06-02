@@ -1,6 +1,6 @@
 # Order
 
-These terms, together with the order referencing them, make up a software license agreement.  The software, the developer, and the customer are identified on order form.
+These terms, together with the order referencing them, make up a software license agreement.  The software, the developer, and the customer are identified on the order.
 
 {{#model=trial}}
 # Trial
@@ -11,11 +11,11 @@ This agreement will continue for the term on the order.  The customer may use th
 {{#model=users}}
 # Users Limit
 
-The customer's use of the software is limited to the number of users on the order at any one time.  The customer may reassigning each user at most once per calendar quarter.
+The customer's use of the software is limited to the number of individual users on the order at any one time.  The customer may reassign each user at most once per calendar quarter.
 
 # Eligible Users
 
-The customer's employees, the customer's subsidiaries' and affiliates' employees, and independent contractors providing services to the customer may be assigned as users under this agreement.
+Only the customer's employees, the customer's subsidiaries' and affiliates' employees, and individual independent contractors providing services to the customer may be assigned as users under this agreement.
 {{/model=users}}
 
 {{#model=metered}}
@@ -72,7 +72,7 @@ The customer may not make changes to the software's source code.
 
 # Fees
 
-The vendor agrees to bill the customer per the order.  The customer agrees to pay the fees on the order, usign the payment method on the order.
+The vendor agrees to bill the customer per the order.  The customer agrees to pay the fees on the order, using the payment method on the order.
 
 # Term and Termination
 
@@ -91,7 +91,7 @@ This agreement will continue for one year.
 {{#term=renewing}}{{/term=renewing}}
 ## Term and Renewal
 
-This agreement will continue for one year, and then renew automatically for additional year-long terms.  Either side can stop this agreement from renewing automatically by giving the other side notice at least sixty calendar days before it would otherwise renew.
+This agreement will continue for one year, and then renew automatically for one year at a time.  Either side can stop this agreement from renewing by giving notice at least sixty calendar days before it renews again.
 
 {{#term=month}}
 ## Month-to-Month
@@ -103,9 +103,15 @@ This agreement continues month-by-month, until one side gives the other notice t
 
 Either side can terminate this agreement immediately if the other side breaches and fails to cure their breach within fourteen calendar days of notice.
 
+# Use
+
 # Permitted Use
 
-The customer may use the software only for its own computing needs and those of its subsidiaries and affiliates.  The customer may not:
+The customer may use the software only for its own computing needs and those of its subsidiaries and affiliates.
+
+## Prohibited Uses
+
+The customer may not:
 
 - sell, lease, license, or sublicense the software or documentation
 
@@ -125,11 +131,11 @@ The customer may use the software only for its own computing needs and those of 
 
 ## Software Copyright License
 
-The vendor grants the customer and each authorized user a standard license for any copyrights in covered versions of the software that the vendor can license, to copy, install, back up, and make permitted use of the software.
+The vendor grants the customer and each authorized user a standard license for any copyrights in covered versions of the software that the vendor can license, to copy, install, back up, and use of the software as allowed by this agreement.
 
 ## Software Patent License
 
-The vendor grants the customer and each authorized user a standard license for any patents can license or becomes able to license, to make permitted use of the software.
+The vendor grants the customer and each authorized user a standard license for any patents can license or becomes able to license, to use the software as allowed by this agreement.
 
 ## Documentation Copyright License
 
@@ -160,64 +166,53 @@ If any part of the software is or becomes available under a public license durin
 {{#reporting=phone}}
 # Phone Home
 
-The software will report the customer's usage to the vendor by contacting the vendor's servers via the Internet.  The customer agrees not to take any steps to prevent the software from sending those reports, and will configure its firewall and other settings according to the documentation to allow them.
+The software will report the customer's use to the vendor by contacting the vendor's servers via the Internet.  The customer agrees not to take any steps to prevent the software from sending those reports, and will configure its firewall and other settings according to the documentation to allow them.
 {{/reporting=phone}}
 
 {{#reporting=self}}
-# Usage Reports
+# Reporting
 
-The customer agrees to track and accurately report its usage of the software to the vendor on a monthly basis.
+The customer agrees to track and accurately report its use of the software to the vendor on a monthly basis.
 {{/reporting=self}}
 
 {{#reporting=audit}}
 # Audit
 
-The vendor may audit the customer's usage of the software to confirm that the customer has remained within the limits of this agreement.  The customer agrees to cooperate with audits and the vendor's auditors during regular business hours.  The vendor agrees to cooperate with the customer to minimize the disruption to the customer's business from the audit.  The customer agrees to promptly pay the vendor's costs of performing an audit if the audit reveals that the customer has exceeded the limits on their use under this agreement.
+The vendor may audit the customer's use of the software to confirm that the customer has remained within the limits of this agreement.  The customer agrees to cooperate with audits during regular business hours.  The vendor agrees to cooperate with the customer to minimize the disruption to the customer's business from the audit.  The customer agrees to promptly pay the vendor's costs of performing an audit if the audit reveals that the customer has exceeded the limits on their use under this agreement.
 {{/reporting=audit}}
 
 <!-- end reporting -->
 
 # Delivery
 
-{{#delivery=compiled}}
-## Binary
+## Materials
 
-The vendor agrees to give the customer a copy of the software in compiled form, as well as its documentation, either by e-mail or by making it available for download online, without any additional charge, within three calendar days of entering this agreement.  {{^maintenance=version}}The vendor agrees to make new versions of the software covered by this agreement available in the same way within three calendar days of their release.{{/maintenance=version}}
+The vendor agrees to deliver the following to the customer within three calendar days:
+
+{{#delivery=compiled}}
+- a copy of the software in compiled form
 {{/delivery=compiled}}
 
 {{#delivery=source}}
-## Source
-
-The vendor agrees to give the customer:
-
-- a copy of the software's source code, in the preferred form for review and development
-
-- copies of any scripts or configuration files necessary to compile it
-
-- a copy of the software's documentation
-
-either by e-mail or by making it available for download online, without any additional charge, within three calendar days of entering this agreement.  {{^maintenance=version}}The vendor agrees to make new versions of the software covered by this agreement available in the same way within three calendar days of their release.{{/maintenance=version}}
+- a copy of the software's source code, in the preferred form for making changes
+- copies of any scripts or configuration files necessary to compile the software's source code
 {{/delivery=source}}
 
 {{#delivery=both}}
-## Binary and Source
-
-The vendor agrees to give the customer:
-
 - a copy of the software in compiled form
-
-- a copy of the software's source code, in the preferred form for review and development
-
-- copies of any scripts or configuration files necessary to compile it
+- a copy of the software's source code, in the preferred form for making changes
+- copies of any scripts or configuration files necessary to compile the software's source code
+{{/delivery=both}}
 
 - a copy of the software's documentation
 
-either by e-mail or by making it available for download online, without any additional charge, within three calendar days of entering this agreement.  {{^maintenance=version}}The vendor agrees to make new versions of the software covered by this agreement available in the same way within three calendar days of their release.{{/maintenance=version}}
-{{/delivery=both}}
+## Method
+
+The vendor agrees to deliver all materials by e-mail or by making them available available for download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three calendar days of their release.{{/maintenance=version}}
 
 ## License Keys
 
-If the software requires a license key or keys to function, the vendor agrees to give the customer those keys by e-mail on entering into this agreement.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two weeks before the expiration date of the last set of keys.  The customer agrees to share license keys only as required for use of the software under this agreement, and to secure its license keys at least as well as customer's own confidential business information.
+If the software requires a license keys to function, the vendor agrees to give the customer those keys by e-mail within three calendar days.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two calendar weeks before the last keys expire.  The customer agrees to share license keys only as required for use of the software under this agreement, and to secure its license keys at least as well as its confidential business information.
 
 {{#escrow=yes}}
 # Escrow
@@ -272,7 +267,7 @@ The customer agrees to provide the vendor prompt access to personnel, systems, a
 
 ## Confidentiality
 
-On the customer's request, the vendor will agree to the terms of a standard, published, mutual nodisclosure agreement with the customer, for the purpose of fulfilling its support obligations under this agreement through its term.
+On the customer's request, the vendor will agree to the terms of a standard, published, mutual nondisclosure agreement with the customer, for the purpose of fulfilling its support obligations under this agreement through its term.
 
 {{/support=none}}
 
@@ -292,15 +287,15 @@ The vendor guarantees that the software will perform as described in its documen
 
 - the customer combines the software with other software or hardware in ways not described in the documentation, and a problem results from the combination
 
-## Free of Malware
+## Malware
 
-The vendor guarantees that the software will be kept free of malicious code, such as cmputer worms and viruses.
+The vendor guarantees that the software will be kept free of malicious code, such as computer worms and viruses.
 
 ## Limiting Code
 
 The developer guarantees that the software will be kept free of code that automatically limits or disables software functionality, other than:
 
-- code that limits or disables functionality on faliure to validate license keys
+- code that limits or disables functionality on failure to validate license keys
 
 - code that limits or disables functionality based on automatic monitoring of any limits on its use under this agreement
 
@@ -324,6 +319,10 @@ If the software depends on, installs, configures, or links to other software in 
 !!! [Warranties](#warranties) sets out the only warranties the vendor provides for the software.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
 {{/model=trial}}
 
+## Unforeseeable Damages
+
+!!! Neither side will be liable for breach-of-contract damages they could not have reasonably foreseen when entering into this agreement.
+
 ## Liability Cap
 
 !!! Except for [Uncapped Liabilities](#uncapped-liabilities), neither side's total liability for breach of this agreement will exceed the amount of fees the vendor received from the customer under this agreement during the twelve months before the first claim is made.  This limit applies even if the side liable is advised that the other may suffer damages, and even if the customer paid no fees at all.
@@ -338,9 +337,7 @@ If the software depends on, installs, configures, or links to other software in 
 
 - liabilities the law requires to be unlimited
 
-## Unforeseeable Damages
-
-Neither side will be liable for breach-of-contract damages they could not have reasonably foreseen when entering into this agreement.
+# Indemnities
 
 ## General Indemnity
 
