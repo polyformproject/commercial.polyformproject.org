@@ -169,7 +169,8 @@ for (const key in examples) {
         test.equal(heading, 'Commercial License Generator', 'heading')
 
         // Fill out the form.
-        await page.click('text=Show Advanced Options')
+        const showAdvanced = await page.$('text=Show Advanced Options')
+        if (showAdvanced) await showAdvanced.click()
         const example = examples[key]
         for (const promptID in example) {
           const choiceID = example[promptID]
