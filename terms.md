@@ -55,7 +55,7 @@ This agreement covers only the specific version of the software on the order.
 {{/maintenance=version}}
 
 {{#maintenance=term}}
-This agreement covers the specific version of the software on the order, plus any new versions of the software that the vendor makes generally available to customers, or specifically provides to the customer, while this agreement continues.  The vendor agrees to make new version of the software fixing bugs and addressing other technical issues identified by its staff and pointed out by customers.
+This agreement covers the specific version of the software on the order, plus any new versions of the software that the vendor makes generally available to customers, or specifically provides to the customer, while this agreement continues.
 {{/maintenance=term}}
 
 {{#modification=yes}}
@@ -70,9 +70,13 @@ The customer may make changes to the software's source code, compile those chang
 The customer may not make changes to the software's source code.
 {{/modification=no}}
 
-# Fees
+# Billing, Fees, and Payment
 
 The vendor agrees to bill the customer per the order.  The customer agrees to pay the fees on the order, using the payment method on the order.
+
+# Billing Disputes
+
+The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven calendar days of resolution.
 
 # Term and Termination
 
@@ -91,7 +95,7 @@ This agreement will continue for one year.
 {{#term=renewing}}{{/term=renewing}}
 ## Term and Renewal
 
-This agreement will continue for one year, and then renew automatically for one year at a time.  Either side can stop this agreement from renewing by giving notice at least sixty calendar days before it renews again.
+This agreement will continue for one year, then renew automatically for an additional year at a time.  Either side can stop this agreement from renewing by giving notice at least sixty calendar days before it renews again.
 
 {{#term=month}}
 ## Month-to-Month
@@ -131,11 +135,11 @@ The customer may not:
 
 ## Software Copyright License
 
-The vendor grants the customer and each authorized user a standard license for any copyrights in covered versions of the software that the vendor can license, to copy, install, back up, and use of the software as allowed by this agreement.
+The vendor grants the customer and each authorized user a standard license for any copyrights in the software that the vendor can license, to copy, install, back up, and use of the software as allowed by this agreement.
 
 ## Software Patent License
 
-The vendor grants the customer and each authorized user a standard license for any patents can license or becomes able to license, to use the software as allowed by this agreement.
+The vendor grants the customer and each authorized user a standard license for any patents the vendor can license or becomes able to license, to use the software.
 
 ## Documentation Copyright License
 
@@ -143,7 +147,7 @@ The vendor grants the customer and all customer personnel a standard license for
 
 ## Standard License Terms
 
-A standard license means a nonexclusive license for the term of this agreement that is conditional on payment of all fees as required by this agreement and subject to any use limits in this agreement.
+A standard license means a nonexclusive license for the term of this agreement, for versions of the software covered by this agreement, that is conditional on payment of all fees as required by this agreement and subject to any use limits in this agreement.
 
 ## No Other Licenses
 
@@ -155,9 +159,9 @@ Some components of the software may be open source software available under free
 
 ## Dual Licensing
 
-If any part of the software is or becomes available under a public license during the term of this agreement:
+If any part of the software is or becomes available under a public license:
 
-- During the term of this agreement, the customer must abide by this agreement, not the public license.
+- While this agreement continues, the customer must abide by this agreement, not the public license.
 
 - After this agreement ends, the customer must abide by the public license.
 
@@ -178,7 +182,25 @@ The customer agrees to track and accurately report its use of the software to th
 {{#reporting=audit}}
 # Audit
 
-The vendor may audit the customer's use of the software to confirm that the customer has remained within the limits of this agreement.  The customer agrees to cooperate with audits during regular business hours.  The vendor agrees to cooperate with the customer to minimize the disruption to the customer's business from the audit.  The customer agrees to promptly pay the vendor's costs of performing an audit if the audit reveals that the customer has exceeded the limits on their use under this agreement.
+## Audit Right
+
+The vendor may audit the customer's use of the software to confirm that the customer has remained within its use limits.
+
+## Audit Frequency
+
+The vendor may audit the customer at most once per rolling year-long period.
+
+## Auditor
+
+The vendor agrees to give notice of any outside auditor that it plans to use to audit the customer.  If the customer gives notice of a reasonable objection to the vendor's choice of auditor, the vendor must use a different auditor, or perform the audit itself.
+
+## Audit Hours
+
+The customer agrees to cooperate with audits during regular business hours.  The vendor agrees to cooperate with the customer to minimize the disruption to the customer's business from the audit.
+
+## Audit Costs
+
+The customer agrees to promptly pay the vendor's costs of performing an audit if the audit reveals that the customer has exceeded the limits on their use under this agreement.  Otherwise, the vendor will cover its own audit costs.
 {{/reporting=audit}}
 
 <!-- end reporting -->
@@ -194,13 +216,13 @@ The vendor agrees to deliver the following to the customer within three calendar
 {{/delivery=compiled}}
 
 {{#delivery=source}}
-- a copy of the software's source code, in the preferred form for making changes
+- a copy of the software's source code in the preferred form for making changes
 - copies of any scripts or configuration files necessary to compile the software's source code
 {{/delivery=source}}
 
 {{#delivery=both}}
 - a copy of the software in compiled form
-- a copy of the software's source code, in the preferred form for making changes
+- a copy of the software's source code in the preferred form for making changes
 - copies of any scripts or configuration files necessary to compile the software's source code
 {{/delivery=both}}
 
@@ -208,11 +230,11 @@ The vendor agrees to deliver the following to the customer within three calendar
 
 ## Method
 
-The vendor agrees to deliver all materials by e-mail or by making them available available for download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three calendar days of their release.{{/maintenance=version}}
+The vendor agrees to deliver all materials by e-mail or by making them available available to download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three calendar days of their release.{{/maintenance=version}}
 
 ## License Keys
 
-If the software requires a license keys to function, the vendor agrees to give the customer those keys by e-mail within three calendar days.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two calendar weeks before the last keys expire.  The customer agrees to share license keys only as required for use of the software under this agreement, and to secure its license keys at least as well as its confidential business information.
+If the software requires license keys to function, the vendor agrees to give the customer those keys by e-mail within three calendar days.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two calendar weeks before the last keys expire.  The customer agrees to share license keys only as required for use of the software under this agreement, and to secure its license keys at least as well as its confidential business information.
 
 {{#escrow=yes}}
 # Escrow
@@ -242,19 +264,29 @@ During its regular business hours, the vendor agrees to respond to e-mail suppor
 {{/support=basic}}
 
 {{#support=full}}
-## Full Support
+## Support Scope
 
-- The vendor agrees to respond to support requests from customer personnel, by phone and through its support portal, about configuration of, use of, and problems with the software and its documentation.  The vendor will respond to support requests every hour of every day of the year, according to the service levels on the order.
+The vendor agrees to respond to support requests from customer personnel about configuration of, use of, and problems with the software and its documentation.
 
-- If the vendor fails to meet its support service-level agreements for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
+## Support Channels
+
+The vendor agrees to respond to support request via the support channels on the order.
+
+## Support Hours
+
+The vendor will respond to support requests every hour of every day of the year, according to the service levels on the order.
+
+## Support SLA
+
+If the vendor fails to meet its support service-level agreements for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
 
 ## Severity Levels
 
 - **Critical Support Requests** are support requests that report:
 
-  - TODO
+  - the software has stopped working at all
 
-  - TODO
+  - functions of the software that are critical to the customer's use case have stopped working, begun malfunctioning, or are working only very slowly
 
 - **Urgent Support Requests** are support requests that report substantial loss of functionality or responsiveness of the software.
 
@@ -263,11 +295,11 @@ During its regular business hours, the vendor agrees to respond to e-mail suppor
 
 ## Access
 
-The customer agrees to provide the vendor prompt access to personnel, systems, and requested information in order to respond to support requests.
+The customer agrees to give the vendor prompt access to personnel, systems, and requested information needed to respond to support requests.
 
 ## Confidentiality
 
-On the customer's request, the vendor will agree to the terms of a standard, published, mutual nondisclosure agreement with the customer, for the purpose of fulfilling its support obligations under this agreement through its term.
+On the customer's request, the vendor will agree to the terms of a standard, published, mutual nondisclosure agreement with the customer, for the purpose of fulfilling its support obligations under this agreement.
 
 {{/support=none}}
 
@@ -285,15 +317,15 @@ The vendor guarantees that the software will perform as described in its documen
 
 - the customer runs the software using hardware or software different from that required, according to the documentation
 
-- the customer combines the software with other software or hardware in ways not described in the documentation, and a problem results from the combination
+- the customer combines the software with other software or hardware in ways not described in the documentation
 
 ## Malware
 
-The vendor guarantees that the software will be kept free of malicious code, such as computer worms and viruses.
+The vendor guarantees that the software it delivers will be free of malicious code, such as computer worms and viruses.
 
 ## Limiting Code
 
-The developer guarantees that the software will be kept free of code that automatically limits or disables software functionality, other than:
+The developer guarantees that the software it delivers will be free of code that automatically limits or disables software functionality, other than:
 
 - code that limits or disables functionality on failure to validate license keys
 
@@ -341,7 +373,7 @@ If the software depends on, installs, configures, or links to other software in 
 
 ## General Indemnity
 
-Subject to [Indemnification Process](#indemnification-process), the vendor agrees to indemnify the customer for legal claims by others alleging that permitted use of the software infringes any copyright, trademark, or trade secret right, or breaks any law.
+Subject to [Indemnification Process](#indemnification-process), the vendor agrees to indemnify the customer for legal claims by others alleging that the software infringes any copyright, trademark, or trade secret right, or breaks any law.
 
 ## Patent Indemnity
 
@@ -353,15 +385,19 @@ Subject to [Indemnification Process](#indemnification-process), the vendor agree
 
 ## Scope of Indemnity
 
-Throughout this agreement, to indemnify means to indemnify and hold harmless for all liability, expenses, damages, and costs, as well as to defend the indemnified party.  Indemnification is the indemnified side's only remedy under this agreement for claims covered.
+Throughout this agreement, to indemnify means to indemnify and hold harmless for all liability, expenses, damages, and costs, as well as to defend the indemnified party.  
+
+## Only Remedy
+
+Indemnification is the only remedy under this agreement for claims covered by indemnity.
 
 ## Indemnification Process
 
-Both sides agree that to receive indemnification under this agreement, they must give notice of any covered claim quickly, allow the other side to control investigation, defense, and settlement, and cooperate with those efforts.  Both sides agree that if they fail to give notice of any covered claim quickly, indemnification will not cover amounts that could have been defended against or mitigated if notice had been given quickly.  Both sides agree that if they take control of the defense and settlement of any covered claim, they will not agree to any settlements that admit fault or impose obligations on the other side without their permission.
+Both sides agree that to be indemnified they must give notice of any covered claim quickly, allow the other side to control investigation, defense, and settlement, and cooperate with those efforts.  Both sides agree that if they fail to give notice of any covered claim quickly, indemnification will not cover amounts that could have been defended against or mitigated if notice had been given quickly.  Both sides agree that if they take control of the defense and settlement of any covered claim, they will not agree to any settlements that admit fault or impose obligations on the other side without their permission.
 
 ## Repair, Replace, Refund
 
-If the vendor or the customer receives written notice of a claim that the software infringes any intellectual property right or breaks any law, or vendor reasonably anticipates a claim of that kind, the developer may take any of these steps:
+If the vendor or the customer receives written notice of a claim that the software infringes any intellectual property right or breaks any law, or vendor reasonably anticipates a claim of that kind:
 
 - The developer may provide the customer a new version of the software that no longer infringes or breaks the law.  That new version will be covered by this agreement.  The customer will not pay any additional fee for the new version.
 
@@ -370,6 +406,22 @@ If the vendor or the customer receives written notice of a claim that the softwa
 - If the problem is illegality, the developer may get the approvals, licenses, or other requirements needed to abide by the law.
 
 - The developer may refund any fees the customer has prepaid under this agreement for time remaining in the term of this agreement, on a proportional basis, and end this agreement immediately by giving the customer notice.
+
+# Tax
+
+## Taxes on Fees
+
+The customer agrees to pay all tax on fees under this agreement, except tax on the vendor's income.
+
+## Tax Withholding
+
+If the customer is located outside the United States and local law requires the customer to withhold taxes on fees paid under this agreement:
+
+- The customer agrees to make the required tax withholding payments for the vendor by deducting the right amounts from payments to the vendor and paying them to the proper tax authorities.
+
+- The customer agrees to increase the amount of each payment made under this agreement, to offset withholding, so that the vendor receives the full amount owed.
+
+- The customer agrees to give the vendor relevant official tax documentation and tax receipts showing that withholding was required and that proper withholding payment was made, as soon as possible after making any withholding payment.
 
 # General Contract Terms
 
@@ -388,24 +440,6 @@ The United Nations Convention on Contracts for the International Sale of Goods w
 ## No UCITA
 
 As far as the law allows, the Uniform Computer Information Transactions Act will not apply to this agreement.
-
-## Taxes
-
-The customer agrees to pay all tax on fees under this agreement, except tax on the vendor's income.
-
-## Tax Withholding
-
-If the customer is located outside the United States and local law requires the customer to withhold taxes on fees paid under this agreement:
-
-- The customer agrees to make the required tax withholding payments for the vendor by deducting the right amounts from payments to the vendor and paying them to the proper tax authorities.
-
-- The customer agrees to increase the amount of each payment made under this agreement, to offset withholding, so that the vendor receives the full amount owed.
-
-- The customer agrees to give the vendor relevant official tax documentation and tax receipts showing that withholding was required and that proper withholding payment was made, as soon as possible after making any withholding payment.
-
-## Billing Disputes
-
-The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven calendar days Deadline` of resolution.
 
 ## Government Procurement
 
