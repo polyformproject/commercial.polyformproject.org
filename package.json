@@ -1,19 +1,21 @@
 {
   "private": true,
+  "dependencies": {
+    "commonform-commonmark": "^6.0.0",
+    "commonform-docx": "^5.5.2",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.6.0",
+    "mustache": "^4.2.0",
+    "ooxml-signature-pages": "^3.0.2",
+    "outline-numbering": "^2.0.0"
+  },
   "devDependencies": {
     "ajv": "^8.4.0",
     "browserify": "^17.0.0",
-    "commonform-commonmark": "^6.0.0",
-    "commonform-docx": "^5.5.2",
     "exorcist": "^2.0.0",
-    "file-saver": "^2.0.5",
     "js-yaml": "^4.1.0",
-    "jszip": "^3.6.0",
     "licensee": "^8.2.0",
-    "mustache": "^4.2.0",
     "mustache-vars": "^0.2.0",
-    "ooxml-signature-pages": "^3.0.2",
-    "outline-numbering": "^2.0.0",
     "playwright": "^1.11.1",
     "send": "^0.17.1",
     "standard": "^16.0.3",
