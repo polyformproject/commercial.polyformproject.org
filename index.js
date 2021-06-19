@@ -14,12 +14,11 @@ const signatures = require('./signatures.json')
 const terms = require('./terms.json')
 
 const version = 'Development Draft'
-const metaLicense = `
-<h2>Permission</h2>
-<p>Each contributor licenses you to do everything with PolyForm licenses that would otherwise infringe that contributor’s copyright in it.</p>
-<p>If you make changes to a PolyForm license, you must remove all mention of “PolyForm” and polyformproject.org, as well.</p>
-<p class=conspicuous>As far as the law allows, PolyForm licenses come as is, without any warranty at all, and no contributor will be liable to anyone for any damages related to the licenses or their use, for any kind of legal claim.</p>
-`
+const permission = [
+  { text: 'Each contributor licenses you to do everything with PolyForm licenses that would otherwise infringe that contributor’s copyright in it.' },
+  { text: 'If you make changes to a PolyForm license, you must remove all mention of “PolyForm” and polyformproject.org, as well.' },
+  { text: 'As far as the law allows, PolyForm licenses come as is, without any warranty at all, and no contributor will be liable to anyone for any damages related to the licenses or their use, for any kind of legal claim.', conspicuous: true }
+]
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
@@ -151,6 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const zip = new JSZip()
         zip.file('order.docx', files[0])
         zip.file('terms.docx', files[1])
+        const permissionLines = ['# Permission']
+          .concat(permission.map(p => p.conspicuous ? `***${p.text}***` : p.text))
+        zip.file('permission.txt', permissionLines.join('\n\n') + '\n')
         const manifest = {
           generator: 'commercial.polyformproject.org',
           version,
@@ -164,10 +166,15 @@ document.addEventListener('DOMContentLoaded', () => {
           })
       })
   }
-
   // License for Legal Texts
   const license = document.createElement('section')
-  license.innerHTML = metaLicense
+  license.innerHTML = `
+    <h2 id=permission>Permission</h2>
+    ${permission
+      .map(p => `<p${p.conspicuous ? ' class=conspicuous' : ''}>${p.text}</p>`)
+      .join('\n')
+    }
+  `
   fragment.appendChild(license)
 
   onInputChange()
