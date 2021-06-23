@@ -255,7 +255,7 @@ The vendor agrees to deliver all materials by e-mail or by making them available
 
 ## License Keys
 
-If the software requires license keys to function, the vendor agrees to give the customer those keys by e-mail within three days.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two weeks before the last keys expire.  The customer agrees to share license keys only as required for use of the software under this agreement, and to secure its license keys at least as well as its confidential business information.
+If the software requires license keys to function, the vendor agrees to give the customer those keys by e-mail within three days.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two weeks before the last keys expire.  The customer agrees to share license keys only as required for use of the software as allowed under this this agreement, and to secure its license keys at least as well as its confidential business information.
 
 {{#escrow=yes}}
 # Escrow
