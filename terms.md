@@ -316,7 +316,7 @@ If the vendor fails to meet its support service levels for three months in a row
 
 ## Access
 
-The customer agrees to give the vendor prompt access to personnel, systems, and requested information needed to respond to support requests.
+On the vendor's request, the customer agrees to give the vendor prompt access to personnel, systems, and information needed to respond to support requests.
 
 ## Confidentiality
 
