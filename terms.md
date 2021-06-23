@@ -21,31 +21,46 @@ Only the customer's employees, the customer's subsidiaries' and affiliates' empl
 {{#model=metered}}
 # Metered License
 
-The customer's use of the software is limited as described on the order.
+The customer's use of the software is limited to within the numeric technical limits on the order.
 {{/model=metered}}
 
 {{#expansion=list}}
-# Increase Limits
+{{#model=users}}
+# Additional Users
 
-The customer can increase the limits on its use of the software by paying for additional usage at the vendor's published list price.
+The customer can increase its users limit by paying for for additional users, in advance, at the vendor's published list price.
+{{/model=users}}
+
+{{#model=metered}}
+# Additional Usage
+
+The customer can increase the numeric technical limits on its use of the software by paying for additional usage, in advance, at the vendor's published list prices.
+{{/model=users}}
 {{/expansion=list}}
 
 {{#expansion=quoted}}
-# Increase Limits
+{{#model=users}}
+# Additional Users
 
-The customer can increase the limits on its use of the software by paying for additional usage according to the pricing on the order.
+The customer can increase its users limit by paying for for additional users, in advance, according to the pricing on the order.
+{{/model=users}}
+{{#model=metered}}
+# Additional Usage
+
+The customer can increase the numeric technical limits on its use of the software by paying for additional usage, in advance, according to the pricing on the order.
+{{/model=metered}}
 {{/expansion=quoted}}
 
 {{#expansion=usage}}
 # Overcharges
 
-If the customer exceeds the limits on its use of the software, the customer agrees to pay additional charges for its usage according to the pricing on the order.
+If the customer {{#model=users}}allows use by more individual than its users limit allows{{/model=users}}{{#model=metered}}exceeds the numeric technical limits on its use of the software{{/model=metered}}, the customer agrees to pay additional charges for its usage according to the pricing on the order.
 {{/expansion=usage}}
 
 {{#expansion=negotiate}}
 # Increase Limits
 
-The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase the limits on the customer's use of the software on request.
+The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase {{#model=users}}the customer's users limit{{/model=users}}{{#model=metered}}the numeric technical limits on the customer's use of the software{{/model=metered}} on request.
 {{/expansion=negotiate}}
 
 # Versions
