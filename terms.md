@@ -299,7 +299,7 @@ The vendor will respond to support requests every hour of every day of the year,
 
 ## Support SLA
 
-If the vendor fails to meet its support service-level agreements for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
+If the vendor fails to meet its support service levels for three months in a row, the customer can end this agreement by notice to vendor.  If the customer ends this agreement for unresponsive support, the vendor agrees to refund all the support fees the customer paid for those months.
 
 ## Severity Levels
 
