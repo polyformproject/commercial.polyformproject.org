@@ -535,7 +535,7 @@ Both sides will waive terms of this agreement, if at all, only in signed writing
 
 ## No Assignment
 
-Neither side may assign any right under this agreement without the other side's signed, written permission.  Neither side will unreasonably refuse such permission.  Any attempt to assign against the terms of this agreement will have no legal effect.
+Neither side may assign any right under this agreement without the other side's signed, written permission.  Neither side will unreasonably refuse permission.  Any attempt to assign against the terms of this agreement will have no legal effect.
 
 ## No Delegation
 
