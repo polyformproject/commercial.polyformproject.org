@@ -70,7 +70,7 @@ This agreement covers only the specific version of the software on the order.
 {{/maintenance=version}}
 
 {{#maintenance=term}}
-This agreement covers the specific version of the software on the order, plus any new versions of the software that the vendor makes generally available to customers, or specifically provides to the customer, while this agreement continues.
+This agreement covers the specific version of the software on the order, plus any new versions of the software that the vendor makes generally available, or specifically provides to the customer, while this agreement continues.
 {{/maintenance=term}}
 
 {{#modification=yes}}
@@ -249,7 +249,7 @@ The vendor agrees to deliver the following to the customer within three calendar
 
 ## Method
 
-The vendor agrees to deliver all materials by e-mail or by making them available to download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three calendar days of their release.{{/maintenance=version}}
+The vendor agrees to deliver all materials by e-mail or by making them available to download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three calendar days of making it generally available.{{/maintenance=version}}
 
 ## License Keys
 
