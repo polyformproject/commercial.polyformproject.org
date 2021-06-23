@@ -1,3 +1,5 @@
+_Customer_ and _Vendor_ agree to the attached PolyForm Commercial Software License Terms.
+
 # Software
 
 `Software Name and Software Description`
