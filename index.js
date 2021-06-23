@@ -176,16 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
           })
       })
   }
-  // License for Legal Texts
-  const license = document.createElement('section')
-  license.innerHTML = `
-    <h2 id=permission>Permission</h2>
-    ${permission
-      .map(p => `<p${p.conspicuous ? ' class=conspicuous' : ''}>${p.text}</p>`)
-      .join('\n')
-    }
-  `
-  fragment.appendChild(license)
 
   onInputChange()
 
