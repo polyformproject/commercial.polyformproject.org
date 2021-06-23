@@ -1,10 +1,10 @@
 # Software
 
-The software is `Software Name`, `Software Description`.
+`Software Name and Software Description`
 
 # Version
 
-The version of the software being licensed is `Software Version`.
+`Software Version`
 
 {{#model=users}}
 # Users
