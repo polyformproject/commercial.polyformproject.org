@@ -187,10 +187,16 @@
   choices:
     - id: none
       name: None
+      notes:
+        - good for the vendor
     - id: known
       name: Known Patents
+      notes:
+        - common compromise
     - id: all
       name: All Patents
+      notes:
+        - good for the customer
 
 - id: law
   name: Governing Law
