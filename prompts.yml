@@ -140,6 +140,8 @@
   choices:
     - id: version
       name: Specific Version
+      notes:
+        - named on the order
     - id: term
       name: Updates During the Term of the Agreement
 
