@@ -407,6 +407,8 @@ Subject to [Indemnification Process](#indemnification-process), the vendor agree
 - The customer combined the software with other technology, and the software on its own would not infringe.
 
 - The customer made or used changes to the software, and the unchanged software would not infringe.
+
+- The customer used changes to the software specifically requested from the vendor in writing, and the unchanged software would not infringe.
 {{/patent=none}}
 
 ## Scope of Indemnity
