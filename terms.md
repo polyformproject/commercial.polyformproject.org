@@ -11,7 +11,7 @@ This agreement will continue for the term on the order.  The customer may use th
 {{#model=users}}
 # Users Limit
 
-The customer's use of the software is limited to the number of individual users on the order at any one time.  The customer may reassign each user at most once in any rolling three-month period.
+The customer's use of the software is limited to the number of individual users on the order at any one time.  The customer may reassign each alloted user to a different individual at most once in any rolling three-month period.
 
 # Eligible Users
 
