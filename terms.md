@@ -470,7 +470,7 @@ If the customer is located outside the United States and local law requires the 
 
 ## Notices
 
-Both sides agree to give notice under this agreement, the side giving notice must send by e-mail to the address the recipient gave with its signature, or to a different address given later for notices going forward.  If either side finds that e-mail can't be delivered to the e-mail address given, the sender may give notice by registered mail to the address on file for the recipient with the state under whose laws it is organized.
+Both sides agree to give notice under this agreement, the side giving notice must send by e-mail to the address the recipient gave with its signature, or to a different address given later for notices going forward, in the English language.  If either side finds that e-mail can't be delivered to the e-mail address given, the sender may give notice by registered mail to the address on file for the recipient with the state under whose laws it is organized.
 
 ## Governing Law
 
