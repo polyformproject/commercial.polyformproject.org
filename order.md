@@ -23,9 +23,16 @@
 `Fees`
 
 {{#expansion=quoted}}
-# Expansion Pricing
+{{#model=users}}
+# Additional Users
 
-The customer can pay for higher limits on use at these prices: `Expansion Prices`
+The customer can pay for more users at these prices: `Expansion Prices`
+{{/model=users}}
+{{#model=metered}}
+# Higher Limits
+
+The customer can pay for more usage at these prices: `Expansion Prices`
+{{/model=metered}}
 {{/expansion=quoted}}
 
 {{#expansion=usage}}
