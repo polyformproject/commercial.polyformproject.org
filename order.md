@@ -78,9 +78,19 @@ The address of vendor's support portal is `Support Portal Address`.  The telepho
 
 The vendor agrees to respond to support requests as follows:
 
--  For _Critical Support Requests_:  Respond `Critical Response Time`, update on status `Critical Update Interval`, and provide a solution `Critical Solution Time`.
+##  Critical Support Requests
 
--  For _Urgent Support Requests_:  Respond `Urgent Response Time`, update on status `Urgent Update Interval`, and provide a solution `Urgent Solution Time`.
+- respond `Critical Response Time`
+- update on status `Critical Update Interval`
+- provide a solution `Critical Solution Time`
 
--  For _Regular Support Requests_:  Respond `Regular Response Time`, update on status `Regular Update Interval`, and provide a solution `Regular Solution Time`.
+## Urgent Support Requests
+- respond `Urgent Response Time`
+- update on status `Urgent Update Interval`
+- provide a solution `Urgent Solution Time`
+
+## Regular Support Requests
+- respond `Regular Response Time`
+- update on status `Regular Update Interval`
+- provide a solution `Regular Solution Time`
 {{/support=full}}
