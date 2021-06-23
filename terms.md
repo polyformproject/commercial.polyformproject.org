@@ -392,6 +392,8 @@ If the software depends on, installs, configures, or links to other software in 
 
 # Indemnities
 
+These indemnities apply as long as the customer has paid all licensing fees as required by this agreement:
+
 ## General Indemnity
 
 Subject to [Indemnification Process](#indemnification-process), the vendor agrees to indemnify the customer for legal claims by others alleging that the software infringes any copyright, trademark, or trade secret right, or breaks any law.
