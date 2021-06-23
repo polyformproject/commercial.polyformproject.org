@@ -400,7 +400,7 @@ Both sides agree that indemnification will be the only legal remedy for claims c
 
 ## Indemnification Process
 
-Both sides agree that to be indemnified they must give notice of any covered claim quickly, allow the other side to control investigation, defense, and settlement, and cooperate with those efforts.  Both sides agree that if they fail to give notice of any covered claim quickly, indemnification will not cover amounts that could have been defended against or mitigated if notice had been given quickly.  Both sides agree that if they take control of the defense and settlement of any covered claim, they will not agree to any settlements that admit fault or impose obligations on the other side without their permission.
+Both sides agree that to receive indemnification under this agreement, they must give notice of any covered claim quickly, allow the other side to control investigation, defense, and settlement, and cooperate with those efforts.  Both sides agree that if they fail to give notice of any covered claim quickly, indemnification will not cover amounts that could have been defended against or mitigated if notice had been given quickly.  Both sides agree that if they take control of the defense and settlement of any covered claim, they will not agree to any settlements that admit fault or impose obligations on the other side without their signed, written permission.
 
 ## Repair, Replace, Refund
 
@@ -448,9 +448,33 @@ The United Nations Convention on Contracts for the International Sale of Goods w
 
 As far as the law allows, the Uniform Computer Information Transactions Act will not apply to this agreement.
 
+## Taxes
+
+The customer agrees to pay all tax on fees under this agreement, except tax on the vendor's income.
+
+## Tax Withholding
+
+If the customer is located outside the United States and local law requires the customer to withhold taxes on fees paid under this agreement:
+
+- The customer agrees to make the required tax withholding payments for the vendor by deducting the right amounts from payments to the vendor and paying them to the proper tax authorities.
+
+- The customer agrees to increase the amount of each payment made under this agreement, to offset withholding, so that the vendor receives the full amount owed.
+
+- The customer agrees to give the vendor relevant official tax documentation and tax receipts showing that withholding was required and that proper withholding payment was made, as soon as possible after making any withholding payment.
+
+## Billing Disputes
+
+The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven calendar days of resolution.
+
 ## Government Procurement
 
 The software is commercial computer software, and the document is commercial computer software documentation.  Both were developed exclusively at private expense.  If customer's procurement is subject to Federal Acquisition Regulation 12.212 or Defense Federal Acquisition Regulation Supplement 227.7202, the customer's rights will be only those stated in this agreement.
+
+{{#export=yes}}
+## Export Control
+
+The customer may not export or reexport the software or its documentation from the vendor's home country without the vendor's signed, written permission.
+{{/export=yes}}
 
 ## Dispute Resolution
 
@@ -508,7 +532,7 @@ Both sides will waive terms of this agreement, if at all, only in signed writing
 
 ## No Assignment
 
-Neither side may assign any right under this agreement without the other side's signed written permission.  Neither side will unreasonably refuse such permission.  Any attempt to assign against the terms of this agreement will have no legal effect.
+Neither side may assign any right under this agreement without the other side's signed, written permission.  Neither side will unreasonably refuse such permission.  Any attempt to assign against the terms of this agreement will have no legal effect.
 
 ## No Delegation
 

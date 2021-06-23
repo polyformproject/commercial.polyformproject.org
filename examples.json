@@ -8,7 +8,38 @@
     "patent": "none",
     "law": "vendor",
     "venue": "vendor",
-    "disputes": "litigation"
+    "disputes": "litigation",
+    "export": "no"
+  },
+  "unlimited": {
+    "model": "unlimited",
+    "term": "perpetual",
+    "delivery": "compiled",
+    "maintenance": "term",
+    "escrow": "no",
+    "support": "basic",
+    "warranty": "term",
+    "patent": "known",
+    "law": "newyork",
+    "venue": "vendor",
+    "disputes": "aaa",
+    "export": "no"
+  },
+  "metered": {
+    "model": "metered",
+    "expansion": "quoted",
+    "reporting": "audit",
+    "term": "month",
+    "delivery": "compiled",
+    "maintenance": "version",
+    "escrow": "yes",
+    "support": "basic",
+    "warranty": "period",
+    "patent": "none",
+    "law": "delaware",
+    "venue": "capital",
+    "disputes": "jamsdomestic",
+    "export": "no"
   },
   "heavy": {
     "model": "users",
@@ -23,6 +54,7 @@
     "patent": "all",
     "law": "california",
     "venue": "vendor",
+    "export": "yes",
     "disputes": "aaa"
   }
 }
