@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 site=commercial.polyformproject.org
-[ -d node_modules ] || npm ci
+[ -d node_modules ] || npm ci --no-audit --no-fund
 npm run test
 npm run lint
 npm run build
