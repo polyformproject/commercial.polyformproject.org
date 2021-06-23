@@ -251,3 +251,15 @@
     - id: no
       name: No
       default: true
+
+- id: government
+  name: Government Procurement
+  description: Include a section about United States government procurement?
+  advanced: true
+  choice: single
+  choices:
+    - id: yes
+      name: Yes
+    - id: no
+      name: No
+      default: true

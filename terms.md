@@ -469,9 +469,11 @@ The United Nations Convention on Contracts for the International Sale of Goods w
 
 As far as the law allows, the Uniform Computer Information Transactions Act will not apply to this agreement.
 
+{{#government=yes}}
 ## Government Procurement
 
 The software is commercial computer software, and the document is commercial computer software documentation.  Both were developed exclusively at private expense.  If customer's procurement is subject to Federal Acquisition Regulation 12.212 or Defense Federal Acquisition Regulation Supplement 227.7202, the customer's rights will be only those stated in this agreement.
+{{/government=yes}}
 
 {{#export=yes}}
 ## Export Control
