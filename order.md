@@ -60,7 +60,7 @@ Amounts billed must be paid within `Days to Pay` calendar days of receiving the 
 {{/warranty=period}}
 
 {{#support=basic}}
-# Support
+# Support Address
 
 The e-mail address for support requests is `Support E-Mail Address`.
 {{/support=basic}}
@@ -72,7 +72,9 @@ The e-mail address for support requests is `Support E-Mail Address`.
 
 # Support Channels
 
-The address of vendor's support portal is `Support Portal Address`.  The telephone number for support requests is `Support Phone Number`.
+- The address of vendor's support portal is `Support Portal Address`.
+
+- The telephone number for support requests is `Support Phone Number`.
 
 # Support Service Levels
 
