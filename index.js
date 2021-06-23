@@ -12,6 +12,7 @@ const order = require('./order.json')
 const prompts = require('./prompts.json')
 const signatures = require('./signatures.json')
 const terms = require('./terms.json')
+const permission = require('./permission.json')
 
 const version = require('./version.json')
 const head = require('./head.json')
@@ -19,16 +20,6 @@ const head = require('./head.json')
 const orderFileName = 'order.docx'
 const termsFileName = 'terms.docx'
 const permissionFileName = 'permission.txt'
-
-const permission = `
-# Permission
-
-Each contributor licenses you to do everything with PolyForm licenses that would otherwise infringe that contributor's copyright in it.
-
-If you make changes to a PolyForm license, you must remove all mention of "PolyForm" and polyformproject.org, as well.
-
-***As far as the law allows, PolyForm licenses come as is, without any warranty at all, and no contributor will be liable to anyone for any damages related to the licenses or their use, for any kind of legal claim.***
-`.trim() + '\n'
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
