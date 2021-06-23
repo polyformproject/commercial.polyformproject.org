@@ -6,6 +6,18 @@ The software is `Software Name`, `Software Description`.
 
 The version of the software being licensed is `Software Version`.
 
+{{#model=users}}
+# Users
+
+`Users`
+{{/model=users}}
+
+{{#model=metered}}
+# Technical Limits
+
+`Technical Limits`
+{{/model=metered}}
+
 # Fees
 
 `Fees`

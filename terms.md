@@ -1,6 +1,6 @@
 # Order
 
-These terms, together with the order referencing them, make up a software license agreement.  The software, the developer, and the customer are identified on the order.
+These terms, together with the order referencing them, make up a software license agreement.  The software, the developer, and the customer are all identified on the order.
 
 {{#model=trial}}
 # Trial
@@ -11,7 +11,7 @@ This agreement will continue for the term on the order.  The customer may use th
 {{#model=users}}
 # Users Limit
 
-The customer's use of the software is limited to the number of individual users on the order at any one time.  The customer may reassign each user at most once per calendar quarter.
+The customer's use of the software is limited to the number of individual users on the order at any one time.  The customer may reassign each user at most once in any rolling three-month period.
 
 # Eligible Users
 
@@ -76,7 +76,7 @@ The vendor agrees to bill the customer per the order.  The customer agrees to pa
 
 # Billing Disputes
 
-The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven calendar days of resolution.
+The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy promptly and in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven calendar days of resolution.
 
 # Term and Termination
 
@@ -111,7 +111,7 @@ Either side can terminate this agreement immediately if the other side breaches 
 
 ## Permitted Use
 
-The customer may use the software only for its own computing needs and those of its subsidiaries and affiliates.
+The customer may use the software only for its own computing needs and those of its subsidiaries and corporate affiliates.
 
 ## Prohibited Uses
 
@@ -127,7 +127,7 @@ The customer may not:
 
 - share copies of the software or documentation with with others not licensed by this agreement
 
-- make the software available to others as software-as-a-service
+- make so much of the functionality of the software available to others as software-as-a-service that the service competes with the software for customers
 
 - assist or allow others to use the software against the terms of this agreement
 
@@ -161,9 +161,13 @@ Some components of the software may be open source software available under free
 
 If any part of the software is or becomes available under a public license:
 
-- While this agreement continues, the customer must abide by this agreement, not the public license.
+- While the customer's licenses continue, the customer must abide by this agreement, not the public license.
 
-- After this agreement ends, the customer must abide by the public license.
+{{^term=perpetual}}
+- After the customer's licenses end, the customer must abide by the public license.
+{{/term=perpetual}}
+
+- The customer must abide by the terms of the public license for any versions of the software not covered by this agreement.
 
 <!-- begin reporting -->
 
@@ -379,17 +383,20 @@ Subject to [Indemnification Process](#indemnification-process), the vendor agree
 
 {{#patent=none}}The vendor will not indemnify the customer for any claims by others alleging that the software infringes any patent.{{/patent=none}}
 
-{{#patent=known}}The vendor agrees to indemnify the customer for claims by others alleging that the software infringes a patent that vendor personnel were aware of before the allegation was made.{{/patent=known}}
+{{#patent=known}}The vendor agrees to indemnify the customer for claims by others alleging that the software infringes a patent that vendor personnel were aware of before the allegation was made.{{/patent=known}}{{#patent=all}}The vendor agrees to indemnify the customer for any claims by others alleging that the software infringes any patent.{{/patent=all}}{{^patent=none}}  However, the vendor will not indemnify the customer for patent infringement in these cases:
 
-{{#patent=all}}The vendor agrees to indemnify the customer for any claims by others alleging that the software infringes any patent.{{/patent=all}}
+- The customer combined the software with other technology, and the software on its own would not infringe.
+
+- The customer made or used changes to the software, and the unchanged software would not infringe.
+{{/patent=none}}
 
 ## Scope of Indemnity
 
-Throughout this agreement, to indemnify means to indemnify and hold harmless for all liability, expenses, damages, and costs, as well as to defend the indemnified party.  
+Throughout this agreement, to indemnify means to indemnify and hold harmless for all liability, expenses, damages, and costs, as well as to defend the indemnified party.
 
 ## Only Remedy
 
-Indemnification is the only remedy under this agreement for claims covered by indemnity.
+Both sides agree that indemnification will be the only legal remedy for claims covered by indemnity.
 
 ## Indemnification Process
 
