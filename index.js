@@ -164,7 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
           version,
           head,
           date: new Date().toISOString(),
-          selections
+          selections: {}
+        }
+        for (const key in selections) {
+          const value = selections[key]
+          if (typeof value === 'string') manifest.selections[key] = value
         }
         zip.file('manifest.json', JSON.stringify(manifest))
         zip.generateAsync({ type: 'blob' })
