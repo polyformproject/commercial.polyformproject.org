@@ -182,6 +182,17 @@ document.addEventListener('DOMContentLoaded', () => {
   onInputChange()
 
   main.appendChild(fragment)
+
+  // Add Git commit to footer.
+  const footer = document.querySelector('footer[role=contentinfo]')
+  const commit = document.createElement('p')
+  commit.className = 'commit'
+  commit.appendChild(document.createTextNode('Deployed Commit: '))
+  const commitLink = document.createElement('a')
+  commitLink.href = `https://github.com/polyformproject/commercial.polyformproject.org/commit/${head}`
+  commitLink.appendChild(document.createTextNode(head))
+  commit.appendChild(commitLink)
+  footer.appendChild(commit)
 })
 
 function renderTemplate (template, view, title, signatures) {

@@ -74,3 +74,17 @@ footer[role=contentinfo] {
   font-style: italic;
   font-weight: bold;
 }
+
+.commit {
+  font-size: 85%;
+  opacity: 0.5;
+}
+
+.commit a[href] {
+  font-family: monospace;
+  text-decoration: none;
+}
+
+.commit a[href]:hover {
+  text-decoration: underline;
+}
