@@ -18,7 +18,7 @@
 `Technical Limits`
 {{/model=metered}}
 
-# Fees
+# License Fees
 
 `Fees`
 
