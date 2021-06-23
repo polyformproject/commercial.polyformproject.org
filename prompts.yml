@@ -168,7 +168,7 @@
 
 - id: warranty
   name: Quality Warranty
-  description: Will the seller give a promise about the quality of the software?
+  description: How long will the seller guarantee the software?
   requires:
     - model: unlimited
     - model: users
@@ -178,9 +178,9 @@
   choice: single
   choices:
     - id: period
-      name: Limited Warranty Period
+      name: During a Limited Warranty Period
     - id: term
-      name: Term of the Agreement
+      name: Throughout the Term of the Agreement
 
 - id: patent
   name: Patent Infringement Indemnity
