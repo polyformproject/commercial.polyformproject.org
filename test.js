@@ -123,8 +123,8 @@ function testRenders (kind, template) {
         }, 'Common Form render')
         test.doesNotThrow(() => {
           const options = {
-            title: `Test Rendering: ${name} ${kind}`,
-            edition: new Date().toISOString(),
+            title: `PolyForm Commercial Test Rendering: ${name} ${kind}`,
+            edition: `Generated ${new Date().toISOString()}`,
             after: ooxmlSignaturePages(kind === 'order' ? signatures : [])
           }
           Object.assign(options, docxOptions)
