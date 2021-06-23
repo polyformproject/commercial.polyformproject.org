@@ -110,7 +110,7 @@ This agreement will continue for one year.
 {{#term=renewing}}{{/term=renewing}}
 ## Term and Renewal
 
-This agreement will continue for one year, then renew automatically for an additional year at a time.  Either side can stop this agreement from renewing by giving notice at least sixty calendar days before it renews again.
+This agreement will continue for one year, then renew automatically for an additional year at a time.  Either side can stop this agreement from renewing by giving notice at least ninety calendar days before it renews again.
 
 {{#term=month}}
 ## Month-to-Month
