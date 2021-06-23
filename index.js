@@ -44,6 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.createElement('form')
   fragment.appendChild(form)
 
+  // Explanation Paragraph
+  const explanation = document.createElement('p')
+  explanation.appendChild(document.createTextNode(
+    'Answer these questions to create a ZIP archive with an order form template and legal terms for a commercial software license agreement.'
+  ))
+  form.appendChild(explanation)
+
   // Advanced Options
   const haveAdvancedOptions = prompts.some(p => p.advanced)
   let advanced
