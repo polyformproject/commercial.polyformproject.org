@@ -1,6 +1,6 @@
 # Permission
 
-Each contributor licenses you to do everything with PolyForm licenses that would otherwise infringe that contributor's copyright in it.
+Each contributor licenses you to do everything with each PolyForm license that would otherwise infringe that contributor's copyright in it.
 
 If you make changes to a PolyForm license, you must remove all mention of "PolyForm" and polyformproject.org, as well.
 
