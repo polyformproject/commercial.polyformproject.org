@@ -146,7 +146,7 @@ The customer may not:
 
 - assist or allow others to use the software against the terms of this agreement
 
-# Intellectual Property
+# Licenses
 
 ## Software Copyright License
 
@@ -166,7 +166,7 @@ A standard license means a nonexclusive license for the term of this agreement, 
 
 ## No Other Licenses
 
-Apart from the licenses in [Intellectual Property](#intellectual-property), this agreement does not license or assign any intellectual property rights.
+Apart from the licenses in [Licenses](#licenses), this agreement does not license or assign any intellectual property rights.
 
 ## Open Source Compliance
 
