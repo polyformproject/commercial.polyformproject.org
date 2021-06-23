@@ -85,11 +85,13 @@ The customer may make changes to the software's source code, compile those chang
 The customer may not make changes to the software's source code.
 {{/modification=no}}
 
-# Billing, Fees, and Payment
+# Billing
+
+## Bills, Fees, and Payment
 
 The vendor agrees to bill the customer per the order.  The customer agrees to pay the fees on the order, using the payment method on the order.
 
-# Billing Errors
+## Billing Errors
 
 The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy promptly and in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven days of resolution.
 
