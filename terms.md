@@ -350,7 +350,7 @@ The developer guarantees that the software it delivers will be free of code that
 
 - code that limits or disables functionality on failure to validate license keys
 
-- code that limits or disables functionality based on automatic monitoring of any limits on its use under this agreement
+- code that limits or disables functionality based on automatic monitoring of {{#model=users}}the users limit{{/model=users}}{{#model=metered}}numeric technical limits on usage{{/model=metered}}
 
 ## Software Dependencies
 
