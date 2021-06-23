@@ -2,7 +2,7 @@ _Customer_ and _Vendor_ agree to the attached PolyForm Commercial Software Licen
 
 # Software
 
-`Software Name and Software Description`
+`Software Name and Description`
 
 # Version
 
@@ -22,25 +22,25 @@ _Customer_ and _Vendor_ agree to the attached PolyForm Commercial Software Licen
 
 # License Fees
 
-`Fees`
+`License Fees`
 
 {{#expansion=quoted}}
 {{#model=users}}
 # Additional Users
 
-The customer can pay for more users at these prices: `Expansion Prices`
+`Additional User Pricing`
 {{/model=users}}
 {{#model=metered}}
 # Higher Limits
 
-The customer can pay for more usage at these prices: `Expansion Prices`
+`Additional Metered Pricing`
 {{/model=metered}}
 {{/expansion=quoted}}
 
 {{#expansion=usage}}
 # Usage-Based Pricing
 
-`Usage-Based Prices`
+`Usage-Based Pricing`
 {{/expansion=usage}}
 
 # Billing
@@ -49,7 +49,7 @@ The customer can pay for more usage at these prices: `Expansion Prices`
 
 # Payment Terms
 
-Amounts billed must be paid within `Days to Pay` calendar days of receiving the bill.
+`Payment Terms`
 
 # Payment Method
 

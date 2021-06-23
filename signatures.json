@@ -2,6 +2,13 @@
   {
     "header": "The parties are signing this agreement on the dates by their signatures.",
     "term": "Vendor",
+    "entities": [
+      {
+        "name": "{VendorCo, Inc.}",
+        "jurisdiction": "{Delaware}",
+        "form": "{corporation}"
+      }
+    ],
     "information": [
       "date",
       "email",
@@ -11,6 +18,13 @@
   {
     "header": "The parties are signing this agreement on the dates by their signatures.",
     "term": "Customer",
+    "entities": [
+      {
+        "name": "{Customer LLC}",
+        "form": "{limited liability company}",
+        "jurisdiction": "{California}"
+      }
+    ],
     "information": [
       "date",
       "email",

@@ -3,6 +3,7 @@
   "dependencies": {
     "commonform-commonmark": "^6.0.0",
     "commonform-docx": "^5.5.2",
+    "commonform-prepare-blanks": "^1.0.2",
     "file-saver": "^2.0.5",
     "jszip": "^3.6.0",
     "mustache": "^4.2.0",

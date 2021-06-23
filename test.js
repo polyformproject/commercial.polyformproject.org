@@ -1,5 +1,6 @@
 const AJV = require('ajv').default
 const JSZip = require('jszip')
+const blanksValues = require('./blanks')
 const commonmark = require('commonform-commonmark')
 const docx = require('commonform-docx')
 const docxOptions = require('./docx-options')
@@ -12,6 +13,7 @@ const ooxmlSignaturePages = require('ooxml-signature-pages')
 const order = require('fs').readFileSync('./order.md', 'utf8')
 const path = require('path')
 const playwright = require('playwright')
+const prepareBlanks = require('commonform-prepare-blanks')
 const tape = require('tape')
 
 const examples = require('./examples.json')
@@ -127,8 +129,11 @@ function testRenders (kind, template) {
             edition: `Generated ${new Date().toISOString()}`,
             after: ooxmlSignaturePages(kind === 'order' ? signatures : [])
           }
+          const blanks = kind === 'order'
+            ? prepareBlanks(blanksValues, parsed.directions)
+            : []
           Object.assign(options, docxOptions)
-          docx(parsed.form, [], options)
+          docx(parsed.form, blanks, options)
             .generateAsync({ type: 'nodebuffer' })
             .then(result => {
               fs.mkdir('examples', { recursive: true }, error => {

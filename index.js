@@ -6,13 +6,15 @@ const docxOptions = require('./docx-options')
 const fileSaver = require('file-saver')
 const mustache = require('mustache')
 const ooxmlSignaturePages = require('ooxml-signature-pages')
+const prepareBlanks = require('commonform-prepare-blanks')
 
+const blanksValues = require('./blanks.json')
 const documentTitles = require('./document-titles')
 const order = require('./order.json')
+const permission = require('./permission.json')
 const prompts = require('./prompts.json')
 const signatures = require('./signatures.json')
 const terms = require('./terms.json')
-const permission = require('./permission.json')
 
 const version = require('./version.json')
 const head = require('./head.json')
@@ -151,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
       view[`${key}=${value}`] = true
     })
     Promise.all([
-      renderTemplate(order, view, documentTitles.order, signatures),
+      renderTemplate(order, view, documentTitles.order, signatures, blanksValues),
       renderTemplate(terms, view, documentTitles.terms)
     ])
       .then(files => {
@@ -206,13 +208,19 @@ document.addEventListener('DOMContentLoaded', () => {
   footer.appendChild(commit)
 })
 
-function renderTemplate (template, view, title, signatures) {
+function renderTemplate (template, view, title, signatures, blanksValues) {
+  console.log(blanksValues)
   const markdown = mustache.render(template, view)
   const parsed = commonmark.parse(markdown)
   const options = { title, edition: version }
+  console.log(parsed)
   Object.assign(options, docxOptions)
+  const blanks = blanksValues
+    ? prepareBlanks(blanksValues, parsed.directions)
+    : []
+  console.log(blanks)
   if (signatures) options.after = ooxmlSignaturePages(signatures)
-  return docx(parsed.form, [], options).generateAsync({ type: 'blob' })
+  return docx(parsed.form, blanks, options).generateAsync({ type: 'blob' })
 }
 
 function onInputChange () {
