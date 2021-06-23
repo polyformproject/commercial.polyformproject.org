@@ -35,7 +35,7 @@ The customer can increase its users limit by paying for for additional users, in
 # Additional Usage
 
 The customer can increase the numeric technical limits on its use of the software by paying for additional usage, in advance, at the vendor's published list prices.
-{{/model=users}}
+{{/model=metered}}
 {{/expansion=list}}
 
 {{#expansion=quoted}}
