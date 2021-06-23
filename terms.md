@@ -91,7 +91,7 @@ The vendor agrees to bill the customer per the order.  The customer agrees to pa
 
 # Billing Errors
 
-The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy promptly and in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven calendar days of resolution.
+The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy promptly and in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven days of resolution.
 
 # Term and Termination
 
@@ -110,7 +110,7 @@ This agreement will continue for one year.
 {{#term=renewing}}{{/term=renewing}}
 ## Term and Renewal
 
-This agreement will continue for one year, then renew automatically for an additional year at a time.  Either side can stop this agreement from renewing by giving notice at least ninety calendar days before it renews again.
+This agreement will continue for one year, then renew automatically for an additional year at a time.  Either side can stop this agreement from renewing by giving notice at least ninety days before it renews again.
 
 {{#term=month}}
 ## Month-to-Month
@@ -120,7 +120,7 @@ This agreement continues month-by-month, until one side gives the other notice t
 
 ## Termination
 
-Either side can terminate this agreement immediately if the other side breaches and fails to cure their breach within fourteen calendar days of notice.
+Either side can terminate this agreement immediately if the other side breaches and fails to cure their breach within fourteen days of notice.
 
 # Use
 
@@ -230,7 +230,7 @@ The customer agrees to promptly pay the vendor's costs of performing an audit if
 
 ## Materials
 
-The vendor agrees to deliver the following to the customer within three calendar days:
+The vendor agrees to deliver the following to the customer within three days:
 
 {{#delivery=compiled}}
 - a copy of the software in compiled form
@@ -251,11 +251,11 @@ The vendor agrees to deliver the following to the customer within three calendar
 
 ## Method
 
-The vendor agrees to deliver all materials by e-mail or by making them available to download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three calendar days of making it generally available.{{/maintenance=version}}
+The vendor agrees to deliver all materials by e-mail or by making them available to download online, without any additional charge.{{^maintenance=version}}  The vendor agrees to make new versions of the software covered by this agreement available in the same way, within three days of making it generally available.{{/maintenance=version}}
 
 ## License Keys
 
-If the software requires license keys to function, the vendor agrees to give the customer those keys by e-mail within three calendar days.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two calendar weeks before the last keys expire.  The customer agrees to share license keys only as required for use of the software under this agreement, and to secure its license keys at least as well as its confidential business information.
+If the software requires license keys to function, the vendor agrees to give the customer those keys by e-mail within three days.  If license keys for the software expire over time, the vendor agrees to give the customer new license keys by e-mail at least two weeks before the last keys expire.  The customer agrees to share license keys only as required for use of the software under this agreement, and to secure its license keys at least as well as its confidential business information.
 
 {{#escrow=yes}}
 # Escrow
