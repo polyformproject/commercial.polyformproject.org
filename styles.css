@@ -65,8 +65,10 @@ button[type=reset] {
 }
 
 footer[role=contentinfo] {
+  border-top: 1px solid black;
   font-size: 85%;
   margin-bottom: 5rem;
+  margin-top: 3rem;
   text-align: right;
 }
 

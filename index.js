@@ -16,6 +16,10 @@ const terms = require('./terms.json')
 const version = require('./version.json')
 const head = require('./head.json')
 
+const orderFileName = 'order.docx'
+const termsFileName = 'terms.docx'
+const permissionFileName = 'permission.txt'
+
 const permission = `
 # Permission
 
@@ -161,9 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ])
       .then(files => {
         const zip = new JSZip()
-        zip.file('order.docx', files[0])
-        zip.file('terms.docx', files[1])
-        zip.file('permission.txt', permission)
+        zip.file(orderFileName, files[0])
+        zip.file(termsFileName, files[1])
+        zip.file(permissionFileName, permission)
         const manifest = {
           generator: 'commercial.polyformproject.org',
           version,
@@ -178,6 +182,15 @@ document.addEventListener('DOMContentLoaded', () => {
           })
       })
   }
+
+  // Post-Download Instructions
+  const instructions = document.createElement('p')
+  instructions.innerHTML = `
+    Make sure to fill out <code>${orderFileName}</code> with the details for your deal.
+    The legal terms in <code>${termsFileName}</code> do not have any blanks to fill.
+    Terms for use of the documents are in <code>${permissionFileName}</code>.
+  `
+  form.appendChild(instructions)
 
   onInputChange()
 
