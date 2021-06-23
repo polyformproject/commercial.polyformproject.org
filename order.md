@@ -59,6 +59,10 @@ The e-mail address for support requests is `Support E-Mail Address`.
 {{/support=basic}}
 
 {{#support=full}}
+# Support Fees
+
+`Support Fees`
+
 # Support Channels
 
 The address of vendor's support portal is `Support Portal Address`.  The telephone number for support requests is `Support Phone Number`.
