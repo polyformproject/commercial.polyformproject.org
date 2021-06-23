@@ -175,13 +175,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Post-Download Instructions
-  const instructions = document.createElement('p')
-  instructions.innerHTML = `
-    Make sure to fill out <code>${orderFileName}</code> with the details for your deal.
-    The legal terms in <code>${termsFileName}</code> do not have any blanks to fill.
-    Terms for use of the documents are in <code>${permissionFileName}</code>.
-  `
-  form.appendChild(instructions)
+  const instructions = [
+    `Make sure to fill out <code>${orderFileName}</code> with the details for your deal.`,
+    `The legal terms in <code>${termsFileName}</code> do not have any blanks to fill.`,
+    `Terms for use of the documents are in <code>${permissionFileName}</code>.`
+  ]
+  for (const text of instructions) {
+    const paragraph = document.createElement('p')
+    paragraph.innerHTML = text
+    form.appendChild(paragraph)
+  }
 
   onInputChange()
 
