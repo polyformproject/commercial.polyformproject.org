@@ -16,11 +16,15 @@ const terms = require('./terms.json')
 const version = require('./version.json')
 const head = require('./head.json')
 
-const permission = [
-  { text: 'Each contributor licenses you to do everything with PolyForm licenses that would otherwise infringe that contributor’s copyright in it.' },
-  { text: 'If you make changes to a PolyForm license, you must remove all mention of “PolyForm” and polyformproject.org, as well.' },
-  { text: 'As far as the law allows, PolyForm licenses come as is, without any warranty at all, and no contributor will be liable to anyone for any damages related to the licenses or their use, for any kind of legal claim.', conspicuous: true }
-]
+const permission = `
+# Permission
+
+Each contributor licenses you to do everything with PolyForm licenses that would otherwise infringe that contributor's copyright in it.
+
+If you make changes to a PolyForm license, you must remove all mention of "PolyForm" and polyformproject.org, as well.
+
+***As far as the law allows, PolyForm licenses come as is, without any warranty at all, and no contributor will be liable to anyone for any damages related to the licenses or their use, for any kind of legal claim.***
+`.trim() + '\n'
 
 const selections = {/* promptID -> null | choiceID */}
 const promptIDs = [/* promptID */]
@@ -159,9 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const zip = new JSZip()
         zip.file('order.docx', files[0])
         zip.file('terms.docx', files[1])
-        const permissionLines = ['# Permission']
-          .concat(permission.map(p => p.conspicuous ? `***${p.text}***` : p.text))
-        zip.file('permission.txt', permissionLines.join('\n\n') + '\n')
+        zip.file('permission.txt', permission)
         const manifest = {
           generator: 'commercial.polyformproject.org',
           version,
