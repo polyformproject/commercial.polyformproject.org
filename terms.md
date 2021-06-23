@@ -150,7 +150,7 @@ The customer may not:
 
 ## Software Copyright License
 
-The vendor grants the customer and each authorized user a standard license for any copyrights in the software that the vendor can license, to copy, install, back up, and use of the software as allowed under this agreement.
+The vendor grants the customer and each authorized user a standard license for any copyrights in the software that the vendor can license, to copy, install, back up, and use the software as allowed under this agreement.
 
 ## Software Patent License
 
