@@ -309,9 +309,9 @@ If the vendor fails to meet its support service levels for three months in a row
 
   - functions of the software that are critical to the customer's use case have stopped working, begun malfunctioning, or are working only very slowly
 
-- **Urgent Support Requests** are support requests that report substantial loss of functionality or responsiveness of the software.
+- **Urgent Support Requests** are support requests that report substantial loss of other functionality or responsiveness of the software.
 
-- Other support requests are **Regular Support Requests**.
+- All other support requests are **Regular Support Requests**.
 {{/support=full}}
 
 ## Access
