@@ -12,6 +12,8 @@
         - no warranties
     - id: unlimited
       name: Unlimited
+      notes:
+        - no numeric limits on use of the software
     - id: users
       name: Users
       notes:
@@ -100,11 +102,11 @@
   choice: single
   choices:
     - id: compiled
-      name: Compiled Only
+      name: Compiled Software Only
     - id: source
-      name: Source Only
+      name: Source Code Only
     - id: both
-      name: Source and Compiled
+      name: Compiled Software and Source Code
 
 - id: modification
   name: Modification Rights
@@ -139,7 +141,7 @@
     - id: version
       name: Specific Version
     - id: term
-      name: Updates During Term
+      name: Updates During the Term of the Agreement
 
 - id: support
   name: Support
