@@ -138,9 +138,9 @@ The customer may not:
 - decompile, disassemble, or reverse engineer any part of the software
 {{/delivery=compiled}}
 
-- allow access to the software by others not licensed by this agreement
+- allow access to the software by others not licensed under this agreement
 
-- share copies of the software or documentation with with others not licensed by this agreement
+- share copies of the software or documentation with with others not licensed under this agreement
 
 - make so much of the functionality of the software available to others as software-as-a-service that the service competes with the software for customers
 
@@ -150,7 +150,7 @@ The customer may not:
 
 ## Software Copyright License
 
-The vendor grants the customer and each authorized user a standard license for any copyrights in the software that the vendor can license, to copy, install, back up, and use of the software as allowed by this agreement.
+The vendor grants the customer and each authorized user a standard license for any copyrights in the software that the vendor can license, to copy, install, back up, and use of the software as allowed under this agreement.
 
 ## Software Patent License
 
