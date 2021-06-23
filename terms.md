@@ -154,7 +154,7 @@ The vendor grants the customer and each authorized user a standard license for a
 
 ## Software Patent License
 
-The vendor grants the customer and each authorized user a standard license for any patents the vendor can license or becomes able to license, to use the software.
+The vendor grants the customer and each authorized user a standard license for any patents the vendor can license or becomes able to license, to use the software as allowed under this agreement.
 
 ## Documentation Copyright License
 
