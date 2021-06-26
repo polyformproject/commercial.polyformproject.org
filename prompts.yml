@@ -10,10 +10,6 @@
         - evaluation use only
         - time stated on the ordering document
         - no warranties
-    - id: unlimited
-      name: Unlimited
-      notes:
-        - no numeric limits on use of the software
     - id: users
       name: Users
       notes:
@@ -24,6 +20,10 @@
       notes:
         - transaction, storage volume or other technical limit
         - stated on the ordering document
+    - id: unlimited
+      name: Unlimited
+      notes:
+        - no numeric limits on use of the software
     - id: cpu
       name: CPU
       version: 2
