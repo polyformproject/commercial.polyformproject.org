@@ -134,6 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
         label.appendChild(document.createTextNode(choice.notes.join(', ')))
       }
     })
+
+    if (prompt.resources) {
+      const paragraph = document.createElement('p')
+      paragraph.className = 'resources'
+      paragraph.innerHTML = prompt.resources
+      set.appendChild(paragraph)
+    }
   })
 
   if (haveAdvancedOptions) form.appendChild(advanced)

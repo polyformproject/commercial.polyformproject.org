@@ -90,3 +90,7 @@ footer[role=contentinfo] {
 .commit a[href]:hover {
   text-decoration: underline;
 }
+
+.resources {
+  color: #555;
+}

@@ -32,6 +32,9 @@
       "choice": {
         "const": "single"
       },
+      "resources": {
+        "type": "string"
+      },
       "choices": {
         "type": "array",
         "items": {
