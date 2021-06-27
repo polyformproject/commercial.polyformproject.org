@@ -250,16 +250,29 @@
   choices:
     - id: litigation
       name: Litigation
+      notes:
+        - public process
     - id: executives
       name: Executives Meet Before Litigation
+      notes:
+        - can help avoid costly litigation
     - id: mediation
       name: Mediation Before Litigation
+      notes:
+        - more formal “talk it over”
+        - involves a third-party mediator
     - id: jamsdomestic
       name: JAMS Arbitration, Under Domestic Rules
+      notes:
+        - popular private resolution option
     - id: jamsinternational
       name: JAMS Arbitration, Under International Rules
+      notes:
+        - popular private resolution option
     - id: aaa
       name: AAA Arbitration
+      notes:
+        - popular private resolution option
 
 - id: export
   name: Export Control
