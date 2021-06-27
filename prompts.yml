@@ -284,6 +284,8 @@
   choices:
     - id: yes
       name: Yes
+      notes:
+        - no export or reexport without permission
     - id: no
       name: No
       default: true
@@ -296,6 +298,9 @@
   choices:
     - id: yes
       name: Yes
+      notes:
+        - software and documentation developed at private expense
+        - only rights are those under the agreement
     - id: no
       name: No
       default: true
