@@ -207,14 +207,27 @@
   choices:
     - id: vendor
       name: Vendor's Headquarters
+      notes:
+        - often the vendor's choice
     - id: customer
       name: Customer's Headquarters
+      notes:
+        - often the customer's choice
     - id: california
       name: California
+      notes:
+        - common compromise
+        - lots of experience with software deals
     - id: delaware
       name: Delaware
+      notes:
+        - common compromise
+        - many companies legally based here
     - id: newyork
       name: New York
+      notes:
+        - common compromise
+        - popular for international deals
 
 - id: venue
   name: Venue for Disputes
