@@ -74,7 +74,7 @@
 
 - id: term
   name: Term
-  description: How long will the license last?
+  description: How long will the license agreement last?
   requires:
     - model: unlimited
     - model: users
