@@ -58,7 +58,7 @@
 
 - id: reporting
   name: Usage Reporting
-  description: How will the seller determine the customer's usage?
+  description: How will the seller determine the customer’s usage?
   requires:
     - model: users
     - model: metered
@@ -129,7 +129,7 @@
 
 - id: escrow
   name: Escrow
-  description: If the customer doesn't get source code, will they get it if the seller discontinues the product or goes out of business?
+  description: If the customer doesn’t get source code, will they get it if the seller discontinues the product or goes out of business?
   requires:
     - delivery: compiled
   choice: single
@@ -218,13 +218,13 @@
   choice: single
   choices:
     - id: vendor
-      name: Vendor's Headquarters
+      name: Vendor’s Headquarters
       notes:
-        - often the vendor's choice
+        - often the vendor’s choice
     - id: customer
-      name: Customer's Headquarters
+      name: Customer’s Headquarters
       notes:
-        - often the customer's choice
+        - often the customer’s choice
     - id: california
       name: California
       notes:
