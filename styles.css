@@ -32,11 +32,13 @@ fieldset legend {
 
 label {
   display: block;
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 2rem;
+  position: relative;
 }
 
 input[type=radio], input[type=checkbox] {
-  margin-right: 1ex;
+  left: -2rem;
+  position: absolute;
 }
 
 .description {
