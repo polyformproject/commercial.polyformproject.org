@@ -74,10 +74,16 @@
   choices:
     - id: phone
       name: Software Phones Home
+      notes:
+        - customer commits not to block
     - id: self
       name: Self-Reported by Customer
+      notes:
+        - monthly
     - id: audit
-      name: Annual Audit Right
+      name: Audit Right
+      notes:
+        - at most annually
 
 - id: term
   name: Term
