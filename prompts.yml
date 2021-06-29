@@ -284,11 +284,11 @@
         - more formal “talk it over”
         - with a professional mediator
     - id: jamsdomestic
-      name: JAMS Arbitration, Under Domestic Rules
+      name: JAMS Arbitration, Domestic Rules
       notes:
         - popular private option
     - id: jamsinternational
-      name: JAMS Arbitration, Under International Rules
+      name: JAMS Arbitration, International Rules
       notes:
         - popular private option
     - id: aaa
