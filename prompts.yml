@@ -129,15 +129,15 @@
 
 - id: escrow
   name: Escrow
-  description: If the customer doesn’t get source code, will they get it if the seller discontinues the product or goes out of business?
+  description: Will you agree to deposit source code with an escrow agent, for release to the customer if you discontinue the product or go out of business?
   requires:
     - delivery: compiled
   choice: single
   choices:
     - id: no
-      name: None
+      name: No
     - id: yes
-      name: Third-Party
+      name: Yes
 
 - id: maintenance
   name: Maintenance
