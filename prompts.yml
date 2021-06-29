@@ -165,7 +165,7 @@
         - additional fee
         - availability service-level agreements
         - response-time service-level agreements
-  notes: |
+  after: |
     You may also provide free support through a public forum or chat room.  But the license agreement won’t obligate you to do so.
 
 - id: warranty
