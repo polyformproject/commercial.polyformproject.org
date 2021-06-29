@@ -8,19 +8,19 @@
       name: Trial
       notes:
         - evaluation use only
-        - time stated on the ordering document
+        - time on the ordering document
         - no warranties
         - may be free of charge
     - id: users
       name: Users
       notes:
         - maximum number of users
-        - stated on the ordering document
+        - on the ordering document
     - id: metered
       name: Metered
       notes:
         - transaction, storage volume or other technical limit
-        - stated on the ordering document
+        - on the ordering document
     - id: unlimited
       name: Unlimited
       notes:
