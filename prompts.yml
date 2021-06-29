@@ -144,11 +144,11 @@
   description: Will the seller provides updates to the software?
   choice: single
   choices:
-    - id: version
+    - id: no
       name: No
       notes:
         - just the version named on the order
-    - id: term
+    - id: yes
       name: Yes
       notes:
         - customer gets updates during the term
