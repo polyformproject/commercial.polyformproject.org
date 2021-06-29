@@ -135,10 +135,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
 
-    if (prompt.resources) {
+    if (prompt.after) {
       const paragraph = document.createElement('p')
-      paragraph.className = 'resources'
-      paragraph.innerHTML = prompt.resources
+      paragraph.className = 'after'
+      paragraph.innerHTML = prompt.after
       set.appendChild(paragraph)
     }
   })

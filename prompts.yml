@@ -199,7 +199,7 @@
       name: All Patents
       notes:
         - good for the customer
-  resources: |
+  after: |
     See <a href="https://patentpotato.com" target="_blank">Patent Potato</a> for background and further reading.
 
 - id: law
