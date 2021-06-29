@@ -48,6 +48,9 @@
       name: Commit to Negotiate in Good Faith
     - id: list
       name: On Payment, at List Price
+      notes:
+        - customer pays first
+        - published pricing
     - id: quoted
       name: On Payment, as Agreed
       notes:
