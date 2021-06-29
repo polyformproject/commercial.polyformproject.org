@@ -40,15 +40,21 @@
   choice: single
   choices:
     - id: none
-      name: None
+      name: Nothing Agreed in Advance
+      notes:
+        - They will have to reach out to you for an amendment or a new deal.
     - id: negotiate
       name: Commit to Negotiate in Good Faith
     - id: list
       name: On Payment, at List Price
     - id: quoted
-      name: On Payment, as Agreed in Ordering Document
+      name: On Payment, as Agreed
+      notes:
+        - specify increase pricing on the ordering document
     - id: usage
-      name: Based on Usage, as Agreed in Ordering Document
+      name: Based on Usage, as Agreed
+      notes:
+        - specify how to calcualte on the ordering document
 
 - id: reporting
   name: Usage Reporting
