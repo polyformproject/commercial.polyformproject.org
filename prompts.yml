@@ -235,17 +235,14 @@
     - id: california
       name: California
       notes:
-        - common compromise
-        - lots of experience with software deals
+        - lots of software experience
     - id: delaware
       name: Delaware
       notes:
-        - common compromise
-        - many companies legally based here
+        - many firms incorporated here
     - id: newyork
       name: New York
       notes:
-        - common compromise
         - popular for international deals
 
 - id: venue
