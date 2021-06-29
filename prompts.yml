@@ -159,7 +159,7 @@
   choice: single
   choices:
     - id: none
-      name: No Support
+      name: No Paid Support
     - id: basic
       name: Basic Support
       notes:
