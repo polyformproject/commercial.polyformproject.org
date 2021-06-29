@@ -84,13 +84,16 @@ footer[role=contentinfo] {
   opacity: 0.5;
 }
 
-.commit a[href] {
-  font-family: monospace;
+a[href] {
   text-decoration: none;
 }
 
-.commit a[href]:hover {
+a[href]:hover {
   text-decoration: underline;
+}
+
+.commit a[href] {
+  font-family: monospace;
 }
 
 .after {
