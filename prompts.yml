@@ -145,11 +145,13 @@
   choice: single
   choices:
     - id: version
-      name: Specific Version
+      name: No
       notes:
-        - named on the order
+        - just the version named on the order
     - id: term
-      name: Updates During the Term of the Agreement
+      name: Yes
+      notes:
+        - customer gets updates during the term
 
 - id: support
   name: Paid Support
