@@ -46,6 +46,9 @@
         - customer asks for amendment or new license
     - id: negotiate
       name: Commit to Negotiate in Good Faith
+      notes:
+        - customer asks
+        - vendor agrees to talk
     - id: list
       name: On Payment, at List Price
       notes:
