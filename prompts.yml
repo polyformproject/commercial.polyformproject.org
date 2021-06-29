@@ -276,19 +276,19 @@
       name: Mediation Before Litigation
       notes:
         - more formal “talk it over”
-        - involves a third-party mediator
+        - with a professional mediator
     - id: jamsdomestic
       name: JAMS Arbitration, Under Domestic Rules
       notes:
-        - popular private resolution option
+        - popular private option
     - id: jamsinternational
       name: JAMS Arbitration, Under International Rules
       notes:
-        - popular private resolution option
+        - popular private option
     - id: aaa
       name: AAA Arbitration
       notes:
-        - popular private resolution option
+        - popular private option
 
 - id: export
   name: Export Control
