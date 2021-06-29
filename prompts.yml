@@ -146,8 +146,8 @@
       name: Updates During the Term of the Agreement
 
 - id: support
-  name: Support
-  description: Will the seller provide technical support?
+  name: Paid Support
+  description: Will the seller provide paid technical support?
   choice: single
   choices:
     - id: none
@@ -165,6 +165,8 @@
         - additional fee
         - availability service-level agreements
         - response-time service-level agreements
+  notes: |
+    You may also provide free support through a public forum or chat room.  But the license agreement won’t obligate you to do so.
 
 - id: warranty
   name: Quality Warranty
