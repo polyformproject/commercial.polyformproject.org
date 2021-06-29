@@ -33,7 +33,7 @@
 
 - id: expansion
   name: Expansion
-  description: If the customer needs more usage than they've agreed to, how can they get it?
+  description: What if the customer wants more users or higher usage limits?
   requires:
     - model: users
     - model: metered
