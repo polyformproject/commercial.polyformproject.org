@@ -32,7 +32,7 @@
       "choice": {
         "const": "single"
       },
-      "resources": {
+      "after": {
         "type": "string"
       },
       "choices": {
