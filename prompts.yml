@@ -48,20 +48,20 @@
       name: Commit to Negotiate in Good Faith
       notes:
         - customer asks
-        - vendor agrees to talk
+        - vendor commits to talk
     - id: list
       name: On Payment, at List Price
       notes:
-        - customer pays first
+        - pay first
         - published pricing
     - id: quoted
-      name: On Payment, as Agreed
+      name: On Payment, as Quoted
       notes:
-        - increase pricing on the ordering document
+        - pricing on ordering document
     - id: usage
       name: Based on Usage, as Agreed
       notes:
-        - method to calculate on the ordering document
+        - method to calculate on ordering document
 
 - id: reporting
   name: Usage Reporting
