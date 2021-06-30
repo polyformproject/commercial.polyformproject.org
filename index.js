@@ -45,18 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.createElement('form')
   fragment.appendChild(form)
 
-  // Explanation Paragraph
-  const explanation = document.createElement('p')
-  explanation.appendChild(document.createTextNode(
-    'Answer these questions to create a ZIP archive with an order form template and legal terms for a commercial software license agreement.'
-  ))
-  form.appendChild(explanation)
+  function appendParagraph (text) {
+    const paragraph = document.createElement('p')
+    paragraph.appendChild(document.createTextNode(text))
+    form.appendChild(paragraph)
+  }
 
-  const order = document.createElement('p')
-  order.appendChild(document.createTextNode(
+  appendParagraph(
+    'Answer these questions to create a ZIP archive with an order form template and legal terms for a commercial software license agreement.'
+  )
+
+  appendParagraph(
     'Try to answer the questions in order. New questions may appear as you make choices.'
-  ))
-  form.appendChild(order)
+  )
 
   // Advanced Options
   const haveAdvancedOptions = prompts.some(p => p.advanced)
