@@ -222,16 +222,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function renderTemplate (template, view, title, signatures, blanksValues) {
-  console.log(blanksValues)
   const markdown = mustache.render(template, view)
   const parsed = commonmark.parse(markdown)
   const options = { title, edition: version }
-  console.log(parsed)
   Object.assign(options, docxOptions)
   const blanks = blanksValues
     ? prepareBlanks(blanksValues, parsed.directions)
     : []
-  console.log(blanks)
   if (signatures) options.after = ooxmlSignaturePages(signatures)
   return docx(parsed.form, blanks, options).generateAsync({ type: 'blob' })
 }
