@@ -52,6 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
   ))
   form.appendChild(explanation)
 
+  const order = document.createElement('p')
+  order.appendChild(document.createTextNode(
+    'Try to answer the questions in order. New questions may appear as you make choices.'
+  ))
+  form.appendChild(order)
+
   // Advanced Options
   const haveAdvancedOptions = prompts.some(p => p.advanced)
   let advanced
