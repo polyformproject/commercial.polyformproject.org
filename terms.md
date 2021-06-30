@@ -2,11 +2,11 @@
 
 These terms, together with the order referencing them, make up a software license agreement.  The software, the developer, and the customer are all identified on the order.
 
-{{#model=trial}}
-# Trial
+{{#model=evaluation}}
+# Evaluation
 
 This agreement will continue for the term on the order.  The customer may use the software only to evaluate its functionality and suitability for the customer's needs, not to serve customer's customers or to integrate into production systems.
-{{/model=trial}}
+{{/model=evaluation}}
 
 {{#model=users}}
 # Users
@@ -339,7 +339,7 @@ On the customer's request, the vendor will agree to the terms of a standard, pub
 
 {{/support=none}}
 
-{{^model=trial}}
+{{^model=evaluation}}
 # Warranties
 
 ## Perform As Documented
@@ -371,21 +371,21 @@ The developer guarantees that the software it delivers will be free of code that
 
 If the software depends on, installs, configures, or links to other software in order to function, the vendor guarantees that those software dependencies will be either provided in the copies of the software delivered to the customer or generally available for the customer to download, free or charge, from a well known website or Internet service, such as an open source software package repository.
 
-{{/model=trial}}
+{{/model=evaluation}}
 
 # Liability
 
-{{#model=trial}}
+{{#model=evaluation}}
 ## Disclaimer
 
 !!! The vendor provides the software as is, without any warranty.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
-{{/model=trial}}
+{{/model=evaluation}}
 
-{{^model=trial}}
+{{^model=evaluation}}
 ## Disclaimer
 
 !!! [Warranties](#warranties) sets out the only warranties the vendor provides for the software.  The vendor disclaims any warranties the law might otherwise imply, like warranties of merchantability, fitness for any particular purpose, title, or noninfringement.
-{{/model=trial}}
+{{/model=evaluation}}
 
 ## Unforeseeable Damages
 

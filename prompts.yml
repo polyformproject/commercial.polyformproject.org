@@ -4,8 +4,8 @@
   description: Vendors price and structure licenses in different ways.
   choice: single
   choices:
-    - id: trial
-      name: Trial
+    - id: evaluation
+      name: Evaluation
       notes:
         - evaluation use only
         - time on the ordering document

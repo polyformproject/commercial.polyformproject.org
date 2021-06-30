@@ -1,6 +1,6 @@
 {
-  "trial": {
-    "model": "trial",
+  "evaluation": {
+    "model": "evaluation",
     "delivery": "compiled",
     "escrow": "no",
     "maintenance": "no",
