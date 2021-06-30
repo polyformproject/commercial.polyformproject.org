@@ -13,6 +13,7 @@
   },
   "unlimited": {
     "model": "unlimited",
+    "trial": "no",
     "term": "perpetual",
     "delivery": "compiled",
     "maintenance": "yes",
@@ -27,6 +28,7 @@
   },
   "metered": {
     "model": "metered",
+    "trial": "no",
     "expansion": "quoted",
     "reporting": "audit",
     "term": "month",
@@ -43,6 +45,7 @@
   },
   "heavy": {
     "model": "users",
+    "trial": "yes",
     "expansion": "list",
     "reporting": "audit",
     "term": "renewing",

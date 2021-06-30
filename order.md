@@ -8,6 +8,12 @@ _Customer_ and _Vendor_ agree to the attached PolyForm Commercial Software Licen
 
 `Software Version`
 
+{{#trial=yes}}
+# Trial Period
+
+`Trial Period`
+{{/trial=yes}}
+
 {{#model=users}}
 # Users
 

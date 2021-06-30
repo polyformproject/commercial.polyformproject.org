@@ -1,6 +1,7 @@
 {
   "Software Name and Description": "{e.g. Super Counter, an expense reporting application for Windows}",
   "Software Version": "{e.g. 1.0.1}",
+  "Trial Period": "{e.g. thirty days starting on delivery}",
   "Users": "{e.g. 100 users}",
   "Technical Limits": "{e.g. 500GB of store, 1,000 transactions processed per month}",
   "License Fees": "{e.g. $1,000 per month, $100 per user per month}",

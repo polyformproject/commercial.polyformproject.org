@@ -8,6 +8,18 @@ These terms, together with the order referencing them, make up a software licens
 This agreement will continue for the term on the order.  The customer may use the software only to evaluate its functionality and suitability for the customer's needs, not to serve customer's customers or to integrate into production systems.
 {{/model=evaluation}}
 
+{{#trial=yes}}
+# Trial
+
+- This agreement will begin with the trial period on the order.
+
+- The customer will not accrue fees during the trial period.
+
+- Neither [Warranties](#warranties) nor [Indemnities](#indemnities) will apply during the trial period.
+
+- The customer may end this agreement at any time during the trial period by giving the vendor notice.
+{{/trial=yes}}
+
 {{#model=users}}
 # Users
 
@@ -119,19 +131,19 @@ This agreement continues until one side or the other ends it.
 {{#term=year}}
 ## Fixed Term
 
-This agreement will continue for one year.
+This agreement will continue for one year{{#trial=yes}} after the trial period ends{{/trial=yes}}.
 {{/term=year}}
 
 {{#term=renewing}}
 ## Term and Renewal
 
-This agreement will continue for one year, then renew automatically for an additional year at a time.  Either side can stop this agreement from renewing by giving notice at least ninety days before it renews again.
+This agreement will continue for one year{{#trial=yes}} after the trial period ends{{/trial=yes}}, then renew automatically for an additional year at a time.  Either side can stop this agreement from renewing by giving notice at least ninety days before it renews again.
 {{/term=renewing}}
 
 {{#term=month}}
 ## Month-to-Month
 
-This agreement continues month-by-month, until one side gives the other notice that it will end after the next month-long period ends.
+This agreement will continue month-by-month{{#trial=yes}} after the trial period ends{{/trial=yes}}, until one side gives the other notice that it will end after the next month-long period ends.
 {{/term=month}}
 
 ## Termination

@@ -32,6 +32,27 @@
       name: Site
       version: 2
 
+- id: trial
+  name: Initial Trial
+  description: Allow the customer to try the software for free first?
+  requires:
+    - model: users
+    - model: metered
+    - model: unlimited
+  choice: single
+  choices:
+    - id: yes
+      name: Yes
+      notes:
+        - trial period on ordering document
+        - term begins after trial period
+        - no warranties during trial
+        - free of charge
+    - id: no
+      name: No
+      notes:
+        - paid license begins immediately
+
 - id: expansion
   name: Expansion
   description: What if the customer wants more users or higher usage limits?
