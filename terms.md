@@ -122,10 +122,11 @@ This agreement continues until one side or the other ends it.
 This agreement will continue for one year.
 {{/term=year}}
 
-{{#term=renewing}}{{/term=renewing}}
+{{#term=renewing}}
 ## Term and Renewal
 
 This agreement will continue for one year, then renew automatically for an additional year at a time.  Either side can stop this agreement from renewing by giving notice at least ninety days before it renews again.
+{{/term=renewing}}
 
 {{#term=month}}
 ## Month-to-Month
