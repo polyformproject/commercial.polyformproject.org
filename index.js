@@ -10,11 +10,11 @@ const prepareBlanks = require('commonform-prepare-blanks')
 
 const blanksValues = require('./blanks.json')
 const documentTitles = require('./document-titles')
-const order = require('./order.json')
+const orderTemplate = require('./order.json')
 const permission = require('./permission.json')
 const prompts = require('./prompts.json')
 const signatures = require('./signatures.json')
-const terms = require('./terms.json')
+const termsTemplate = require('./terms.json')
 
 const version = require('./version.json')
 const head = require('./head.json')
@@ -166,8 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
       view[`${key}=${value}`] = true
     })
     Promise.all([
-      renderTemplate(order, view, documentTitles.order, signatures, blanksValues),
-      renderTemplate(terms, view, documentTitles.terms)
+      renderTemplate(orderTemplate, view, documentTitles.order, signatures, blanksValues),
+      renderTemplate(termsTemplate, view, documentTitles.terms)
     ])
       .then(files => {
         const zip = new JSZip()
