@@ -345,3 +345,5 @@
     - id: no
       name: No
       default: true
+  after: |
+    <a href="https://en.wikipedia.org/wiki/Federal_Acquisition_Regulation">Federal Acquisition Regulations</a> govern contracts that parts of the United States federal government, including the Deartment of Defense, make to buy things.  Vendors building software without governing funding often opt out of large parts of those regulations under <a href="https://www.acquisition.gov/far/12.212">FAR&nbsp;12.212</a> and <a href="https://www.acquisition.gov/dfars/part-227-patents-data-and-copyrights#DFARS-227.7202">DFARS&nbsp;227.7202</a>.
