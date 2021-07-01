@@ -319,7 +319,7 @@
 
 - id: export
   name: Export Control
-  description: Include a section about United States export controls?
+  description: Include a section about export controls?
   advanced: true
   choice: single
   choices:
@@ -330,6 +330,8 @@
     - id: no
       name: No
       default: true
+  after: |
+    Many countries <a href="https://en.wikipedia.org/wiki/Export_control">regulate selling or even simply sharing sensitive technologies abroad</a>. This used to be <a href="https://en.wikipedia.org/wiki/Crypto_Wars">a much bigger concern with cryptography implemented in software</a>, but still comes up for software sometimes.
 
 - id: government
   name: Government Procurement
