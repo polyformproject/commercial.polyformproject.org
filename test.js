@@ -40,10 +40,10 @@ tape('templating', test => {
 
   prompts.forEach(prompt => {
     const promptID = prompt.id
-    prompt.choices.forEach(choice => {
-      if (choice.version > 1) return
-      const choiceID = choice.id
-      possible.push(`${promptID}=${choiceID}`)
+    prompt.responses.forEach(response => {
+      if (response.version > 1) return
+      const responseID = response.id
+      possible.push(`${promptID}=${responseID}`)
     })
   })
 
@@ -78,9 +78,9 @@ tape('prompt requirements', test => {
       for (const otherPromptID in requirement) {
         const otherPrompt = prompts.find(prompt => prompt.id === otherPromptID)
         test.assert(otherPrompt, `${promptID}: required prompt "${otherPromptID}" exists`)
-        const choiceID = requirement[otherPromptID]
-        const choice = otherPrompt.choices.find(choice => choice.id === choiceID)
-        test.assert(choice, `${promptID}: required prompt "${otherPromptID}" has choice "${choiceID}"`)
+        const responseID = requirement[otherPromptID]
+        const response = otherPrompt.responses.find(response => response.id === responseID)
+        test.assert(response, `${promptID}: required prompt "${otherPromptID}" has response "${responseID}"`)
       }
     }
   }
@@ -91,12 +91,12 @@ for (const name in examples) {
   tape(`validate example "${name}"`, test => {
     const example = examples[name]
     for (const promptID in example) {
-      const choiceID = example[promptID]
+      const responseID = example[promptID]
       const prompt = prompts.find(prompt => prompt.id === promptID)
       test.assert(prompt, `promptID "${promptID}"`)
       if (!prompt) break
-      const choice = prompt.choices.find(choice => choice.id === choiceID)
-      test.assert(choice, `choiceID "${choiceID}"`)
+      const response = prompt.responses.find(response => response.id === responseID)
+      test.assert(response, `responseID "${responseID}"`)
     }
     test.end()
   })
@@ -112,8 +112,8 @@ function testRenders (kind, template) {
         const example = examples[name]
         const view = {}
         for (const promptID in example) {
-          const choiceID = example[promptID]
-          view[`${promptID}=${choiceID}`] = true
+          const responseID = example[promptID]
+          view[`${promptID}=${responseID}`] = true
         }
         let rendered
         test.doesNotThrow(() => {
@@ -178,8 +178,8 @@ for (const key in examples) {
         if (showAdvanced) await showAdvanced.click()
         const example = examples[key]
         for (const promptID in example) {
-          const choiceID = example[promptID]
-          await page.check(`#${promptID}_${choiceID}`)
+          const responseID = example[promptID]
+          await page.check(`#${promptID}_${responseID}`)
         }
 
         // Download the packet.

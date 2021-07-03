@@ -3,7 +3,7 @@
   name: License Model
   description: Vendors price and structure licenses in different ways.
   choice: single
-  choices:
+  responses:
     - id: evaluation
       name: Evaluation
       notes:
@@ -40,7 +40,7 @@
     - model: metered
     - model: unlimited
   choice: single
-  choices:
+  responses:
     - id: yes
       name: Yes
       notes:
@@ -60,7 +60,7 @@
     - model: users
     - model: metered
   choice: single
-  choices:
+  responses:
     - id: none
       name: Nothing Agreed in Advance
       notes:
@@ -92,7 +92,7 @@
     - model: metered
     - expansion: usage
   choice: single
-  choices:
+  responses:
     - id: phone
       name: Software Phones Home
       notes:
@@ -116,7 +116,7 @@
     - model: cpu
     - model: site
   choice: single
-  choices:
+  responses:
     - id: perpetual
       name: Perpetual
     - id: year
@@ -130,7 +130,7 @@
 #  name: Usage
 #  description: Can the customer use the software for more than internal business?
 #  choice: multiple
-#  choices:
+#  responses:
 #    - id: service
 #      name: External Services
 #    - id: redistribution
@@ -140,7 +140,7 @@
   name: Delivery
   description: Will the customer get source code, a compiled version, or both?
   choice: single
-  choices:
+  responses:
     - id: compiled
       name: Compiled Software Only
     - id: source
@@ -155,7 +155,7 @@
     - delivery: source
     - delivery: both
   choice: single
-  choices:
+  responses:
     - id: yes
       name: Allowed
     - id: no
@@ -167,7 +167,7 @@
   requires:
     - delivery: compiled
   choice: single
-  choices:
+  responses:
     - id: no
       name: No
     - id: yes
@@ -177,7 +177,7 @@
   name: Maintenance
   description: Will the seller provides updates to the software?
   choice: single
-  choices:
+  responses:
     - id: no
       name: No
       notes:
@@ -191,7 +191,7 @@
   name: Paid Support
   description: Will the seller provide paid technical support?
   choice: single
-  choices:
+  responses:
     - id: none
       name: No Paid Support
     - id: basic
@@ -220,7 +220,7 @@
     - model: cpu
     - model: site
   choice: single
-  choices:
+  responses:
     - id: period
       name: During a Limited Warranty Period
     - id: term
@@ -230,7 +230,7 @@
   name: Patent Infringement Indemnity
   description: Will the seller cover the customer if someone brings a lawsuit claiming that the software infringes a patent?
   choice: single
-  choices:
+  responses:
     - id: none
       name: None
       notes:
@@ -250,7 +250,7 @@
   name: Governing Law
   description: What law will govern the license agreement?
   choice: single
-  choices:
+  responses:
     - id: vendor
       name: Vendor’s Headquarters
       notes:
@@ -276,7 +276,7 @@
   name: Venue for Disputes
   description: Where will the seller and customer bring lawsuits about the agreement?
   choice: single
-  choices:
+  responses:
     - id: capital
       name: Capital of the Governing Law Jurisdiction
     - id: biggest
@@ -290,7 +290,7 @@
   name: Dispute Resolution
   description: How will the seller and customer resolve disputes about the agreement?
   choice: single
-  choices:
+  responses:
     - id: litigation
       name: Litigation
       notes:
@@ -322,7 +322,7 @@
   description: Include a section about export controls?
   advanced: true
   choice: single
-  choices:
+  responses:
     - id: yes
       name: Yes
       notes:
@@ -338,7 +338,7 @@
   description: Include a section about United States government procurement?
   advanced: true
   choice: single
-  choices:
+  responses:
     - id: yes
       name: Yes
       notes:

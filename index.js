@@ -23,7 +23,7 @@ const orderFileName = 'order.docx'
 const termsFileName = 'terms.docx'
 const permissionFileName = 'permission.txt'
 
-const selections = {/* promptID -> null | choiceID */}
+const responses = {/* promptID -> null | responseID */}
 const promptIDs = [/* promptID */]
 const fieldsets = {/* promptID => fieldset */}
 const inputs = {/* promptID -> [input] */}
@@ -113,32 +113,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputType = prompt.choice === 'single' ? 'radio' : 'checkbox'
     const required = prompt.choice === 'single' && hasRequired
 
-    prompt.choices.forEach(choice => {
-      // Skip choices scheduled for later versions.
-      if (choice.version > 1) return
+    prompt.responses.forEach(response => {
+      // Skip responses scheduled for later versions.
+      if (response.version > 1) return
 
-      const choiceID = choice.id
+      const responseID = response.id
 
       const label = document.createElement('label')
       set.appendChild(label)
 
       const input = document.createElement('input')
       input.dataset.prompt = promptID
-      input.dataset.choice = choiceID
+      input.dataset.response = responseID
       input.type = inputType
-      input.id = `${promptID}_${choiceID}`
+      input.id = `${promptID}_${responseID}`
       input.name = promptID
-      input.value = choiceID
+      input.value = responseID
       input.requred = required ? 'true' : null
       input.onchange = onInputChange
-      input.checked = choice.default ? 'true' : null
+      input.checked = response.default ? 'true' : null
       label.appendChild(input)
-      label.appendChild(document.createTextNode(choice.name))
+      label.appendChild(document.createTextNode(response.name))
       inputs[promptID].push(input)
 
-      if (Array.isArray(choice.notes)) {
+      if (Array.isArray(response.notes)) {
         label.appendChild(document.createTextNode(' — '))
-        label.appendChild(document.createTextNode(choice.notes.join(', ')))
+        label.appendChild(document.createTextNode(response.notes.join(', ')))
       }
     })
 
@@ -160,10 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
   submitButton.appendChild(document.createTextNode('Download ZIP Archive'))
   form.onsubmit = event => {
     event.preventDefault()
-    updateSelectionsGlobal()
+    updateResponsesGlobal()
     const view = {}
-    Object.keys(selections).forEach(key => {
-      const value = selections[key]
+    Object.keys(responses).forEach(key => {
+      const value = responses[key]
       view[`${key}=${value}`] = true
     })
     Promise.all([
@@ -180,11 +180,11 @@ document.addEventListener('DOMContentLoaded', () => {
           version,
           head,
           date: new Date().toISOString(),
-          selections: {}
+          responses: {}
         }
-        for (const key in selections) {
-          const value = selections[key]
-          if (typeof value === 'string') manifest.selections[key] = value
+        for (const key in responses) {
+          const value = responses[key]
+          if (typeof value === 'string') manifest.responses[key] = value
         }
         zip.file('manifest.json', JSON.stringify(manifest))
         zip.generateAsync({ type: 'blob' })
@@ -235,25 +235,25 @@ function renderTemplate (template, view, title, signatures, blanksValues) {
 }
 
 function onInputChange () {
-  updateSelectionsGlobal()
+  updateResponsesGlobal()
   applyPromptRequirements()
 }
 
-function updateSelectionsGlobal () {
+function updateResponsesGlobal () {
   promptIDs.forEach(promptID => {
-    selections[promptID] = null
+    responses[promptID] = null
     const elements = inputs[promptID]
     elements.forEach(element => {
       if (element.checked && !element.disabled) {
-        const choiceID = element.dataset.choice
+        const responseID = element.dataset.response
         if (element.type === 'checkbox') {
-          if (Array.isArray(selections[promptID])) {
-            selections[promptID].push(choiceID)
+          if (Array.isArray(responses[promptID])) {
+            responses[promptID].push(responseID)
           } else {
-            selections[promptID] = [choiceID]
+            responses[promptID] = [responseID]
           }
         } else if (element.type === 'radio') {
-          selections[promptID] = choiceID
+          responses[promptID] = responseID
         }
       }
     })
@@ -271,8 +271,8 @@ function applyPromptRequirements () {
     }
     const met = required.some(predicate => {
       const requiredPromptID = Object.keys(predicate)[0]
-      const requiredChoiceID = Object.values(predicate)[0]
-      return selections[requiredPromptID] === requiredChoiceID
+      const requiredResponseID = Object.values(predicate)[0]
+      return responses[requiredPromptID] === requiredResponseID
     })
     if (met) {
       requiredPromptIDs.push(promptID)
@@ -288,6 +288,6 @@ function applyPromptRequirements () {
       })
     }
   })
-  const complete = requiredPromptIDs.every(promptID => selections[promptID])
+  const complete = requiredPromptIDs.every(promptID => responses[promptID])
   submitButton.disabled = !complete
 }
