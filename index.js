@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   onInputChange()
 
-  main.appendChild(fragment)
+  main.replaceChildren(fragment)
 
   // Add Git commit to footer.
   const footer = document.querySelector('footer[role=contentinfo]')
