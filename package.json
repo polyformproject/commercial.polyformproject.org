@@ -36,6 +36,6 @@
     "build:head": "echo \"\\\"$(git rev-parse HEAD)\\\"\" > head.json",
     "prestart": "npm run build",
     "pretest": "npm run build",
-    "test": "npm run build:prompts && node test.js"
+    "test": "npm run build:prompts && node test.js && ./test.sh"
   }
 }
