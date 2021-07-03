@@ -109,10 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     description.appendChild(document.createTextNode(prompt.description))
     set.appendChild(description)
 
-    // Compute attributes common to all prompt inputs.
-    const inputType = prompt.choice === 'single' ? 'radio' : 'checkbox'
-    const required = prompt.choice === 'single' && hasRequired
-
     prompt.responses.forEach(response => {
       // Skip responses scheduled for later versions.
       if (response.version > 1) return
@@ -125,11 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const input = document.createElement('input')
       input.dataset.prompt = promptID
       input.dataset.response = responseID
-      input.type = inputType
+      input.type = 'radio'
       input.id = `${promptID}_${responseID}`
       input.name = promptID
       input.value = responseID
-      input.requred = required ? 'true' : null
+      input.requred = hasRequired ? 'true' : null
       input.onchange = onInputChange
       input.checked = response.default ? 'true' : null
       label.appendChild(input)
