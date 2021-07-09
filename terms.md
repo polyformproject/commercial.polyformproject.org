@@ -186,7 +186,7 @@ The vendor grants the customer and each authorized user a standard license for a
 
 ## Documentation Copyright License
 
-The vendor grants the customer and all customer personnel a standard license for any copyrights in the documentation that the vendor can license, to read, back up, and copy the documentation.
+The vendor grants the customer and each authorized user a standard license for any copyrights in the documentation that the vendor can license, to read, back up, and copy the documentation.
 
 ## Standard License Terms
 
