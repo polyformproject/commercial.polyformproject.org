@@ -441,7 +441,7 @@ Subject to [Indemnification Process](#indemnification-process), the vendor agree
 
 ## Scope of Indemnity
 
-Throughout this agreement, to indemnify means to indemnify and hold harmless for all liability, expenses, damages, and costs, as well as to defend the indemnified party.
+Throughout this agreement, to indemnify means to indemnify and hold the customer and its personnel harmless for all liability, expenses, damages, and costs, as well as to defend the indemnified party.
 
 ## Only Remedy
 
