@@ -149,7 +149,7 @@
 
 - id: maintenance
   name: Maintenance
-  description: Will the seller provides updates to the software?
+  description: Will the seller provide updates to the software?
   responses:
     - id: no
       name: No
