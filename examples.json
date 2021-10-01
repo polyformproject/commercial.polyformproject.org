@@ -80,7 +80,7 @@
     "patent": "none",
     "law": "vendor",
     "venue": "vendor",
-    "dispute": "litigation",
+    "disputes": "litigation",
     "export": "yes",
     "government": "no"
   }
