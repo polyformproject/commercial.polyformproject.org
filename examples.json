@@ -67,5 +67,21 @@
     "venue": "vendor",
     "export": "yes",
     "disputes": "aaa"
+  },
+  "individual traditional": {
+    "customer": "individual",
+    "model": "unmetered",
+    "trial": "no",
+    "term": "perpetual",
+    "delivery": "compiled",
+    "escrow": "no",
+    "maintenance": "no",
+    "support": "none",
+    "patent": "none",
+    "law": "vendor",
+    "venue": "vendor",
+    "dispute": "litigation",
+    "export": "yes",
+    "government": "no"
   }
 }
