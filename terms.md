@@ -206,7 +206,7 @@ Some components of the software may be open source software available under free
 
 If any part of the software is or becomes available under a public license:
 
-- While the customer's licenses continue, the customer must abide by this agreement, not the public license.
+- While the customer's licenses continue, the customer and each authorized user must abide by this agreement, not the public license.
 
 {{^term=perpetual}}
 - After the customer's licenses end, the customer must abide by the public license.
