@@ -20,7 +20,7 @@ This agreement will continue for the term on the order.  The customer may use th
 - The customer may end this agreement at any time during the trial period by giving the vendor notice.
 {{/trial=yes}}
 
-{{#model=users}}
+{{#users=limited}}
 # Users
 
 ## Users Limit
@@ -54,7 +54,7 @@ The vendor agrees to task its personnel to negotiate an amendment to this agreem
 
 If the customer exceeds its users limit, the customer agrees to pay additional charges for the additional users according to the pricing on the order.
 {{/expansion=usage}}
-{{/model=users}}
+{{/users=limited}}
 
 {{#model=metered}}
 # Usage Limits
@@ -84,7 +84,7 @@ If the customer exceeds the numeric technical limits on its use of the software,
 {{#expansion=negotiate}}
 ## Increase Limits
 
-The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase {{#model=users}}the customer's users limit{{/model=users}}{{#model=metered}}the numeric technical limits on the customer's use of the software{{/model=metered}} on request.
+The vendor agrees to task its personnel to negotiate an amendment to this agreement to increase the numeric technical limits on the customer's use of the software on request.
 {{/expansion=negotiate}}
 {{/model=metered}}
 
@@ -378,7 +378,7 @@ The developer guarantees that the software it delivers will be free of code that
 
 - code that limits or disables functionality on failure to validate license keys
 
-- code that limits or disables functionality based on automatic monitoring of {{#model=users}}the users limit{{/model=users}}{{#model=metered}}numeric technical limits on usage{{/model=metered}}
+- code that limits or disables functionality based on automatic monitoring of agreed limits on usage
 
 ## Software Dependencies
 

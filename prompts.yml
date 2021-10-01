@@ -1,4 +1,34 @@
 # This YAML data file lists all the questions and answers users can choose to generate license packets.
+- id: customer
+  name: Customer
+  description: Is the customer a single end user or an organization?
+  responses:
+    - id: individual
+      name: Individual
+      notes:
+        - individual end-user
+    - id: organization
+      name: Organization
+      notes:
+        - company or other group
+        - covers multiple personnel
+
+- id: users
+  name: Users
+  description: Will the number of people at the organization who can use the software be limited?
+  requires:
+    - customer: organization
+  responses:
+    - id: unlimited
+      name: Unlimited
+      notes:
+        - any number of users
+    - id: limited
+      name: Limited
+      notes:
+        - maximum number of users
+        - on the ordering document
+
 - id: model
   name: License Model
   description: Vendors price and structure licenses in different ways.
@@ -10,28 +40,22 @@
         - time on the ordering document
         - no warranties
         - may be free of charge
-    - id: users
-      name: Users
-      notes:
-        - maximum number of users
-        - on the ordering document
     - id: metered
       name: Metered
       notes:
         - transaction, storage volume or other technical limit
         - on the ordering document
-    - id: unlimited
-      name: Unlimited
+    - id: unmetered
+      name: Unmetered
       notes:
-        - no numeric limits on use of the software
+        - no numeric technical limits on use of the software
 
 - id: trial
   name: Initial Trial
   description: Allow the customer to try the software for free first?
   requires:
-    - model: users
     - model: metered
-    - model: unlimited
+    - model: unmetered
   responses:
     - id: yes
       name: Yes
@@ -49,7 +73,7 @@
   name: Expansion
   description: What if the customer wants more users or higher usage limits?
   requires:
-    - model: users
+    - users: limited
     - model: metered
   responses:
     - id: none
@@ -79,7 +103,7 @@
   name: Usage Reporting
   description: How will the seller determine the customer’s usage?
   requires:
-    - model: users
+    - users: limited
     - model: metered
     - expansion: usage
   responses:
@@ -100,8 +124,7 @@
   name: Term
   description: How long will the license agreement last?
   requires:
-    - model: unlimited
-    - model: users
+    - model: unmetered
     - model: metered
   responses:
     - id: perpetual
@@ -186,9 +209,8 @@
   name: Quality Warranty
   description: How long will the seller guarantee the software?
   requires:
-    - model: unlimited
-    - model: users
     - model: metered
+    - model: unmetered
   responses:
     - id: period
       name: During a Limited Warranty Period

@@ -14,11 +14,11 @@ _Customer_ and _Vendor_ agree to the attached PolyForm Commercial Software Licen
 `Trial Period`
 {{/trial=yes}}
 
-{{#model=users}}
+{{#users=limited}}
 # Users
 
 `Users`
-{{/model=users}}
+{{/users=limited}}
 
 {{#model=metered}}
 # Technical Limits
@@ -31,11 +31,11 @@ _Customer_ and _Vendor_ agree to the attached PolyForm Commercial Software Licen
 `License Fees`
 
 {{#expansion=quoted}}
-{{#model=users}}
+{{#users=limited}}
 # Additional Users
 
 `Additional User Pricing`
-{{/model=users}}
+{{/users=limited}}
 {{#model=metered}}
 # Higher Limits
 

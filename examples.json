@@ -1,5 +1,7 @@
 {
-  "evaluation": {
+  "organization, unlimited, evaluation": {
+    "customer": "organization",
+    "users": "unlimited",
     "model": "evaluation",
     "delivery": "compiled",
     "escrow": "no",
@@ -11,8 +13,10 @@
     "disputes": "litigation",
     "export": "no"
   },
-  "unlimited": {
-    "model": "unlimited",
+  "organization, unlimited, unmetered": {
+    "customer": "organization",
+    "users": "unlimited",
+    "model": "unmetered",
     "trial": "no",
     "term": "perpetual",
     "delivery": "compiled",
@@ -26,7 +30,9 @@
     "disputes": "aaa",
     "export": "no"
   },
-  "metered": {
+  "organization, limited, metered": {
+    "customer": "organization",
+    "users": "limited",
     "model": "metered",
     "trial": "no",
     "expansion": "quoted",
@@ -43,8 +49,10 @@
     "disputes": "jamsdomestic",
     "export": "no"
   },
-  "heavy": {
-    "model": "users",
+  "organization heavy": {
+    "customer": "organization",
+    "users": "limited",
+    "model": "metered",
     "trial": "yes",
     "expansion": "list",
     "reporting": "audit",
