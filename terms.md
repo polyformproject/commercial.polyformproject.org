@@ -118,7 +118,7 @@ The vendor agrees to bill the customer per the order.  The customer agrees to pa
 
 ## Billing Errors
 
-The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to assign relevant personnel to resolve any concerns about bill accuracy promptly and in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven days of resolution.
+The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to resolve any concerns about bill accuracy promptly and in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven days of resolution.
 
 # Term and Termination
 
@@ -154,7 +154,7 @@ Either side can terminate this agreement immediately if the other side breaches 
 
 ## Permitted Use
 
-The customer may use the software only for its own computing needs and those of its subsidiaries and corporate affiliates.
+The customer may use the software only for its own computing needs{{#customer=organization}} and those of its subsidiaries and corporate affiliates{{/customer=organization}}.
 
 ## Prohibited Uses
 
@@ -245,7 +245,7 @@ The vendor agrees to give notice of any outside auditor that it plans to use to 
 
 ## Audit Hours
 
-The customer agrees to cooperate with audits during regular business hours.  The vendor agrees to cooperate with the customer to minimize the disruption to the customer's business from the audit.
+The customer agrees to cooperate with audits during regular business hours.  The vendor agrees to cooperate with the customer to minimize disruption to the customer from the audit.
 
 ## Audit Costs
 
@@ -309,13 +309,13 @@ The vendor does not agree to provide technical support for the software under th
 {{#support=basic}}
 ## Basic Support
 
-During its regular business hours, the vendor agrees to respond to e-mail support requests from customer personnel about configuration of, use of, and problems with the software and its documentation.  The vendor does not agree to any specific service levels for response to support requests.
+During its regular business hours, the vendor agrees to respond to e-mail support requests from customer{{#customer=organization}} or any authorized user{{/customer=organization}} about configuration of, use of, and problems with the software and its documentation.  The vendor does not agree to any specific service levels for response to support requests.
 {{/support=basic}}
 
 {{#support=full}}
 ## Support Scope
 
-The vendor agrees to respond to support requests from customer personnel about configuration of, use of, and problems with the software and its documentation.
+The vendor agrees to respond to support requests from customer{{#customer=organization}} and each authorized user{{/customer=organization}} about configuration of, use of, and problems with the software and its documentation.
 
 ## Support Channels
 
@@ -359,15 +359,15 @@ On the customer's request, the vendor will agree to the terms of a standard, pub
 
 The vendor guarantees that the software will perform as described in its documentation {{#warranty=period}}during the warranty period on the order{{/warranty=period}}{{#warranty=term}}while this agreement continues{{/warranty=term}}, except when:
 
-- the customer uses an older version of the software than the latest provided under this agreement
+- using older version of the software than the latest provided under this agreement
 
 {{#modification=yes}}
-- the customer modifies the software
+- using the software with modifications
 {{/modification=yes}}
 
-- the customer runs the software using hardware or software different from that required, according to the documentation
+- running the software using hardware or software different from that required, according to the documentation
 
-- the customer combines the software with other software or hardware in ways not described in the documentation
+- combining the software with other software or hardware in ways not described in the documentation
 
 ## Malware
 
@@ -442,7 +442,7 @@ Subject to [Indemnification Process](#indemnification-process), the vendor agree
 
 ## Scope of Indemnity
 
-Throughout this agreement, to indemnify means to indemnify and hold the customer and its personnel harmless for all liability, expenses, damages, and costs, as well as to defend the indemnified party.
+Throughout this agreement, to indemnify means to indemnify and hold the customer{{#customer=organization}} and its personnel{{/customer=organization}} harmless for all liability, expenses, damages, and costs, as well as to defend the indemnified party.
 
 ## Only Remedy
 
