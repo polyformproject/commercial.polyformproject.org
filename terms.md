@@ -356,6 +356,7 @@ On the customer's request, the vendor will agree to the terms of a standard, pub
 # Warranties
 
 ## Perform As Documented
+
 The vendor guarantees that the software will perform as described in its documentation {{#warranty=period}}during the warranty period on the order{{/warranty=period}}{{#warranty=term}}while this agreement continues{{/warranty=term}}, except when:
 
 - the customer uses an older version of the software than the latest provided under this agreement
