@@ -178,15 +178,15 @@ The customer may not:
 
 ## Software Copyright License
 
-The vendor grants the customer and each authorized user a standard license for any copyrights in the software that the vendor can license, to copy, install, back up, and use the software as allowed under this agreement.
+The vendor grants the customer{{#customer=organization}} and each authorized user{{/customer=organization}} a standard license for any copyrights in the software that the vendor can license, to copy, install, back up, and use the software as allowed under this agreement.
 
 ## Software Patent License
 
-The vendor grants the customer and each authorized user a standard license for any patents the vendor can license or becomes able to license, to use the software as allowed under this agreement.
+The vendor grants the customer{{#customer=organization}} and each authorized user{{/customer=organization}} a standard license for any patents the vendor can license or becomes able to license, to use the software as allowed under this agreement.
 
 ## Documentation Copyright License
 
-The vendor grants the customer and each authorized user a standard license for any copyrights in the documentation that the vendor can license, to read, back up, and copy the documentation.
+The vendor grants the customer{{#customer=organization}} and each authorized user{{/customer=organization}} a standard license for any copyrights in the documentation that the vendor can license, to read, back up, and copy the documentation.
 
 ## Standard License Terms
 
@@ -206,7 +206,7 @@ Some components of the software may be open source software available under free
 
 If any part of the software is or becomes available under a public license:
 
-- While the customer's licenses continue, the customer and each authorized user must abide by this agreement, not the public license.
+- While the customer's licenses continue, the customer{{#customer=organization}} and each authorized user{{/customer=organization}} must abide by this agreement, not the public license.
 
 {{^term=perpetual}}
 - After the customer's licenses end, the customer must abide by the public license.
