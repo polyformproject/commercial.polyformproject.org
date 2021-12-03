@@ -7,7 +7,7 @@
     "file-saver": "^2.0.5",
     "jszip": "^3.7.1",
     "mustache": "^4.2.0",
-    "ooxml-signature-pages": "^3.0.2",
+    "ooxml-signature-pages": "^3.1.0",
     "outline-numbering": "^2.0.0"
   },
   "devDependencies": {
