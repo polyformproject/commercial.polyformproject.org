@@ -19,7 +19,7 @@
     "mustache-vars": "^0.2.0",
     "playwright": "^1.17.1",
     "send": "^0.17.1",
-    "standard": "^16.0.3",
+    "standard": "^16.0.4",
     "tape": "^5.3.1"
   },
   "scripts": {
