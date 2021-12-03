@@ -53,6 +53,7 @@ _Customer_ and _Vendor_ agree to the attached PolyForm Commercial Software Licen
 
 `Billing`
 
+{{#billing=invoices}}
 # Payment Terms
 
 `Payment Terms`
@@ -60,6 +61,13 @@ _Customer_ and _Vendor_ agree to the attached PolyForm Commercial Software Licen
 # Payment Method
 
 `Payment Method`
+{{/billing=invoices}}
+
+{{#billing=card}}
+# Payment Method
+
+credit or debit card
+{{/billing=card}}
 
 {{#warranty=period}}
 # Warranty Period

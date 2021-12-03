@@ -112,13 +112,21 @@ The customer may not make changes to the software's source code.
 
 # Billing
 
-## Bills, Fees, and Payment
+{{#billing=invoices}}
+## Invoices, Fees, and Payment
 
-The vendor agrees to bill the customer per the order.  The customer agrees to pay the fees on the order, using the payment method on the order.
+The vendor agrees to invoice the customer per the order.  The customer agrees to pay the fees on the order, using the payment method on the order.
+{{/billing=invoices}}
+
+{{#billing=card}}
+## Charges
+
+The customer agrees to pay the fees on the order.  The vendor agrees to charge the customer's payment card per the order.
+{{/billing=card}}
 
 ## Billing Errors
 
-The customer agrees to give the vendor notice of any suspected error on a bill before the deadline for payment.  Both sides agree to resolve any concerns about bill accuracy promptly and in good faith.  The customer agrees to pay the undisputed part of each bill by the original deadline, and any part of the bill resolved later within seven days of resolution.
+The customer agrees to give the vendor notice of any suspected billing error {{#billing=invoices}}on an invoice before the deadline for payment{{/billing=invoices}}{{#billing=card}}within thirty days after the charge is made{{/billing=card}}.  Both sides agree to resolve any potential billing errors promptly and in good faith.  {{#billing=invoices}}The customer agrees to pay the undisputed part of each invoice by the original deadline, and any part of the invoice resolved later within seven days of resolution.{{/billing=invoices}}  {{#billing=card}}The vendor agrees to refund the part of any charge resolved to be an overpayment within seven days of resolution.{{/billing=card}}
 
 # Term and Termination
 

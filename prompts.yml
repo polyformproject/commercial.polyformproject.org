@@ -50,6 +50,22 @@
       notes:
         - no numeric technical limits on use of the software
 
+- id: billing
+  name: Billing Method
+  description: How will you bill the customer?
+  requires:
+    - model: metered
+    - model: unmetered
+  responses:
+    - id: invoices
+      name: Invoices
+    - id: card
+      name: Direct Charge to Payment Card
+      notes:
+        - credit card
+        - debit card
+        - vendor initiates charges
+
 - id: trial
   name: Initial Trial
   description: Allow the customer to try the software for free first?
