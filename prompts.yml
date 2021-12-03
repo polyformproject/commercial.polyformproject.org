@@ -59,6 +59,8 @@
   responses:
     - id: invoices
       name: Invoices
+      notes:
+        - acceptable payment methods on ordering document
     - id: card
       name: Direct Charge to Payment Card
       notes:
