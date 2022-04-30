@@ -20,7 +20,7 @@
     "playwright": "^1.21.1",
     "send": "^0.18.0",
     "standard": "^16.0.4",
-    "tape": "^5.3.2"
+    "tape": "^5.5.3"
   },
   "scripts": {
     "lint": "standard",
